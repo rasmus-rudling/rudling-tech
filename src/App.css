@@ -4,3 +4,12 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+
+.linkStyle {
+    text-decoration: underline;
+    color: #2F7EF5;
+}
+
+.linkStyle:hover {
+    color: #0A1C36;
+}

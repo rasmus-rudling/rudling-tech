@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import classes from './frontPage.module.scss';
+import {Link} from "react-router-dom";
 
 import ImageAnimation from './ImageAnimation/ImageAnimation';
 
@@ -19,7 +20,24 @@ const FrontPage : React.FC = () => {
                 <div className={classes.startText}>
                     <span>Hi and welcome!</span>
                     <br />
-                    My name is Rasmus Rudling. On this website
+                    My name is Rasmus Rudling and I study the fourth out
+                    five years for my degree in Master of Science in Engineering at
+                    KTH Royal Institute of Technology.
+                    I'm currently studying a <a 
+                        target="_blank"
+                        href="https://www.kth.se/en/studies/master/computer-science" 
+                        className="linkStyle"
+                    >
+                        master in Computer Science
+                    </a> where I've specialized to learn about <a 
+                        target="_blank"
+                        href="https://www.kth.se/student/kurser/program/TCSCM/20202/inriktningar?l=en" 
+                        className="linkStyle"
+                    >
+                        cognitive systems
+                    </a>. 
+                    
+                    On this website
                     you'll find blog posts and tutorials about concepts
                     I'm interested in. You can also find my previous work
                     in my portfolio. I hope you enjoy the visit!
