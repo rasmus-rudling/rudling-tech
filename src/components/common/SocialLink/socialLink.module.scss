@@ -1,0 +1,35 @@
+$containerHeight: 50px;
+
+.SocialLink {
+    height: $containerHeight;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.iconContainer {
+    display: flex;
+    background-color: #232323;
+    height: $containerHeight;
+    width: $containerHeight;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 0 0 5px;
+}
+
+.textContainer {
+    display: flex;
+    background-color: #fff;
+    height: $containerHeight;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 0 5px 5px 0;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.iconClass {
+    background-color: #2F7EF5 !important;
+}

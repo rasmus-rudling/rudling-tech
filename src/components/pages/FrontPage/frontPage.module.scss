@@ -2,8 +2,31 @@
     min-height: 100vh;
     min-width: 100vw;
     background-color: #f0f0f0;
-    // background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+.textAndImageContainer {
+    // margin-right: 20px;
+}
+
+.socialContainer {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.startText {
+    margin: 20px 0;
+    text-align: justify;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.startText span {
+    font-weight: 400;
 }

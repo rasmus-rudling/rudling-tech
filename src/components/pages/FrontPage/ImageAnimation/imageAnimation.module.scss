@@ -72,14 +72,14 @@ $containerSize: 200px;
 }
 
 .wave1 {
-    animation: wave linear 20s infinite;
+    animation: wave linear 15s infinite;
     fill: rgb(47, 126, 245, 1);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
     z-index: 500;
 }
 
 .wave2 {
-    animation: wave linear 25s infinite;
+    animation: wave linear 20s infinite;
     animation-delay: -3s;
     animation-direction: reverse;
     fill: rgb(47, 126, 245, 0.9);
@@ -88,7 +88,7 @@ $containerSize: 200px;
 }
 
 .wave3 {
-    animation: wave linear 30s infinite;
+    animation: wave linear 25s infinite;
     animation-delay: -1s;
     fill: rgb(47, 126, 245, 0.5);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));

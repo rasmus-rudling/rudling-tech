@@ -17,9 +17,10 @@ const Wave : React.FC<Props> = ({color, waveClass}) => {
             y="0px" 
             viewBox="0 0 2560 343.5" 
             className = {waveClass}
-            // style = {{
-            //     "fill": color
-            // }}
+            style = {{
+                // "fill": color,
+                "height": "100px"
+            }}
         >
             <defs>
             </defs>

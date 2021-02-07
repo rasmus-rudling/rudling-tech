@@ -1,0 +1,16 @@
+.MenuButton {
+    border: 0;
+    background-color: inherit;
+    // background-color: blue;
+    height: 100%;
+    width: 150px;
+    font-size: 25px;
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    transition: .2s;
+}
+
+.MenuButton:hover {
+    color: #2F7EF5;
+    border-bottom: 4px solid #2F7EF5;
+}

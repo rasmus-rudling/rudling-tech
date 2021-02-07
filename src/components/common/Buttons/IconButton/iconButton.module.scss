@@ -1,0 +1,17 @@
+.IconButton {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #232323;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: .3s;
+    outline: none;
+}
+
+.IconButton:hover {
+    background-color: #4b4b4b;
+    transform: scale(1.05);
+}
