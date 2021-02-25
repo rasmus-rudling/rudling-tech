@@ -8,8 +8,6 @@ import SocialLink from '../../common/SocialLink/SocialLink';
 
 
 const FrontPage : React.FC = () => {
-    const mailAddressRef = useRef(null);
-
     return (
         <div className={classes.FrontPage}>
             <ImageAnimation />
@@ -41,7 +39,7 @@ const FrontPage : React.FC = () => {
                     in my portfolio. I hope you enjoy the visit!
                 </div>
 
-
+                {/* TODO: Show Social links in a smaller format when screen <= 475px */}
                 <div className={classes.socialLinks}>
                     <SocialLink 
                         socialIcon = "github"
@@ -71,9 +69,20 @@ const FrontPage : React.FC = () => {
                             "marginTop": "20px",
                         }}
                         linkAction = "copy"
+                        secondIcon = "check"
                     />
 
-                    {/* TODO: Add resume as Social Link */}
+                    <SocialLink 
+                        socialIcon = "resume"
+                        text="Check out my resume!"
+                        extraStyle = {{
+                            "marginTop": "20px",
+                        }}
+                        linkAction = "download"
+                        onClickHandler = {() => {
+                            window.open('https://drive.google.com/file/d/1m2y7tyZW_TXbqsCISAk_FI7XMM-tpeOI/view?usp=sharing', '_blank');
+                        }}
+                    />      
                 </div>
                 
             </div>

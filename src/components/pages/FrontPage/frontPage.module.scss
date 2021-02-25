@@ -13,6 +13,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .startText {
@@ -21,6 +22,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
+    max-width: 400px;
 }
 
 .startText span {
@@ -29,13 +31,15 @@
 
 .socialLinks {
     display: none;
+    width: 100%;
+    max-width: 400px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 975px) {
     .socialContainer {
         flex-direction: row;
         width: 80%;
-        align-items: center;
+        justify-content: center;
     }
 
     .startText {

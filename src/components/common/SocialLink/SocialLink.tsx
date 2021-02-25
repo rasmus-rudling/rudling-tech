@@ -6,15 +6,19 @@ import MailIcon from '../../common/icons/MailIcon';
 import LinkedInIcon from '../../common/icons/LinkedInIcon';
 import VisitIcon from '../icons/VisitIcon';
 import CopyIcon from '../icons/CopyIcon';
+import ResumeIcon from '../icons/ResumeIcon';
+import DownloadFileIcon from '../icons/DownloadFileIcon';
 
 import IconButton from '../Buttons/IconButton/IconButton';
+import CheckIcon from '../icons/CheckIcon';
 
 interface Props {
     socialIcon: string,
     text: string,
     linkAction: string,
     onClickHandler?: () => void,
-    extraStyle?: React.CSSProperties
+    extraStyle?: React.CSSProperties,
+    secondIcon?: string
 }
 
 const selectElementText = (el : any) => {
@@ -39,11 +43,19 @@ const copySelectionText = () => {
 }
 
 
-const SocialLink : React.FC<Props> = ({socialIcon, text, extraStyle, linkAction, onClickHandler}) => {
+const SocialLink : React.FC<Props> = ({
+    socialIcon, 
+    text, 
+    extraStyle, 
+    linkAction, 
+    onClickHandler, 
+    secondIcon
+}) => {
     const [iconExtraClass, setIconExtraClass] = useState<undefined | string>(undefined);
     
     let _socialIcon, 
         actionIcon,
+        secondActionIcon,
         _onClickHandler, 
         socialIconWidth = "25px";
     
@@ -53,18 +65,40 @@ const SocialLink : React.FC<Props> = ({socialIcon, text, extraStyle, linkAction,
         _socialIcon = <LinkedInIcon iconColor="#fff" iconWidth={socialIconWidth} />
     } else if (socialIcon === "mail") {
         _socialIcon = <MailIcon iconColor="#fff" iconWidth={socialIconWidth} />
+    } else if (socialIcon === "resume") {
+        _socialIcon = <ResumeIcon iconColor="#fff" iconWidth={socialIconWidth} />
     }
 
     if (linkAction === "visit") {
-        actionIcon = <VisitIcon 
-                        iconColor="#fff"
-                        iconWidth="15px"
-                    />
+        actionIcon = (
+            <VisitIcon 
+                iconColor="#fff"
+                iconWidth="15px"
+            />
+        );
     } else if (linkAction === "copy") {
-        actionIcon = <CopyIcon 
-                        iconColor="#fff"
-                        iconWidth="15px"
-                    />
+        actionIcon = (
+            <CopyIcon 
+                iconColor="#fff"
+                iconWidth="15px"
+            />
+        );
+    } else if (linkAction === "download") {
+        actionIcon = (
+            <DownloadFileIcon 
+                iconColor="#fff"
+                iconWidth="15px"
+            />
+        );
+    }
+
+    if (secondIcon === "check") {
+        secondActionIcon = (
+            <CheckIcon 
+                iconColor="#fff"
+                iconWidth="15px"
+            />
+        );
     }
 
     if (onClickHandler === undefined) {
@@ -100,7 +134,7 @@ const SocialLink : React.FC<Props> = ({socialIcon, text, extraStyle, linkAction,
                     onClickHandler = {_onClickHandler}
                     extraClass = {iconExtraClass}
                 >
-                    {actionIcon}
+                    {iconExtraClass === undefined ? actionIcon : secondActionIcon}
                 </IconButton>
             </div>
         </div>

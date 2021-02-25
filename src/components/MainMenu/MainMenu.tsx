@@ -23,6 +23,7 @@ const MainMenu : React.FC<Props> = ({menuButtons}) => {
                     {
                         menuButtons.map(menuButton => (
                             <MenuButton 
+                                key = {menuButton.pageAddress}
                                 pageAddress = {menuButton.pageAddress}
                                 text = {menuButton.text}
                             />
@@ -39,6 +40,7 @@ const MainMenu : React.FC<Props> = ({menuButtons}) => {
                 {
                     menuButtons.map(menuButton => (
                         <MenuButton 
+                            key = {menuButton.pageAddress}
                             pageAddress = {menuButton.pageAddress}
                             text = {menuButton.text}
                             inModalMenu = {true}
