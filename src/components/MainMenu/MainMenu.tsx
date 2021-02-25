@@ -2,66 +2,51 @@ import React, { useState } from 'react';
 import classes from './mainMenu.module.scss';
 
 import MenuButton from './MenuButton/MenuButton';
+import HamburgerButton from '../common/Buttons/HamburgerButton/HamburgerButton';
 
-const MainMenu : React.FC = () => {
-    const [hamburgerState, setHamburgerState] = useState("normal");
+interface MenuButtonObject {
+    pageAddress: string,
+    text: string
+}
+
+interface Props {
+    menuButtons: Array<MenuButtonObject>
+}
+
+const MainMenu : React.FC<Props> = ({menuButtons}) => {
+    const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className={classes.MainMenu}>
-            <div className={classes.buttonsContainer}>
-                <MenuButton 
-                    pageAddress = "tech-blog"
-                    text = "Tech blog"
-                />
-
-                <MenuButton 
-                    pageAddress = "tutorials"
-                    text = "Tutorials"
-                />
-
-                <MenuButton 
-                    pageAddress = "portfolio"
-                    text = "Portfolio"
-                />
-            </div>
-
-
-            {/* TODO: Change menu based on window size */}
-            <div 
-                className={classes.hamburgerIconContainer}
-                onClick = {() => {
-                    if (hamburgerState === "normal") {
-                        setHamburgerState("x");
-                    } else {
-                        setHamburgerState("normal");
+        <>
+            <div className={showModal ? classes.MainMenu : [classes.MainMenu, classes.MainMenuBoxShadow].join(" ")}>
+                <div className={classes.buttonsContainer}>
+                    {
+                        menuButtons.map(menuButton => (
+                            <MenuButton 
+                                pageAddress = {menuButton.pageAddress}
+                                text = {menuButton.text}
+                            />
+                        ))
                     }
-                }}
-            >
-                <div 
-                    className = {
-                        hamburgerState === "normal" 
-                            ? classes.normalHamburgerLine1
-                            : classes.xHamburgerLine1
-                        } 
-                />
+                </div>
 
-                <div 
-                    className = {
-                        hamburgerState === "normal" 
-                            ? classes.normalHamburgerLine2
-                            : classes.xHamburgerLine2
-                        } 
-                />
-                
-                <div 
-                    className = {
-                        hamburgerState === "normal" 
-                            ? classes.normalHamburgerLine3
-                            : classes.xHamburgerLine3
-                        } 
+                <HamburgerButton 
+                    showingModal = {showModal}
+                    onClick = {() => setShowModal(!showModal)}
                 />
             </div>
-        </div>
+            <div className={showModal ? classes.showMenuModal : classes.hideMenuModal}>
+                {
+                    menuButtons.map(menuButton => (
+                        <MenuButton 
+                            pageAddress = {menuButton.pageAddress}
+                            text = {menuButton.text}
+                            inModalMenu = {true}
+                        />
+                    ))
+                }
+            </div>
+        </>
     )
 }
 

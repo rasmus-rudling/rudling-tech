@@ -11,11 +11,26 @@ import FrontPage from './components/pages/FrontPage/FrontPage';
 import MainMenu from './components/MainMenu/MainMenu';
 
 const App = () => {
+    const mainMenuButtons = [
+        {
+            pageAddress: "tech-blog",
+            text: "Tech blog"
+        },
+        {
+            pageAddress: "tutorials",
+            text: "Tutorials"
+        },
+        {
+            pageAddress: "portfolio",
+            text: "Portfolio"
+        }
+    ]
+
     return (
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <MainMenu />
+                    <MainMenu menuButtons = {mainMenuButtons}/>
                     <FrontPage />
                 </Route>
             </Switch>

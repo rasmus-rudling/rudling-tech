@@ -15,7 +15,7 @@ $containerSize: 200px;
 .rasmusImg {
     height: 115%;
     margin-top: 14%;
-    z-index: 950;
+    z-index: 450;
     // animation: rasmusWave ease-in-out 14s infinite;
 }
 
@@ -75,7 +75,7 @@ $containerSize: 200px;
     animation: wave linear 15s infinite;
     fill: rgb(47, 126, 245, 1);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
-    z-index: 500;
+    z-index: 300;
 }
 
 .wave2 {
@@ -84,7 +84,7 @@ $containerSize: 200px;
     animation-direction: reverse;
     fill: rgb(47, 126, 245, 0.9);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
-    z-index: 490;
+    z-index: 290;
 }
 
 .wave3 {
@@ -92,7 +92,7 @@ $containerSize: 200px;
     animation-delay: -1s;
     fill: rgb(47, 126, 245, 0.5);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
-    z-index: 470;
+    z-index: 270;
 }
 
 @keyframes wave {

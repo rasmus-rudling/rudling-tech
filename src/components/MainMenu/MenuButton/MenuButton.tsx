@@ -4,15 +4,16 @@ import { useHistory } from "react-router-dom";
 
 interface Props {
     pageAddress: string,
-    text: string
+    text: string,
+    inModalMenu?: Boolean
 }
 
-const MenuButton : React.FC<Props> = ({pageAddress, text}) => {
+const MenuButton : React.FC<Props> = ({pageAddress, text, inModalMenu=false}) => {
     const history = useHistory();
     
     return (
         <button 
-            className={classes.MenuButton}
+            className={!inModalMenu ? classes.MenuButton : classes.ModalMenuButton}
             onClick = {() => history.push(pageAddress)}    
         >
             {text}

@@ -1,16 +1,34 @@
-.MenuButton {
+.MenuButton,
+.ModalMenuButton {
     border: 0;
     background-color: inherit;
-    // background-color: blue;
-    height: 100%;
-    width: 150px;
     font-size: 25px;
     cursor: pointer;
-    border-bottom: 4px solid transparent;
     transition: .2s;
+}
+
+.MenuButton {
+    height: 100%;
+    width: 150px;
+    border-bottom: 4px solid transparent;
 }
 
 .MenuButton:hover {
     color: #2F7EF5;
     border-bottom: 4px solid #2F7EF5;
+}
+
+.ModalMenuButton {
+    padding: 20px 0;
+    width: 100%;
+    transition: .2s;
+}
+
+.ModalMenuButton:not(:nth-child(2)) {
+    border-top: 1px solid rgba(47, 126, 245, 0.5);;
+    border-bottom: 1px solid rgba(47, 126, 245, 0.5);;
+}
+
+.ModalMenuButton:hover {
+    background-color: rgba(47, 126, 245, 0.2);
 }

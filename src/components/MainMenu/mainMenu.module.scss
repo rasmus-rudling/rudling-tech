@@ -2,17 +2,23 @@
     height: 80px;
     width: 100vw;
     background-color: #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     position: fixed;
     z-index: 1000;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    transition: .3s;
+}
+
+.MainMenuBoxShadow {
+    transition: .3s;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .buttonsContainer {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-around;
 }
@@ -21,76 +27,35 @@
     margin-right: 20px;
 }
 
-.hamburgerIconContainer {
+
+
+.showMenuModal,
+.hideMenuModal {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 50px;
-    cursor: pointer;
-    margin-right: 20px;
-    border-radius: 5px;
-    transition: .15s;
-    position: relative;
+    top: 80px;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 900;
+    transition: .7s;
 }
 
-.hamburgerIconContainer:hover {
-    background-color: rgba(47, 126, 245, 0.2);
+.showMenuModal {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.normalHamburgerLine1,
-.normalHamburgerLine2,
-.normalHamburgerLine3,
-.xHamburgerLine1,
-.xHamburgerLine2,
-.xHamburgerLine3 {
-    position: absolute;
-    width: 40px;
-    height: 6px;
-    background-color: #2F7EF5;
-    border-radius: 3px;
-    transition-timing-function: ease-in-out;
-    opacity: 1;
-    display: flex;
+.hideMenuModal {
+    transform: translateY(-102%);
 }
-
-.normalHamburgerLine1,
-.normalHamburgerLine3,
-.xHamburgerLine1,
-.xHamburgerLine3 {
-    transition: .5s;
-}
-
-.normalHamburgerLine2,
-.xHamburgerLine2 {
-    transition: .4s;
-}
-
-.normalHamburgerLine1 {
-    transform: translateY(-12px);
-}
-
-.normalHamburgerLine3 {
-    transform: translateY(12px);
-}
-
-.xHamburgerLine1 {
-    transform: rotate(135deg);
-}
-
-.xHamburgerLine2 {
-    transform: translateX(-50px);
-    opacity: 0;
-}
-
-.xHamburgerLine3 {
-    transform: rotate(45deg);
-    
-}
-
 
 
 @media (min-width: 500px) {
+    .buttonsContainer {
+        display: flex;
+    }
 
+    .showMenuModal {
+        display: none;
+    }
 }
