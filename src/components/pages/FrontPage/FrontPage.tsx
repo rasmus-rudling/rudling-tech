@@ -12,16 +12,14 @@ const FrontPage : React.FC = () => {
 
     return (
         <div className={classes.FrontPage}>
-            <div className={classes.textAndImageContainer}>
-                <ImageAnimation />
-            </div>
+            <ImageAnimation />
             
             <div className={classes.socialContainer}>
                 <div className={classes.startText}>
                     <span>Hi and welcome!</span>
                     <br />
-                    My name is Rasmus Rudling and I study the fourth out
-                    five years for my degree in Master of Science in Engineering at
+                    My name is Rasmus Rudling and I'm in the penultimate
+                    year of my degree in Master of Science in Engineering at
                     KTH Royal Institute of Technology.
                     I'm currently studying a <a 
                         target="_blank"
@@ -44,35 +42,40 @@ const FrontPage : React.FC = () => {
                 </div>
 
 
-                <SocialLink 
-                    socialIcon = "github"
-                    text="github.com/rrudling"
-                    linkAction = "visit"
-                    onClickHandler = {() => {
-                        window.open('https://www.github.com/rrudling', '_blank');
-                    }}
-                />
+                <div className={classes.socialLinks}>
+                    <SocialLink 
+                        socialIcon = "github"
+                        text="github.com/rrudling"
+                        linkAction = "visit"
+                        onClickHandler = {() => {
+                            window.open('https://www.github.com/rrudling', '_blank');
+                        }}
+                    />
 
-                <SocialLink 
-                    socialIcon = "linkedin"
-                    text="linkedin.com/in/rrudling"
-                    extraStyle = {{
-                        "marginTop": "20px",
-                    }}
-                    linkAction = "visit"
-                    onClickHandler = {() => {
-                        window.open('https://www.linkedin.com/in/rrudling', '_blank');
-                    }}
-                />
+                    <SocialLink 
+                        socialIcon = "linkedin"
+                        text="linkedin.com/in/rrudling"
+                        extraStyle = {{
+                            "marginTop": "20px",
+                        }}
+                        linkAction = "visit"
+                        onClickHandler = {() => {
+                            window.open('https://www.linkedin.com/in/rrudling', '_blank');
+                        }}
+                    />
 
-                <SocialLink 
-                    socialIcon = "mail"
-                    text="rasmusrudling@gmail.com"
-                    extraStyle = {{
-                        "marginTop": "20px",
-                    }}
-                    linkAction = "copy"
-                />
+                    <SocialLink 
+                        socialIcon = "mail"
+                        text="rasmusrudling@gmail.com"
+                        extraStyle = {{
+                            "marginTop": "20px",
+                        }}
+                        linkAction = "copy"
+                    />
+
+                    {/* TODO: Add resume as Social Link */}
+                </div>
+                
             </div>
             
         </div>

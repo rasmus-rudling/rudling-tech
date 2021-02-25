@@ -1,20 +1,16 @@
 .FrontPage {
     min-height: 100vh;
-    min-width: 100vw;
     background-color: #f0f0f0;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 80px;
-}
-
-.textAndImageContainer {
-    // margin-right: 20px;
+    padding-top: 120px;
+    padding-bottom: 50px;
 }
 
 .socialContainer {
-    width: 400px;
+    width: 80%;
     display: flex;
     flex-direction: column;
 }
@@ -30,3 +26,32 @@
 .startText span {
     font-weight: 400;
 }
+
+.socialLinks {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .socialContainer {
+        flex-direction: row;
+        width: 80%;
+        align-items: center;
+    }
+
+    .startText {
+        
+    }
+
+    .socialLinks {
+        margin-left: 30px;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 475px) {
+    .socialLinks {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

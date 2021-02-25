@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
 .linkStyle {
     text-decoration: underline;
     color: #2F7EF5;
