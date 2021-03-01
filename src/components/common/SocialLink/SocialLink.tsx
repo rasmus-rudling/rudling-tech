@@ -110,7 +110,7 @@ const SocialLink : React.FC<Props> = ({
 
             setTimeout(() => {
                 setIconExtraClass(undefined);
-            }, 10000)
+            }, 1000)
 
         }
     } else {

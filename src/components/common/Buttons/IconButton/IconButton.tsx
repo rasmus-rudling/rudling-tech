@@ -8,7 +8,12 @@ interface Props {
     children: React.ReactNode
 }
 
-const IconButton : React.FC<Props> = ({iconHeight, onClickHandler, extraClass, children}) => {
+const IconButton : React.FC<Props> = ({
+iconHeight,
+onClickHandler,
+extraClass,
+children
+}) => {
     const iconClasses = [classes.IconButton];
 
     if (extraClass !== undefined) {
