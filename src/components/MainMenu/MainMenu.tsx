@@ -3,6 +3,7 @@ import classes from './mainMenu.module.scss';
 
 import MenuButton from './MenuButton/MenuButton';
 import HamburgerButton from '../common/Buttons/HamburgerButton/HamburgerButton';
+import {useHistory} from "react-router-dom";
 
 interface MenuButtonObject {
     pageAddress: string,
@@ -14,7 +15,14 @@ interface Props {
 }
 
 const MainMenu : React.FC<Props> = ({menuButtons}) => {
+    const history = useHistory();
+
     const [showModal, setShowModal] = useState(false);
+
+    const menuButtonClickHandler = (pageAddress: string) => {
+        setShowModal(false);
+        history.push(pageAddress)
+    }
 
     return (
         <>
@@ -26,6 +34,7 @@ const MainMenu : React.FC<Props> = ({menuButtons}) => {
                                 key = {menuButton.pageAddress}
                                 pageAddress = {menuButton.pageAddress}
                                 text = {menuButton.text}
+                                goToAddress = {menuButtonClickHandler}
                             />
                         ))
                     }
@@ -44,6 +53,7 @@ const MainMenu : React.FC<Props> = ({menuButtons}) => {
                             pageAddress = {menuButton.pageAddress}
                             text = {menuButton.text}
                             inModalMenu = {true}
+                            goToAddress = {menuButtonClickHandler}
                         />
                     ))
                 }

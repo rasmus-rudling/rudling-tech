@@ -31,6 +31,7 @@
 .socialLinks {
     width: 100%;
     max-width: 400px;
+    margin-top: 20px;
 }
 
 @media (min-width: 975px) and (min-height: 635px) and (max-height: 750px){
@@ -51,6 +52,7 @@
     .socialLinks {
         margin-left: 30px;
         flex-direction: column;
+        margin-top: 0;
     }
 }
 

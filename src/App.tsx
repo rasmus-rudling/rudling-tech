@@ -13,16 +13,16 @@ import MainMenu from './components/MainMenu/MainMenu';
 const App = () => {
     const mainMenuButtons = [
         {
-            pageAddress: "tech-blog",
-            text: "Tech blog"
-        },
-        {
-            pageAddress: "tutorials",
-            text: "Tutorials"
+            pageAddress: "blog",
+            text: "Blog"
         },
         {
             pageAddress: "portfolio",
             text: "Portfolio"
+        },
+        {
+            pageAddress: "tutorials",
+            text: "Tutorials"
         }
     ]
 
@@ -30,6 +30,21 @@ const App = () => {
         <Router>
             <Switch>
                 <Route exact path="/">
+                    <MainMenu menuButtons = {mainMenuButtons}/>
+                    <FrontPage />
+                </Route>
+
+                <Route exact path="/blog">
+                    <MainMenu menuButtons = {mainMenuButtons}/>
+                    <FrontPage />
+                </Route>
+
+                <Route exact path="/portfolio">
+                    <MainMenu menuButtons = {mainMenuButtons}/>
+                    <FrontPage />
+                </Route>
+
+                <Route exact path="/tutorials">
                     <MainMenu menuButtons = {mainMenuButtons}/>
                     <FrontPage />
                 </Route>
