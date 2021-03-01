@@ -39,7 +39,6 @@ const FrontPage : React.FC = () => {
                     in my portfolio. I hope you enjoy the visit!
                 </div>
 
-                {/* TODO: Show Social links in a smaller format when screen <= 475px */}
                 <div className={classes.socialLinks}>
                     <SocialLink 
                         socialIcon = "github"
@@ -80,11 +79,14 @@ const FrontPage : React.FC = () => {
                         }}
                         linkAction = "download"
                         onClickHandler = {() => {
-                            window.open('https://drive.google.com/file/d/1m2y7tyZW_TXbqsCISAk_FI7XMM-tpeOI/view?usp=sharing', '_blank');
+                            window.open('https://drive.google.com/file/d/1quF-4idnwynPrXJ74jfYMokbFQ3AOTjo/view?usp=sharing', '_blank');
                         }}
                     />      
                 </div>
-                
+
+                <div>
+
+                </div>
             </div>
             
         </div>

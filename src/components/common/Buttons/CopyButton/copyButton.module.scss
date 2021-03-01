@@ -1,0 +1,54 @@
+.CopyButton {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #232323;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: .3s;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.CopyButton:hover {
+  background-color: #4b4b4b;
+  transform: scale(1.05);
+}
+
+.copyButtonSuccess {
+  background-color: #2F7EF5 !important;
+}
+
+.copyButtonSuccess:hover {
+  background-color: #458bf5 !important;
+}
+
+.copyIcon,
+.checkIcon {
+  position: absolute;
+  display: flex;
+  align-content: center;
+  transform: translateX(0);
+  transition: .5s;
+}
+
+.copyIconLeft {
+  transform: translateX(-50px) !important;
+}
+
+.checkIconRight {
+  transform: translateX(50px) !important;
+}
+
+.copyIcon {
+
+}
+
+.checkIcon {
+
+}

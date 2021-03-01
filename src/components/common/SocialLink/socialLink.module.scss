@@ -8,13 +8,7 @@ $containerHeight: 50px;
 }
 
 .iconContainer {
-    display: flex;
-    background-color: #232323;
-    height: $containerHeight;
-    width: $containerHeight;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px 0 0 5px;
+    display: none;
 }
 
 .textContainer {
@@ -23,7 +17,7 @@ $containerHeight: 50px;
     height: $containerHeight;
     align-items: center;
     padding: 0 10px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     justify-content: space-between;
     width: 100%;
     font-weight: 300;
@@ -33,3 +27,34 @@ $containerHeight: 50px;
 .iconClass {
     background-color: #2F7EF5 !important;
 }
+
+@media (min-width: 475px) {
+    .iconContainer {
+        display: flex;
+        background-color: #232323;
+        height: $containerHeight;
+        width: $containerHeight;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .textContainer {
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+@media (max-width: 390px) {
+    .textContainer {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 345px) {
+    .textContainer {
+        font-size: 15px;
+    }
+}
+
+
+

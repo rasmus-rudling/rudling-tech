@@ -47,6 +47,33 @@
     transform: translateY(-102%);
 }
 
+.modalBackground,
+.fakeModalBackground {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    z-index: 600;
+    cursor: pointer;
+    transition: .5s;
+    opacity: 1;
+    backdrop-filter: blur(2px);
+}
+
+.modalBackground {
+    height: calc(100vh - 305px);
+    top: 305px;
+}
+
+.fakeModalBackground {
+    height: 305px;
+    top: 0;
+}
+
+.hideModalBackground {
+    opacity: 0;
+    z-index: -1;
+    cursor: default;
+}
 
 @media (min-width: 500px) {
     .buttonsContainer {

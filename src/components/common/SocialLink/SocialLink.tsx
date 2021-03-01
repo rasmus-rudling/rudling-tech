@@ -11,6 +11,7 @@ import DownloadFileIcon from '../icons/DownloadFileIcon';
 
 import IconButton from '../Buttons/IconButton/IconButton';
 import CheckIcon from '../icons/CheckIcon';
+import CopyButton from "../Buttons/CopyButton/CopyButton";
 
 interface Props {
     socialIcon: string,
@@ -22,19 +23,19 @@ interface Props {
 }
 
 const selectElementText = (el : any) => {
-    var range = document.createRange() // create new range object
-    range.selectNodeContents(el) // set range to encompass desired element text
-    var selection = window.getSelection() // get Selection object from currently user selected text
+    let range = document.createRange(); // create new range object
+    range.selectNodeContents(el); // set range to encompass desired element text
+    let selection = window.getSelection(); // get Selection object from currently user selected text
 
     if (selection !== null) {
-        selection.removeAllRanges() // unselect any user selected text (if any)
-        selection.addRange(range) // add range to Selection object to select it
+        selection.removeAllRanges(); // unselect any user selected text (if any)
+        selection.addRange(range); // add range to Selection object to select it
     }
 }
 
 const copySelectionText = () => {
-    var copysuccess // var to check whether execCommand successfully executed
-    try{
+    let copysuccess // var to check whether execCommand successfully executed
+    try {
         copysuccess = document.execCommand("copy") // run command to copy selected text to clipboard
     } catch(e){
         copysuccess = false
@@ -109,8 +110,12 @@ const SocialLink : React.FC<Props> = ({
             setIconExtraClass(classes.iconClass);
 
             setTimeout(() => {
+                let selection = window.getSelection();
+                if (selection !== null) {
+                    selection.removeAllRanges();
+                }
                 setIconExtraClass(undefined);
-            }, 1000)
+            }, 5000)
 
         }
     } else {
@@ -129,13 +134,20 @@ const SocialLink : React.FC<Props> = ({
             </div>
             <div className={classes.textContainer}>
                 <div id={text}>{text}</div>
-                <IconButton 
-                    iconHeight = "30px" 
-                    onClickHandler = {_onClickHandler}
-                    extraClass = {iconExtraClass}
-                >
-                    {iconExtraClass === undefined ? actionIcon : secondActionIcon}
-                </IconButton>
+                {linkAction === "copy" ?
+                    <CopyButton
+                        onClickHandler = {_onClickHandler}
+                        markCopySuccess = {iconExtraClass !== undefined}
+                    /> :
+
+                    <IconButton
+                        iconHeight = "30px"
+                        onClickHandler = {_onClickHandler}
+                        extraClass = {iconExtraClass}
+                    >
+                        {actionIcon}
+                    </IconButton>
+                }
             </div>
         </div>
     )
