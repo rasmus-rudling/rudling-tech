@@ -1,18 +1,103 @@
+$cardWidth: 500px;
+$cardHeight: 300px;
+
+.projectCardContainer {
+  overflow: hidden;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 18px -4px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.projectCardContainer:nth-child(1),
+.projectCardContainer:nth-child(2){
+  margin-top: 0;
+}
+
+.ProjectCard,
+.activateBlur,
+.detailsContainer,
+.technologiesContainer{
+  transition: .4s;
+}
+
+
 .ProjectCard {
-  width: 500px;
-  height: 300px;
+  width: $cardWidth;
+  height: $cardHeight;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 18px -4px rgba(0,0,0,0.5);
+  filter: blur(0.1px);
+}
+
+.activateBlur {
+  filter: blur(2px);
+}
+
+.detailsContainer {
+  position: absolute;
+  width: $cardWidth;
+  height: $cardHeight;
+  background-color: rgb(0, 0, 0, 0.6);
+  opacity: 1;
+  z-index: 49;
+  top: 0;
+  left: 0;
+}
+
+.hideDetails {
+  opacity: 0;
+}
+
+.mainLinkButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #2F7EF5;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-.ProjectCard {
-  margin-top: 50px;
+.mainLinkButton:hover {
+  background-color: #1F54A2;
 }
 
-.ProjectCard:nth-child(1),
-.ProjectCard:nth-child(2){
-  margin-top: 0;
+.technologiesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 15px;
+  display: flex;
+  overflow: hidden;
+  transition-timing-function: ease-in-out;
+}
+
+.hideBadges {
+  transform: translateY(-60px);
+}
+
+.technologyBadge {
+  background-color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 40px;
+  z-index: 500;
+}
+
+.technologyBadge:not(:first-child) {
+  margin-left: 10px;
+}
+
+.technologyBadge img {
+  width: 30px;
 }

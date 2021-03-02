@@ -53,7 +53,7 @@ const PortfolioPage: React.FC<Props> = () => {
             demoLink: "https://www.medieteknik.com",
             gitHubLink: "https://github.com/medieteknik-kth/medieteknik.com",
             image: medieteknikImg1,
-            technologies: ["sass", "html", "js", "react", "firebase"]
+            technologies: ["sass", "html", "js", "react"]
         },
         {
             name: "Reinforcement Learning lab",
