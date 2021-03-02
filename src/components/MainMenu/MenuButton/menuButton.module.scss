@@ -24,7 +24,7 @@
     transition: .2s;
 }
 
-.ModalMenuButton:not(:nth-child(2)) {
+.ModalMenuButton:nth-child(2n - 1) {
     border-top: 1px solid rgba(47, 126, 245, 0.4);;
     border-bottom: 1px solid rgba(47, 126, 245, 0.4);;
 }

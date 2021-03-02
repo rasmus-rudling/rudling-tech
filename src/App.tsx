@@ -7,11 +7,17 @@ import {
     Route
 } from "react-router-dom";
 
-import FrontPage from './components/pages/FrontPage/FrontPage';
+
 import MainMenu from './components/MainMenu/MainMenu';
+import HomePage from './components/pages/HomePage/HomePage';
+import PortfolioPage from "./components/pages/PortfolioPage/PortfolioPage";
 
 const App = () => {
     const mainMenuButtons = [
+        {
+            pageAddress: "",
+            text: "Home"
+        },
         {
             pageAddress: "blog",
             text: "Blog"
@@ -31,22 +37,22 @@ const App = () => {
             <Switch>
                 <Route exact path="/">
                     <MainMenu menuButtons = {mainMenuButtons}/>
-                    <FrontPage />
+                    <HomePage />
                 </Route>
 
                 <Route exact path="/blog">
                     <MainMenu menuButtons = {mainMenuButtons}/>
-                    <FrontPage />
+                    <HomePage />
                 </Route>
 
                 <Route exact path="/portfolio">
                     <MainMenu menuButtons = {mainMenuButtons}/>
-                    <FrontPage />
+                    <PortfolioPage />
                 </Route>
 
                 <Route exact path="/tutorials">
                     <MainMenu menuButtons = {mainMenuButtons}/>
-                    <FrontPage />
+                    <HomePage />
                 </Route>
             </Switch>
         </Router>

@@ -1,13 +1,12 @@
-import React, { useRef } from 'react';
-import classes from './frontPage.module.scss';
-import {Link} from "react-router-dom";
+import React from 'react';
+import classes from './homePage.module.scss';
 
 import ImageAnimation from './ImageAnimation/ImageAnimation';
 
 import SocialLink from '../../common/SocialLink/SocialLink';
 
 
-const FrontPage : React.FC = () => {
+const HomePage : React.FC = () => {
     return (
         <div className={classes.FrontPage}>
             <ImageAnimation />
@@ -93,4 +92,4 @@ const FrontPage : React.FC = () => {
     )
 }
 
-export default FrontPage;
+export default HomePage;
