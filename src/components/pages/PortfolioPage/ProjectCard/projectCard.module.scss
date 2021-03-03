@@ -4,7 +4,6 @@ $cardHeight: 300px;
 .projectCardContainer {
   overflow: hidden;
   margin-top: 50px;
-  border-radius: 5px;
   box-shadow: 0px 0px 18px -4px rgba(0,0,0,0.5);
   position: relative;
 }
@@ -12,6 +11,12 @@ $cardHeight: 300px;
 .projectCardContainer:nth-child(1),
 .projectCardContainer:nth-child(2){
   margin-top: 0;
+}
+
+.projectCardContainer,
+.ProjectCard
+{
+  border-radius: 5px;
 }
 
 .ProjectCard,
@@ -29,6 +34,7 @@ $cardHeight: 300px;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(0.1px);
+  border-radius: 5px;
 }
 
 .activateBlur {
@@ -44,6 +50,7 @@ $cardHeight: 300px;
   z-index: 49;
   top: 0;
   left: 0;
+
 }
 
 .hideDetails {
@@ -71,7 +78,8 @@ $cardHeight: 300px;
 .technologiesContainer {
   position: absolute;
   top: 0;
-  left: 0;
+  left: auto;
+  right: auto;
   margin-left: 15px;
   display: flex;
   transition-timing-function: ease-in-out;
@@ -105,8 +113,7 @@ $cardHeight: 300px;
   //background-color: #e6e6e6;
 }
 
-.tooltiptext {
-  //visibility: hidden;
+.technologyBadge .tooltiptext {
   width: 140px;
   background-color: #fff;
   color: #232323;
@@ -122,7 +129,12 @@ $cardHeight: 300px;
   transition: opacity 0.3s;
 }
 
-.tooltiptext::before {
+.technologyBadge:first-child .tooltiptext {
+  left: 0px;
+  margin-left: 0px;
+}
+
+.technologyBadge .tooltiptext::before {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -131,6 +143,10 @@ $cardHeight: 300px;
   border-width: 5px;
   border-style: solid;
   border-color:  transparent transparent #fff transparent;
+}
+
+.technologyBadge:first-child .tooltiptext::before {
+  left: 21px;
 }
 
 .technologyBadge:hover .tooltiptext {
@@ -144,3 +160,7 @@ $cardHeight: 300px;
   height: auto;
 }
 
+.hideOverflow {
+  overflow: hidden;
+  background-color: transparent;
+}
