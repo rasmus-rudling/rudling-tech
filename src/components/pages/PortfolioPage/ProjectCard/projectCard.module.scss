@@ -116,13 +116,12 @@ $cardHeight: 300px;
   border-bottom-right-radius: 7px;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 55px;
   width: 40px;
   z-index: 500;
   cursor: pointer;
   position: relative;
-  transition: .35s;
+  transition: .2s;
   transition-timing-function: ease-in-out;
   top: -60px
 }
@@ -192,7 +191,6 @@ $cardHeight: 300px;
   opacity: 1;
 }
 
-
 .technologyBadge img {
   width: 30px;
   height: auto;
@@ -225,7 +223,7 @@ $cardHeight: 300px;
   left: 30px;
   color: #fff;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   width: 440px;
   opacity: 1;
 }
