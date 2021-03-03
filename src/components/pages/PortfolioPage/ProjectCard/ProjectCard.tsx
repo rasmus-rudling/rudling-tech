@@ -41,7 +41,7 @@ const ProjectCard: React.FC<Props> = ({
     const technologiesInfo : ObjectLiteral = {
         "firebase": {
             "icon": firebaseIcon,
-            "tooltipText": "Learn more about firebase",
+            "tooltipText": "Learn more about Firebase",
             "tooltipLink": "https://en.wikipedia.org/wiki/Firebase"
         },
         "css": {
@@ -109,29 +109,24 @@ const ProjectCard: React.FC<Props> = ({
                 />
             </div>
 
-
-
-            <div className={showProjectDetails
-                ? classes.technologiesContainer
-                : [classes.technologiesContainer, classes.hideBadges].join(" ")
-            }>
+            <div className={classes.technologiesContainer}>
                 {
                     technologies.map(technology => (
                         <div
-                            className = {classes.technologyBadge}
+                            className={showProjectDetails
+                                ? [classes.technologyBadge, classes.showBadge].join(" ")
+                                : [classes.technologyBadge, classes.hideBadge].join(" ")
+                            }
                             onClick = {() => {
                                 window.open(technologiesInfo[technology].tooltipLink, '_blank');
                             }}
                         >
                             <img src={technologiesInfo[technology].icon} alt="" />
-                            {/* TODO: Make sure that the left most tooltip doesn't get hidden by parent */}
                             <span className={classes.tooltiptext}>{technologiesInfo[technology].tooltipText}</span>
                         </div>
                     ))
                 }
             </div>
-
-
 
             <div
                 className={classes.mainLinkButton}
@@ -144,6 +139,22 @@ const ProjectCard: React.FC<Props> = ({
                     iconWidth= "30px"
                 />
             </div>
+
+            <div
+                className = {showProjectDetails
+                    ? classes.name
+                    : [classes.name, classes.hideName].join(" ")
+                }
+            >{name}</div>
+
+            <div
+                className = {showProjectDetails
+                    ? classes.text
+                    : [classes.text, classes.hideText].join(" ")
+                }
+            >{text}</div>
+
+            {/* TODO: Make button for Github-link and demo-link */}
         </div>
     )
 }

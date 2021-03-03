@@ -21,7 +21,7 @@ const PortfolioPage: React.FC<Props> = () => {
     const projects = [
         {
             name: "The Card Game",
-            text: "",
+            text: "The chat was used to see how our morals change with anonymity.",
             mainLink: "https://rrudling.github.io/thecardgame/",
             demoLink: "https://rrudling.github.io/thecardgame/",
             gitHubLink: "https://github.com/rrudling/thecardgame",
@@ -30,7 +30,7 @@ const PortfolioPage: React.FC<Props> = () => {
         },
         {
             name: "Graphical Chess Game",
-            text: "",
+            text: "This chess application was developed as a project in a Java course.",
             mainLink: "https://github.com/rrudling/java-chess",
             demoLink: undefined,
             gitHubLink: "https://github.com/rrudling/java-chess",
@@ -39,7 +39,7 @@ const PortfolioPage: React.FC<Props> = () => {
         },
         {
             name: "Learn AI",
-            text: "",
+            text: "Interactive website to ease the learning of AI concepts for other students.",
             mainLink: "https://rudling.tech/hmm/forwardAlgorithm",
             demoLink: "https://rudling.tech/hmm/forwardAlgorithm",
             gitHubLink: "https://github.com/rrudling/Learn-AI",
@@ -47,8 +47,8 @@ const PortfolioPage: React.FC<Props> = () => {
             technologies: ["sass", "html", "js", "react", "firebase"]
         },
         {
-            name: "Website for Media Technology Chapter @ KTH",
-            text: "",
+            name: "Website for Chapter @ KTH",
+            text: "Worked mostly on the document page and on the event page.",
             mainLink: "https://www.medieteknik.com/documents",
             demoLink: "https://www.medieteknik.com",
             gitHubLink: "https://github.com/medieteknik-kth/medieteknik.com",
@@ -57,7 +57,7 @@ const PortfolioPage: React.FC<Props> = () => {
         },
         {
             name: "Reinforcement Learning lab",
-            text: "",
+            text: "Use Python to further develop a lab exercise regarding reinforcement learning for master students.",
             mainLink: "https://kth.kattis.com/problems/kth.ai.rl1",
             demoLink: "https://kth.kattis.com/problems/kth.ai.rl1",
             gitHubLink: undefined,
@@ -66,7 +66,7 @@ const PortfolioPage: React.FC<Props> = () => {
         },
         {
             name: "SwiftWriter",
-            text: "",
+            text: "An application made to helper people type faster.",
             mainLink: "https://swiftwriter.web.app/",
             demoLink: "https://swiftwriter.web.app/",
             gitHubLink: "https://github.com/rrudling/swift-writer",
@@ -75,7 +75,7 @@ const PortfolioPage: React.FC<Props> = () => {
         },
         {
             name: "Rudling.tech",
-            text: "",
+            text: "My personal website.",
             mainLink: "https://rudling.tech",
             demoLink: "https://rudling.tech",
             gitHubLink: "https://github.com/rrudling/rudling-tech",

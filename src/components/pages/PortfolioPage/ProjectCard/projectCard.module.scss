@@ -22,7 +22,8 @@ $cardHeight: 300px;
 .ProjectCard,
 .activateBlur,
 .detailsContainer,
-.technologiesContainer{
+.name,
+.text {
   transition: .4s;
 }
 
@@ -45,7 +46,7 @@ $cardHeight: 300px;
   position: absolute;
   width: $cardWidth;
   height: $cardHeight;
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.75);
   opacity: 1;
   z-index: 49;
   top: 0;
@@ -54,7 +55,7 @@ $cardHeight: 300px;
 }
 
 .hideDetails {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 .mainLinkButton {
@@ -78,21 +79,41 @@ $cardHeight: 300px;
 .technologiesContainer {
   position: absolute;
   top: 0;
-  left: auto;
-  right: auto;
-  margin-left: 15px;
+  left: 30px;
   display: flex;
-  transition-timing-function: ease-in-out;
+
 }
 
-.hideBadges {
-  transform: translateY(-60px);
+.hideBadge {
+  animation: move_up .35s forwards;
+}
+
+.showBadge {
+  animation: move_down .35s forwards;
+}
+
+@keyframes move_down {
+  from {
+    top: -60px
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes move_up {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -60px
+  }
 }
 
 .technologyBadge {
   background-color: #fff;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,8 +121,26 @@ $cardHeight: 300px;
   width: 40px;
   z-index: 500;
   cursor: pointer;
-  transition: .2s;
   position: relative;
+  transition: .35s;
+  transition-timing-function: ease-in-out;
+  top: -60px
+}
+
+.showBadge:nth-child(2) {
+  animation-delay: .07s;
+}
+
+.showBadge:nth-child(3) {
+  animation-delay: .14s;
+}
+
+.showBadge:nth-child(4) {
+  animation-delay: .21s;
+}
+
+.showBadge:nth-child(5) {
+  animation-delay: .28s;
 }
 
 .technologyBadge:not(:first-child) {
@@ -110,7 +149,6 @@ $cardHeight: 300px;
 
 .technologyBadge:hover {
   margin-top: -5px;
-  //background-color: #e6e6e6;
 }
 
 .technologyBadge .tooltiptext {
@@ -163,4 +201,36 @@ $cardHeight: 300px;
 .hideOverflow {
   overflow: hidden;
   background-color: transparent;
+}
+
+.name {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  width: 440px;
+  opacity: 1;
+}
+
+.hideName {
+  opacity: 0;
+  transform: translateX(-5%);
+}
+
+.text {
+  position: absolute;
+  top: 107px;
+  left: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  width: 440px;
+  opacity: 1;
+}
+
+.hideText {
+  opacity: 0;
+  transform: translateX(5%);
 }
