@@ -38,19 +38,54 @@ const ProjectCard: React.FC<Props> = ({
 }) => {
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
 
-    const technologiesIcons : ObjectLiteral = {
-        "firebase": firebaseIcon,
-        "css": cssIcon,
-        "html": htmlIcon,
-        "js": javascriptIcon,
-        "ts": typescriptIcon,
-        "sass": sassIcon,
-        "react": reactIcon,
-        "java": javaIcon,
-        "python": pythonIcon
+    const technologiesInfo : ObjectLiteral = {
+        "firebase": {
+            "icon": firebaseIcon,
+            "tooltipText": "Learn more about firebase",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Firebase"
+        },
+        "css": {
+            "icon": cssIcon,
+            "tooltipText": "Learn more about CSS",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+        },
+        "html": {
+            "icon": htmlIcon,
+            "tooltipText": "Learn more about HTML",
+            "tooltipLink": "https://en.wikipedia.org/wiki/HTML"
+        },
+        "js": {
+            "icon": javascriptIcon,
+            "tooltipText": "Learn more about Javascript",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Javascript"
+            },
+        "ts": {
+            "icon": typescriptIcon,
+            "tooltipText": "Learn more about Typescript",
+            "tooltipLink": "https://en.wikipedia.org/wiki/TypeScript"
+        },
+        "sass": {
+            "icon": sassIcon,
+            "tooltipText": "Learn more about Sass",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
+        },
+        "react": {
+            "icon": reactIcon,
+            "tooltipText": "Learn more about React",
+            "tooltipLink": "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
+        },
+        "java": {
+            "icon": javaIcon,
+            "tooltipText": "Learn more about Java",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+        },
+        "python": {
+            "icon": pythonIcon,
+            "tooltipText": "Learn more about Python",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Python_(programming_language)"
+        }
     }
 
-    // @ts-ignore
     return (
         <div
             className={classes.projectCardContainer}
@@ -84,8 +119,13 @@ const ProjectCard: React.FC<Props> = ({
                     technologies.map(technology => (
                         <div
                             className = {classes.technologyBadge}
+                            onClick = {() => {
+                                window.open(technologiesInfo[technology].tooltipLink, '_blank');
+                            }}
                         >
-                            <img src={technologiesIcons[technology]} alt="" />
+                            <img src={technologiesInfo[technology].icon} alt="" />
+                            {/* TODO: Make sure that the left most tooltip doesn't get hidden by parent */}
+                            <span className={classes.tooltiptext}>{technologiesInfo[technology].tooltipText}</span>
                         </div>
                     ))
                 }

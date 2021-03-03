@@ -74,7 +74,6 @@ $cardHeight: 300px;
   left: 0;
   margin-left: 15px;
   display: flex;
-  overflow: hidden;
   transition-timing-function: ease-in-out;
 }
 
@@ -92,12 +91,56 @@ $cardHeight: 300px;
   height: 55px;
   width: 40px;
   z-index: 500;
+  cursor: pointer;
+  transition: .2s;
+  position: relative;
 }
 
 .technologyBadge:not(:first-child) {
   margin-left: 10px;
 }
 
+.technologyBadge:hover {
+  margin-top: -5px;
+  //background-color: #e6e6e6;
+}
+
+.tooltiptext {
+  //visibility: hidden;
+  width: 140px;
+  background-color: #fff;
+  color: #232323;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -60px;
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:  transparent transparent #fff transparent;
+}
+
+.technologyBadge:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 .technologyBadge img {
   width: 30px;
+  height: auto;
 }
+
