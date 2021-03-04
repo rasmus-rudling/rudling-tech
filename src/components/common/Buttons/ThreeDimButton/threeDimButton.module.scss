@@ -1,0 +1,42 @@
+.animate {
+  transition: all 0.1s;
+}
+
+.blueActionButton,
+.grayActionButton {
+  position: relative;
+  padding: 7px 22px;
+  float: left;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.grayActionButton {
+  background-color: #777777;
+  border-bottom: 5px solid #494949;
+  text-shadow: 0px -2px #494949;
+}
+
+.blueActionButton {
+  background-color: #2F7EF5;
+  border-bottom: 5px solid #1F54A2;
+  text-shadow: 0px -2px #1F54A2;
+}
+
+.blueActionButton:hover {
+  background-color: #5091f3;
+}
+
+.grayActionButton:hover {
+  background-color: #999999;
+}
+
+.blueActionButton:active,
+.grayActionButton:active {
+  transform: translate(0px,5px);
+  border-bottom: 1px solid transparent;
+}

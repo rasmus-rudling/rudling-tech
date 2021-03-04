@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './projectCard.module.scss';
+import {useHistory} from "react-router-dom";
 
 import LinkIcon from '../../../common/icons/VisitIcon';
 
@@ -12,6 +13,8 @@ import sassIcon from '../../../../resources/icons/sass.svg';
 import reactIcon from '../../../../resources/icons/react.svg';
 import javaIcon from '../../../../resources/icons/java.svg';
 import pythonIcon from '../../../../resources/icons/python.svg';
+import ThreeDimButton from "../../../common/Buttons/ThreeDimButton/ThreeDimButton";
+
 
 interface Props {
     name: string,
@@ -36,6 +39,7 @@ const ProjectCard: React.FC<Props> = ({
     image,
     technologies
 }) => {
+    const history = useHistory();
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
     const [initialHide, setInitialHide] = useState<boolean>(true);
 
@@ -170,7 +174,41 @@ const ProjectCard: React.FC<Props> = ({
                 }
             >{text}</div>
 
-            {/* TODO: Make button for Github-link and demo-link */}
+            <div
+                className = {showProjectDetails
+                    ? classes.linkButtonsContainer
+                    : [classes.linkButtonsContainer, classes.hideLinkButtons].join(" ")
+                }
+            >
+                {
+                    demoLink !== undefined ?
+                        <ThreeDimButton
+                            text="Demo"
+                            onClickHandler={() => window.open(demoLink, '_blank')}
+                            extraClasses={[classes.demoButton]}
+                        /> : null
+                }
+
+                {
+                    gitHubLink !== undefined ?
+                        <ThreeDimButton
+                            text="GitHub"
+                            onClickHandler={() => window.open(gitHubLink, '_blank')}
+                            extraClasses={[classes.gitHubButton]}
+                        /> : null
+                }
+
+                {
+                    gitHubLink !== undefined ?
+                        <ThreeDimButton
+                            text="Learn more"
+                            onClickHandler={() => history.push("/")}
+                            extraClasses={[classes.gitHubButton]}
+                            color = "gray"
+                        /> : null
+                }
+            </div>
+
         </div>
     )
 }

@@ -73,7 +73,7 @@ $cardHeight: 300px;
 }
 
 .mainLinkButton:hover {
-  background-color: #1F54A2;
+  background-color: #5091f3;;
 }
 
 .technologiesContainer {
@@ -237,3 +237,20 @@ $cardHeight: 300px;
 .hideFirst {
   opacity: 0 !important;
 }
+
+.linkButtonsContainer {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  transition: .4s;
+}
+
+.hideLinkButtons {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.gitHubButton:not(:first-child) {
+  margin-left: 20px;
+}
+
