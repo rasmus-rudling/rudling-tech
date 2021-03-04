@@ -151,6 +151,7 @@ $cardHeight: 300px;
 }
 
 .technologyBadge .tooltiptext {
+  visibility: hidden;
   width: 140px;
   background-color: #fff;
   color: #232323;
@@ -231,4 +232,8 @@ $cardHeight: 300px;
 .hideText {
   opacity: 0;
   transform: translateX(5%);
+}
+
+.hideFirst {
+  opacity: 0 !important;
 }

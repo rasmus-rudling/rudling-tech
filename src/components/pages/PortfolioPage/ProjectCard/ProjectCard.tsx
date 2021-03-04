@@ -37,6 +37,7 @@ const ProjectCard: React.FC<Props> = ({
     technologies
 }) => {
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
+    const [initialHide, setInitialHide] = useState<boolean>(true);
 
     const technologiesInfo : ObjectLiteral = {
         "firebase": {
@@ -86,11 +87,29 @@ const ProjectCard: React.FC<Props> = ({
         }
     }
 
+    let badgeClasses = [classes.technologyBadge];
+
+    if (initialHide) {
+        badgeClasses.push(classes.hideFirst);
+    }
+
+    if (showProjectDetails) {
+        badgeClasses.push(classes.showBadge);
+    } else {
+        badgeClasses.push(classes.hideBadge);
+    }
+
     return (
         <div
             className={classes.projectCardContainer}
-            onMouseEnter = {() => setShowProjectDetails(true)}
-            onMouseLeave = {() => setShowProjectDetails(false)}
+            onMouseEnter = {() => {
+                setShowProjectDetails(true);
+                setInitialHide(false);
+            }}
+            onMouseLeave = {() => {
+                setShowProjectDetails(false);
+                setInitialHide(false);
+            }}
         >
             <div
                 className={showProjectDetails
@@ -113,10 +132,7 @@ const ProjectCard: React.FC<Props> = ({
                 {
                     technologies.map(technology => (
                         <div
-                            className={showProjectDetails
-                                ? [classes.technologyBadge, classes.showBadge].join(" ")
-                                : [classes.technologyBadge, classes.hideBadge].join(" ")
-                            }
+                            className={badgeClasses.join(" ")}
                             onClick = {() => {
                                 window.open(technologiesInfo[technology].tooltipLink, '_blank');
                             }}
