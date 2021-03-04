@@ -9,8 +9,23 @@
 
 .projectsContainer {
   display: flex;
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@media (min-width: 535px) {
+  .projectsContainer {
+    flex-direction: row;
+    width: 500px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .projectsContainer {
+    width: 90%;
+    max-width: 1075px;
+    justify-content: space-between;
+  }
 }

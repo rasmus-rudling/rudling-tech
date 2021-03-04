@@ -198,15 +198,13 @@ const ProjectCard: React.FC<Props> = ({
                         /> : null
                 }
 
-                {
-                    gitHubLink !== undefined ?
-                        <ThreeDimButton
-                            text="Learn more"
-                            onClickHandler={() => history.push("/")}
-                            extraClasses={[classes.gitHubButton]}
-                            color = "gray"
-                        /> : null
-                }
+                <ThreeDimButton
+                    text="Learn more"
+                    onClickHandler={() => history.push("/")}
+                    extraClasses={[classes.learnMoreButton]}
+                    color = "gray"
+                />
+
             </div>
 
         </div>

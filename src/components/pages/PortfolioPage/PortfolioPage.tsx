@@ -18,6 +18,11 @@ interface Props {
 }
 
 const PortfolioPage: React.FC<Props> = () => {
+    // TODO: Update project texts
+    // TODO: Change Java logo to original
+    // TODO: Change how project cards look on mobile
+    // TODO: Add Docker icon and add it to RL project
+
     const projects = [
         {
             name: "The Card Game",
