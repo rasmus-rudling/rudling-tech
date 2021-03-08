@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './portfolioPage.module.scss';
 
 import chatImg1 from '../../../resources/images/projects_images/chat1.png';
@@ -19,9 +19,13 @@ interface Props {
 
 const PortfolioPage: React.FC<Props> = () => {
     // TODO: Update project texts
-    // TODO: Change Java logo to original
     // TODO: Change how project cards look on mobile
-    // TODO: Add Docker icon and add it to RL project
+
+    const [showAllDetails, setShowAllDetails] = useState<boolean>(window.innerWidth < 535);
+
+    window.addEventListener("resize", () => {
+        setShowAllDetails(window.innerWidth < 535);
+    })
 
     const projects = [
         {
@@ -55,7 +59,7 @@ const PortfolioPage: React.FC<Props> = () => {
             name: "Website for Chapter @ KTH",
             text: "Worked mostly on the document page and on the event page.",
             mainLink: "https://www.medieteknik.com/documents",
-            demoLink: "https://www.medieteknik.com",
+            demoLink: "https://www.medieteknik.com/documents",
             gitHubLink: "https://github.com/medieteknik-kth/medieteknik.com",
             image: medieteknikImg1,
             technologies: ["sass", "html", "js", "react"]
@@ -67,7 +71,7 @@ const PortfolioPage: React.FC<Props> = () => {
             demoLink: "https://kth.kattis.com/problems/kth.ai.rl1",
             gitHubLink: undefined,
             image: rlImg,
-            technologies: ["python"]
+            technologies: ["python", "docker"]
         },
         {
             name: "SwiftWriter",
@@ -102,6 +106,7 @@ const PortfolioPage: React.FC<Props> = () => {
                             mainLink = {project.mainLink}
                             image = {project.image}
                             technologies = {project.technologies}
+                            showAllDetails = {showAllDetails}
                         />
                     ))
                 }

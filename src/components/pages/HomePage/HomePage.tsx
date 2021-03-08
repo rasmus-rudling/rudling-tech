@@ -4,12 +4,14 @@ import classes from './homePage.module.scss';
 import ImageAnimation from './ImageAnimation/ImageAnimation';
 
 import SocialLink from '../../common/SocialLink/SocialLink';
+import Spinner from "../../common/Spinner/Spinner";
 
 
 const HomePage : React.FC = () => {
     return (
         <div className={classes.FrontPage}>
             <ImageAnimation />
+            <Spinner scale={0.5} />
             
             <div className={classes.socialContainer}>
                 <div className={classes.startText}>

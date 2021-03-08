@@ -13,6 +13,7 @@ import sassIcon from '../../../../resources/icons/sass.svg';
 import reactIcon from '../../../../resources/icons/react.svg';
 import javaIcon from '../../../../resources/icons/java.svg';
 import pythonIcon from '../../../../resources/icons/python.svg';
+import dockerIcon from '../../../../resources/icons/docker.svg';
 import ThreeDimButton from "../../../common/Buttons/ThreeDimButton/ThreeDimButton";
 
 
@@ -23,7 +24,8 @@ interface Props {
     demoLink?: string,
     gitHubLink?: string,
     image: string,
-    technologies: Array<string>
+    technologies: Array<string>,
+    showAllDetails: boolean
 }
 
 interface ObjectLiteral {
@@ -37,7 +39,8 @@ const ProjectCard: React.FC<Props> = ({
     demoLink,
     gitHubLink,
     image,
-    technologies
+    technologies,
+    showAllDetails
 }) => {
     const history = useHistory();
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
@@ -88,16 +91,21 @@ const ProjectCard: React.FC<Props> = ({
             "icon": pythonIcon,
             "tooltipText": "Learn more about Python",
             "tooltipLink": "https://en.wikipedia.org/wiki/Python_(programming_language)"
+        },
+        "docker": {
+            "icon": dockerIcon,
+            "tooltipText": "Learn more about Docker",
+            "tooltipLink": "https://en.wikipedia.org/wiki/Docker_(software)"
         }
     }
 
     let badgeClasses = [classes.technologyBadge];
 
-    if (initialHide) {
+    if (initialHide && !showAllDetails) {
         badgeClasses.push(classes.hideFirst);
     }
 
-    if (showProjectDetails) {
+    if (showProjectDetails || showAllDetails) {
         badgeClasses.push(classes.showBadge);
     } else {
         badgeClasses.push(classes.hideBadge);
@@ -116,7 +124,7 @@ const ProjectCard: React.FC<Props> = ({
             }}
         >
             <div
-                className={showProjectDetails
+                className={showProjectDetails || showAllDetails
                     ? [classes.ProjectCard, classes.activateBlur].join(" ")
                     : classes.ProjectCard
                 }
@@ -125,7 +133,7 @@ const ProjectCard: React.FC<Props> = ({
                 }}
             >
                 <div
-                    className = {showProjectDetails
+                    className = {showProjectDetails || showAllDetails
                         ? classes.detailsContainer
                         : [classes.detailsContainer, classes.hideDetails].join(" ")
                     }
@@ -161,21 +169,21 @@ const ProjectCard: React.FC<Props> = ({
             </div>
 
             <div
-                className = {showProjectDetails
+                className = {showProjectDetails || showAllDetails
                     ? classes.name
                     : [classes.name, classes.hideName].join(" ")
                 }
             >{name}</div>
 
             <div
-                className = {showProjectDetails
+                className = {showProjectDetails || showAllDetails
                     ? classes.text
                     : [classes.text, classes.hideText].join(" ")
                 }
             >{text}</div>
 
             <div
-                className = {showProjectDetails
+                className = {showProjectDetails || showAllDetails
                     ? classes.linkButtonsContainer
                     : [classes.linkButtonsContainer, classes.hideLinkButtons].join(" ")
                 }
@@ -204,9 +212,7 @@ const ProjectCard: React.FC<Props> = ({
                     extraClasses={[classes.learnMoreButton]}
                     color = "gray"
                 />
-
             </div>
-
         </div>
     )
 }

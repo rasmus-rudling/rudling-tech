@@ -1,0 +1,101 @@
+.SpinnerContainer {
+	width: 197px;
+	height: 197px;
+	display: inline-block;
+	overflow: hidden;
+	background: none;
+}
+
+@keyframes spinnerAnimation {
+	0% {
+		opacity: 1;
+		backface-visibility: hidden;
+		transform: translateZ(0) scale(2.8,2.8);
+	} 100% {
+		  opacity: 0;
+		  backface-visibility: hidden;
+		  transform: translateZ(0) scale(1,1);
+	  }
+}
+.spinner div > div {
+	position: absolute;
+	width: 11.82px;
+	height: 11.82px;
+	border-radius: 50%;
+	background: #2f7ef5;
+	animation: spinnerAnimation 1.2195121951219512s linear infinite;
+}.spinner div:nth-child(1) > div {
+	 left: 151.5px;
+	 top: 92.5px;
+	 animation-delay: -1.0670731707317072s;
+ }
+.spinner > div:nth-child(1) {
+	transform: rotate(0deg);
+	transform-origin: 157.41px 98.41px;
+}.spinner div:nth-child(2) > div {
+	 left: 134.5px;
+	 top: 134.5px;
+	 animation-delay: -0.9146341463414633s;
+ }
+.spinner > div:nth-child(2) {
+	transform: rotate(45deg);
+	transform-origin: 140.41px 140.41px;
+}.spinner div:nth-child(3) > div {
+	 left: 92.5px;
+	 top: 151.5px;
+	 animation-delay: -0.7621951219512194s;
+ }
+.spinner > div:nth-child(3) {
+	transform: rotate(90deg);
+	transform-origin: 98.41px 157.41px;
+}.spinner div:nth-child(4) > div {
+	 left: 50.5px;
+	 top: 134.5px;
+	 animation-delay: -0.6097560975609756s;
+ }
+.spinner > div:nth-child(4) {
+	transform: rotate(135deg);
+	transform-origin: 56.41px 140.41px;
+}.spinner div:nth-child(5) > div {
+	 left: 33.5px;
+	 top: 92.5px;
+	 animation-delay: -0.45731707317073167s;
+ }
+.spinner > div:nth-child(5) {
+	transform: rotate(180deg);
+	transform-origin: 39.41px 98.41px;
+}.spinner div:nth-child(6) > div {
+	 left: 50.5px;
+	 top: 50.5px;
+	 animation-delay: -0.3048780487804878s;
+ }
+.spinner > div:nth-child(6) {
+	transform: rotate(225deg);
+	transform-origin: 56.41px 56.41px;
+}.spinner div:nth-child(7) > div {
+	 left: 92.5px;
+	 top: 33.5px;
+	 animation-delay: -0.1524390243902439s;
+ }
+.spinner > div:nth-child(7) {
+	transform: rotate(270deg);
+	transform-origin: 98.41px 39.41px;
+}.spinner div:nth-child(8) > div {
+	 left: 134.5px;
+	 top: 50.5px;
+	 animation-delay: 0s;
+ }
+.spinner > div:nth-child(8) {
+	transform: rotate(315deg);
+	transform-origin: 140.41px 56.41px;
+}
+
+.spinner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform: translateZ(0) scale(1);
+	backface-visibility: hidden;
+	transform-origin: 0 0; /* see note above */
+}
+.spinner div { box-sizing: content-box; }
