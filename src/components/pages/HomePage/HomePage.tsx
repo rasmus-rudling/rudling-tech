@@ -8,6 +8,9 @@ import Spinner from "../../common/Spinner/Spinner";
 
 
 const HomePage : React.FC = () => {
+    // TODO: Make spinner appear when Rasmus-image is loading
+    // TODO: Hide waves when overflow on mobile
+
     return (
         <div className={classes.FrontPage}>
             <ImageAnimation />
