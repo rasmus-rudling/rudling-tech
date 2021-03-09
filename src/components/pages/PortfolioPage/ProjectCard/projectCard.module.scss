@@ -1,8 +1,6 @@
 $cardWidth: 500px;
 $cardHeight: 325px;
 
-// TODO: Make project cards responsive
-
 .projectCardContainer {
   overflow: hidden;
   margin-top: 50px;
@@ -223,6 +221,7 @@ $cardHeight: 325px;
 	position: absolute;
 	top: 70px;
 	left: 30px;
+	width: 80%;
 }
 
 .name {

@@ -18,3 +18,9 @@ code {
 .linkStyle:hover {
     color: #0A1C36;
 }
+
+@media screen {
+    body {
+        overflow-x: hidden;
+    }
+}

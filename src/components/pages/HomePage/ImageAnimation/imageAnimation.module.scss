@@ -5,7 +5,7 @@ $containerSize: 200px;
     height: $containerSize;
     width: $containerSize;
     background-color: #232323;
-    overflow: hidden;
+	overflow: hidden !important;
     display: flex;
     justify-content: center;
     position: relative;

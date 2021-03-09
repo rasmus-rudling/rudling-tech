@@ -42,6 +42,8 @@ const ProjectCard: React.FC<Props> = ({
     technologies,
     showAllDetails
 }) => {
+
+    // TODO: Show project details if user is on touch screen, currently it's only small screens that work
     const history = useHistory();
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
     const [initialHide, setInitialHide] = useState<boolean>(true);
