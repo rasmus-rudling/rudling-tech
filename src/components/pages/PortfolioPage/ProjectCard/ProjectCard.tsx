@@ -168,19 +168,22 @@ const ProjectCard: React.FC<Props> = ({
                 />
             </div>
 
-            <div
-                className = {showProjectDetails || showAllDetails
-                    ? classes.name
-                    : [classes.name, classes.hideName].join(" ")
-                }
-            >{name}</div>
+            <div className={classes.textsContainer}>
+                <div
+                    className = {showProjectDetails || showAllDetails
+                        ? classes.name
+                        : [classes.name, classes.hideName].join(" ")
+                    }
+                >{name}</div>
 
-            <div
-                className = {showProjectDetails || showAllDetails
-                    ? classes.text
-                    : [classes.text, classes.hideText].join(" ")
-                }
-            >{text}</div>
+                <div
+                    className = {showProjectDetails || showAllDetails
+                        ? classes.text
+                        : [classes.text, classes.hideText].join(" ")
+                    }
+                >{text}</div>
+            </div>
+
 
             <div
                 className = {showProjectDetails || showAllDetails

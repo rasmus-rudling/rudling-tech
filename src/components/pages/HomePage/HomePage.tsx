@@ -14,8 +14,7 @@ const HomePage : React.FC = () => {
     return (
         <div className={classes.FrontPage}>
             <ImageAnimation />
-            <Spinner scale={0.5} />
-            
+
             <div className={classes.socialContainer}>
                 <div className={classes.startText}>
                     <span>Hi and welcome!</span>

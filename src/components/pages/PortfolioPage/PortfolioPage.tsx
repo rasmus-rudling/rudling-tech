@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import classes from './portfolioPage.module.scss';
 
-import chatImg1 from '../../../resources/images/projects_images/chat1.png';
-import chatImg2 from '../../../resources/images/projects_images/chat2.png';
-import chessImg from '../../../resources/images/projects_images/chess.jpg';
-import learnAiImg from '../../../resources/images/projects_images/learn_ai1.png';
-import medieteknikImg1 from '../../../resources/images/projects_images/medieteknik1.png';
-import medieteknikImg2 from '../../../resources/images/projects_images/medieteknik2.png';
-import medieteknikImg3 from '../../../resources/images/projects_images/medieteknik3.png';
-import rlImg from '../../../resources/images/projects_images/rl1.png';
-import swiftWriterImg from '../../../resources/images/projects_images/swiftWriter.png';
-import rudlingTechImg from '../../../resources/images/projects_images/rudling_tech1.png';
+import chatImg1 from '../../../resources/images/projects_images/low/chat1.jpg';
+import chatImg2 from '../../../resources/images/projects_images/low/chat2.jpg';
+import chessImg from '../../../resources/images/projects_images/low/chess.jpg';
+import learnAiImg from '../../../resources/images/projects_images/low/learn_ai1.jpg';
+import medieteknikImg1 from '../../../resources/images/projects_images/low/medieteknik1.jpg';
+import medieteknikImg2 from '../../../resources/images/projects_images/low/medieteknik2.jpg';
+import medieteknikImg3 from '../../../resources/images/projects_images/low/medieteknik3.jpg';
+import rlImg from '../../../resources/images/projects_images/low/rl1.jpg';
+import swiftWriterImg from '../../../resources/images/projects_images/low/swiftWriter.jpg';
+import rudlingTechImg from '../../../resources/images/projects_images/low/rudling_tech1.jpg';
 import ProjectCard from "./ProjectCard/ProjectCard";
 
 interface Props {

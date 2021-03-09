@@ -10,15 +10,23 @@ $containerSize: 200px;
     justify-content: center;
     position: relative;
     border: #404040 solid 4px;
-    background-image: url("../../../../resources/images/code_bg.png");
+    background-image: url("../../../../resources/images/codeBgLow1.jpg");
     background-size: 300px;
     background-position: -20px;
+	transition: .5s;
+	opacity: 1;
+}
+
+.hideCodeBg {
+	opacity: 0;
 }
 
 .rasmusImg {
     height: 115%;
     margin-top: 14%;
     z-index: 450;
+	opacity: 1;
+	transition: .5s;
     // animation: rasmusWave ease-in-out 14s infinite;
 }
 
@@ -63,6 +71,15 @@ $containerSize: 200px;
     opacity: 0.5;
     animation-delay: -10s;
     top: 15%;
+}
+
+.wavesContainer {
+	transition: .5s;
+	opacity: 1;
+}
+
+.hideWaves {
+	opacity: 0;
 }
 
 .wave1,
