@@ -5,20 +5,17 @@ import { useIsTouchScreen } from "../../../../contexts/IsTouchScreenContext";
 import classes from './projectCard.module.scss';
 
 import LinkIcon from '../../../common/icons/VisitIcon';
-
-import firebaseIcon from '../../../../resources/icons/firebase.svg';
-import cssIcon from '../../../../resources/icons/css3.svg';
-import htmlIcon from '../../../../resources/icons/html5.svg';
-import javascriptIcon from '../../../../resources/icons/javascript.svg';
-import typescriptIcon from '../../../../resources/icons/typescript.svg';
-import sassIcon from '../../../../resources/icons/sass.svg';
-import reactIcon from '../../../../resources/icons/react.svg';
-import javaIcon from '../../../../resources/icons/java.svg';
-import pythonIcon from '../../../../resources/icons/python.svg';
-import dockerIcon from '../../../../resources/icons/docker.svg';
 import ThreeDimButton from "../../../common/Buttons/ThreeDimButton/ThreeDimButton";
-import codeBgImg from "../../../../resources/images/codeBgLow1.jpg";
 
+interface Technology {
+    "icon": string,
+    "tooltipText": string,
+    "tooltipLink": string
+}
+
+interface TechnologiesInfo {
+    [key: string]: Technology
+}
 
 interface Props {
     name: string,
@@ -28,11 +25,8 @@ interface Props {
     gitHubLink?: string,
     image: string,
     technologies: Array<string>,
-    showAllDetails: boolean
-}
-
-interface ObjectLiteral {
-    [key: string]: any;
+    showAllDetails: boolean,
+    technologiesInfo: TechnologiesInfo
 }
 
 const ProjectCard: React.FC<Props> = ({
@@ -43,7 +37,8 @@ const ProjectCard: React.FC<Props> = ({
     gitHubLink,
     image,
     technologies,
-    showAllDetails
+    showAllDetails,
+    technologiesInfo
 }) => {
 
     const history = useHistory();
@@ -53,58 +48,7 @@ const ProjectCard: React.FC<Props> = ({
 
     const deviceIsTouchScreen = useIsTouchScreen();
 
-    const technologiesInfo : ObjectLiteral = {
-        "firebase": {
-            "icon": firebaseIcon,
-            "tooltipText": "Learn more about Firebase",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Firebase"
-        },
-        "css": {
-            "icon": cssIcon,
-            "tooltipText": "Learn more about CSS",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
-        },
-        "html": {
-            "icon": htmlIcon,
-            "tooltipText": "Learn more about HTML",
-            "tooltipLink": "https://en.wikipedia.org/wiki/HTML"
-        },
-        "js": {
-            "icon": javascriptIcon,
-            "tooltipText": "Learn more about Javascript",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Javascript"
-            },
-        "ts": {
-            "icon": typescriptIcon,
-            "tooltipText": "Learn more about Typescript",
-            "tooltipLink": "https://en.wikipedia.org/wiki/TypeScript"
-        },
-        "sass": {
-            "icon": sassIcon,
-            "tooltipText": "Learn more about Sass",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)"
-        },
-        "react": {
-            "icon": reactIcon,
-            "tooltipText": "Learn more about React",
-            "tooltipLink": "https://en.wikipedia.org/wiki/React_(JavaScript_library)"
-        },
-        "java": {
-            "icon": javaIcon,
-            "tooltipText": "Learn more about Java",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Java_(programming_language)"
-        },
-        "python": {
-            "icon": pythonIcon,
-            "tooltipText": "Learn more about Python",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Python_(programming_language)"
-        },
-        "docker": {
-            "icon": dockerIcon,
-            "tooltipText": "Learn more about Docker",
-            "tooltipLink": "https://en.wikipedia.org/wiki/Docker_(software)"
-        }
-    }
+
 
     let badgeClasses = [classes.technologyBadge],
         projectCardClasses;
@@ -142,7 +86,7 @@ const ProjectCard: React.FC<Props> = ({
             }}
         >
             <img alt="" src={image} style={{"display":"none"}} onLoad={() => {setShowBg(true)}} />
-            {/*<img alt="" src={image} style={{"display":"none"}} onLoad={() => {}} />*/}
+
             <div
                 className={projectCardClasses.join(" ")}
                 style = {{

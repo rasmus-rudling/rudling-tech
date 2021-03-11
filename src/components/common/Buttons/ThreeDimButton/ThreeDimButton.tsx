@@ -4,14 +4,14 @@ import classes from './threeDimButton.module.scss';
 interface Props {
     text: string,
     onClickHandler: () => void,
-    extraClasses: Array<string>,
+    extraClasses?: Array<string>,
     color?: string
 }
 
 const ThreeDimButton: React.FC<Props> = ({
     text,
     onClickHandler,
-    extraClasses,
+    extraClasses=[],
     color="blue"
 }) => {
     let colorClass;
