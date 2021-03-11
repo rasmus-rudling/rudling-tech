@@ -19,6 +19,10 @@ code {
     color: #0A1C36;
 }
 
+div, p {
+    line-height: 1.5;
+}
+
 @media screen {
     body {
         overflow-x: hidden;

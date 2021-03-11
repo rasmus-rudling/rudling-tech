@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useHistory } from "react-router-dom";
+
 import classes from './portfolioPage.module.scss';
 
 import chatImg1 from '../../../resources/images/projects_images/low/chat1.jpg';
@@ -121,8 +122,13 @@ const projects : Projects = {
     "The Card Game": {
         name: "The Card Game",
         text: "The chat was used to see how our morals change with anonymity.",
-        textLong: "",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong: `In our bachelor's thesis, we examined how people's morals change with anonymity.
+        We created this chat application to collect data about user behavior. The application allowed us to
+        test how users behaved when they were exposed to different levels of anonymity.`,
+        bullets: [
+            `This was the first project where I got to work with Firebase. We used Firebase's firestore database 
+            in order to display the chat messages to the users in real-time.`,
+        ],
         mainLink: "https://rrudling.github.io/thecardgame/",
         demoLink: "https://rrudling.github.io/thecardgame/",
         gitHubLink: "https://github.com/rrudling/thecardgame",
@@ -133,8 +139,11 @@ const projects : Projects = {
     "Chess App": {
         name: "Chess App",
         text: "This chess application was developed as a project in a Java course.",
-        textLong: "",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong: `In the course <i>DD1385 Software Engineering</i> I got introduced to object oriented programming
+        in Java. As a final project in the course, me together with another student created a graphical chess application.`,
+        bullets: [
+
+        ],
         mainLink: "https://github.com/rrudling/java-chess",
         demoLink: undefined,
         gitHubLink: "https://github.com/rrudling/java-chess",
@@ -145,8 +154,15 @@ const projects : Projects = {
     "Learn AI": {
         name: "Learn AI",
         text: "Interactive website to ease the learning of AI concepts for other students.",
-        textLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis ac lacus sodales sagittis. In semper nulla dapibus, venenatis eros sed, pellentesque augue. Nam sagittis nisi id nisl blandit, egestas sagittis leo pellentesque. Aenean ac lorem quis neque sagittis faucibus sed eget risus. Aenean nec turpis massa. Sed in arcu enim. Aenean sollicitudin rhoncus sem, ultrices eleifend mi molestie ut. ",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong: `Created a website to ease the learning of AI concepts for other students.
+        After taking the course <i>DD2380 Artificial Intelligence</i> at KTH I felt that I had understood
+        a lot of the basic concepts of AI. Therefore, I decided to create this website. Partly for my own learning,
+        but mainly to help other students understand the concepts better.`,
+        bullets: [
+            `Created <i>a lot</i> of components in this project. This made me really comfortable working with
+            many of the different aspects of react.`,
+            `This was the first project that I hosted with a paid domain name.`
+        ],
         mainLink: "https://rudling.tech/hmm/forwardAlgorithm",
         demoLink: "https://rudling.tech/hmm/forwardAlgorithm",
         gitHubLink: "https://github.com/rrudling/Learn-AI",
@@ -157,8 +173,16 @@ const projects : Projects = {
     "Chapter Website": {
         name: "Chapter Website",
         text: "Worked mostly on the document page and on the event page.",
-        textLong: "",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong: `Worked with a team of nine developers and designers to build a new 
+        website for the Media Technology Chapter at KTH. Worked mostly on the document page, allowing our 
+        chapter members to find documents faster. Also worked on the event 
+        page, allowing chapter members to find all the available events in one place. Previously, 
+        the events were spread out on Facebook.`,
+        bullets: [
+            `This was the first project were I got to use both React and Sass.`,
+            `Learned a lot about how it is to work in a technical team.`,
+            "When we were finished with the first version of the website it became an open source project."
+        ],
         mainLink: "https://www.medieteknik.com/documents",
         demoLink: "https://www.medieteknik.com/documents",
         gitHubLink: "https://github.com/medieteknik-kth/medieteknik.com",
@@ -169,8 +193,16 @@ const projects : Projects = {
     "RL lab": {
         name: "RL lab",
         text: "Use Python to further develop a lab exercise regarding reinforcement learning for master students.",
-        textLong: "",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong: `After taking the course <i>DD2380 Artificial Intelligence</i> at KTH I started working as a 
+        teaching assistant in the course. Before the next course round started, I further developed one of the three
+        lab assignments which was about reinforcement learning.`,
+        bullets: [
+            `When developing the lab, I learned how one could use shell scripts to create a more efficient work flow. When
+            testing the code I used docker, that's when the shell scripts really made our lives easier, since we didn't need
+            to manually copy files all the time.`,
+            `This was the first project that I worked on that I didn't was part of from the start. I learned a lot about
+            how to understand big codebases and how to gradually add new features.`
+        ],
         mainLink: "https://kth.kattis.com/problems/kth.ai.rl1",
         demoLink: "https://kth.kattis.com/problems/kth.ai.rl1",
         gitHubLink: undefined,
@@ -181,8 +213,13 @@ const projects : Projects = {
     "SwiftWriter": {
         name: "SwiftWriter",
         text: "An application made to helper people type faster.",
-        textLong: "",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong: `SwiftWriter is an application that will help people write faster in a fun and frustration free manner.
+        I started to work on this project because I wanted to create something that was
+        useful for others. Currently I don't have the time to work on this project, but I'm excited to
+        continue working on this application when I have more time.`,
+        bullets: [
+            `In this project, I created my first react context. I use it to store the user's choice of language.`
+        ],
         mainLink: "https://swiftwriter.web.app/",
         demoLink: "https://swiftwriter.web.app/",
         gitHubLink: "https://github.com/rrudling/swift-writer",
@@ -193,8 +230,14 @@ const projects : Projects = {
     "Rudling Tech": {
         name: "Rudling Tech",
         text: "My personal website.",
-        textLong: "",
-        bullets: ["Fact #1", "Fact #2", "Fact #3"],
+        textLong:
+            `I've created this website mainly to have a place where I can showcase my previous work. But also to be able to write 
+            blog posts about programming and other technologies I find interesting.`,
+        bullets: [
+            `In this project I've focused a lot on responsive design, creating a seamless experience both for
+            desktop and mobile users.`,
+            `This is the first project I've worked on where I use TypeScript.`
+        ],
         mainLink: "https://rudling.tech",
         demoLink: "https://rudling.tech",
         gitHubLink: "https://github.com/rrudling/rudling-tech",
@@ -335,10 +378,16 @@ const PortfolioPage: React.FC = () => {
                 </div>
 
                 <div className={classes.projectInfoContainer}>
-                    <p>{selectedProject.textLong}</p>
+                    <div
+                        style={{
+
+                        }}
+                        className={classes.longText}
+                        dangerouslySetInnerHTML={{__html: selectedProject.textLong}}
+                    />
                     <ul>
                         {selectedProject.bullets.map(bullet => (
-                            <li>{bullet}</li>
+                            <li dangerouslySetInnerHTML={{__html: bullet}} />
                         ))}
                     </ul>
 
@@ -356,9 +405,12 @@ const PortfolioPage: React.FC = () => {
                         ))}
                     </div>
 
-                    <div className={classes.projectImageContainer}>
-                        <img src={selectedProject.image}/>
-                    </div>
+                    <div
+                        className={classes.projectImageContainer}
+                        style = {{
+                            "backgroundImage": `url(${selectedProject.image})`
+                        }}
+                    />
 
                     <div className={classes.blueButtonsContainer}>
                         {
@@ -380,15 +432,13 @@ const PortfolioPage: React.FC = () => {
                         }
                     </div>
 
-                    <div className={classes.learnMoreButtonContainer}>
-                        <ThreeDimButton
-                            text="Learn more"
-                            onClickHandler={() => history.push("/")}
-                            color = "gray"
-                        />
-                    </div>
-
-
+                    {/*<div className={classes.learnMoreButtonContainer}>*/}
+                    {/*    <ThreeDimButton*/}
+                    {/*        text="Learn more"*/}
+                    {/*        onClickHandler={() => history.push("/")}*/}
+                    {/*        color = "gray"*/}
+                    {/*    />*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </div>

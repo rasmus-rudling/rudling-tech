@@ -20,18 +20,18 @@ const App = () => {
             pageAddress: "",
             text: "Home"
         },
-        {
-            pageAddress: "blog",
-            text: "Blog"
-        },
+        // {
+        //     pageAddress: "blog",
+        //     text: "Blog"
+        // },
         {
             pageAddress: "portfolio",
             text: "Portfolio"
         },
-        {
-            pageAddress: "tutorials",
-            text: "Tutorials"
-        }
+        // {
+        //     pageAddress: "tutorials",
+        //     text: "Tutorials"
+        // }
     ]
 
     return (
