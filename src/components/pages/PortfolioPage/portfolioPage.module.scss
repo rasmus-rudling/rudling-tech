@@ -21,6 +21,24 @@
 	width: 100%;
 }
 
+.mobileProjectsMenu,
+.hideMobileProjectsMenu {
+	margin-top: 20px;
+	user-select: none;
+	width: 84vw;
+	overflow-x: scroll;
+}
+
+.mobileProjectsMenu mark {
+	opacity: 1;
+	transition: .4s;
+}
+
+.hideMobileProjectsMenu mark {
+	opacity: 0;
+
+}
+
 @media (max-width: 424px) {
 	.projectTypes div {
 		font-size: 14px !important;
@@ -57,6 +75,10 @@
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 		flex-direction: column;
+	}
+
+	.mobileProjectsContainer {
+		display: none;
 	}
 }
 

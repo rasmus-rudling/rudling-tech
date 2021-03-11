@@ -1,0 +1,58 @@
+.MultipleChoiceButton {
+	display: flex;
+	justify-content: center;
+	width: fit-content;
+}
+
+.MultipleChoiceButton mark {
+	background-color: transparent;
+}
+
+.MultipleChoiceButton div {
+	background-color: #fff;
+	height: 50px;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	cursor: pointer;
+	font-weight: 300;
+	font-size: 20px;
+	transition: .4s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.MultipleChoiceButton div:hover {
+	background-color: #d8d8d8;
+}
+
+.selectedOption {
+	//background-color: rgb(47, 126, 245, 0.1) !important;
+	background-color: #dce7f9 !important;
+	border-bottom: 4px solid #2F7EF5 !important;
+}
+
+// ===================
+// === TWO OPTIONS ===
+// ===================
+.twoOptions div {
+	width: 50%;
+}
+
+// =====================
+// === THREE OPTIONS ===
+// =====================
+.threeOptions div {
+	width: 33%;
+}
+
+.threeOptions div:nth-child(2) {
+	width: 34% !important;
+}
+
+// =====================
+// === FOUR+ OPTIONS ===
+// =====================
+.fourPlusOptions div {
+	width: 125px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './multipleChoiceButton.module.scss';
+import classes from './multipleChoiceButtonPrimary.module.scss';
 
 interface optionsDict {
     [key: string]: any;
@@ -11,7 +11,11 @@ interface Props {
     extraClass?: string
 }
 
-const MultipleChoiceButton: React.FC<Props> = ({options, changeOption, extraClass}) => {
+const MultipleChoiceButtonPrimary: React.FC<Props> = ({
+    options,
+    changeOption,
+    extraClass
+}) => {
     const numberOfOptions = options.length;
     let numberOfOptionsClass;
 
@@ -41,4 +45,4 @@ const MultipleChoiceButton: React.FC<Props> = ({options, changeOption, extraClas
     )
 }
 
-export default MultipleChoiceButton;
+export default MultipleChoiceButtonPrimary;
