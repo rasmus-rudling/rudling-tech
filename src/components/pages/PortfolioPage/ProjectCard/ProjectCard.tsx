@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
+import { useIsTouchScreen } from "../../../../contexts/IsTouchScreenContext";
+
 import classes from './projectCard.module.scss';
-import {useHistory} from "react-router-dom";
 
 import LinkIcon from '../../../common/icons/VisitIcon';
 
@@ -47,6 +49,8 @@ const ProjectCard: React.FC<Props> = ({
     const history = useHistory();
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
     const [initialHide, setInitialHide] = useState<boolean>(true);
+
+    const deviceIsTouchScreen = useIsTouchScreen();
 
     const technologiesInfo : ObjectLiteral = {
         "firebase": {
