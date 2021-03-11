@@ -1,25 +1,73 @@
 .PortfolioPage {
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  padding-top: 120px;
-  padding-bottom: 50px;
-  display: flex;
-  justify-content: center;
+	min-height: 100vh;
+	background-color: #f0f0f0;
+	display: flex;
+	align-items: center;
+	padding: 120px 8% 50px 8%;
+	flex-direction: column;
+}
+
+.PortfolioPage p {
+	font-weight: 300;
+	text-align: center;
 }
 
 .projectsContainer {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: column;
+  display: none;
+}
+
+.mobileProjectsContainer {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media (max-width: 424px) {
+	.projectTypes div {
+		font-size: 14px !important;
+		height: 40px !important;
+	}
+}
+
+@media (min-width: 425px) and (max-width: 474px) {
+	.projectTypes div {
+		font-size: 17px !important;
+		height: 45px !important;
+	}
+}
+
+@media (min-width: 475px) {
+	.projectTypes div {
+		font-size: 20px !important;
+		height: 50px !important;
+	}
 }
 
 @media (min-width: 535px) {
-  .projectsContainer {
-    flex-direction: row;
-    width: 500px;
-  }
+	.PortfolioPage {
+		padding: 120px 0 50px 0;
+		justify-content: center;
+	}
+
+	.PortfolioPage p {
+		width: 500px;
+	}
+
+	.projectsContainer {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 1165px) {
+	.projectsContainer {
+		flex-direction: row;
+	}
+
+	.PortfolioPage p {
+		width: 80%;
+	}
 }
 
 @media (min-width: 1250px) {

@@ -1,9 +1,13 @@
 $cardWidth: 500px;
 $cardHeight: 325px;
 
+.projectCardContainer:first-child {
+	margin-top: 25px;
+}
+
 .projectCardContainer {
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: 35px;
   position: relative;
   width: 100%;
 }
@@ -24,6 +28,11 @@ $cardHeight: 325px;
 	background-size: cover;
 	filter: blur(0.1px);
 	border-radius: 5px;
+	opacity: 1;
+}
+
+.hideBg {
+	opacity: 0;
 }
 
 .mainLinkButton {
@@ -75,10 +84,9 @@ $cardHeight: 325px;
     }
 }
 
-@media (min-width: 1250px) {
-	.projectCardContainer:nth-child(1),
-	.projectCardContainer:nth-child(2){
-        margin-top: 0;
+@media (min-width: 1165px) {
+	.projectCardContainer:nth-child(2) {
+		margin-top: 25px;
 	}
 }
 

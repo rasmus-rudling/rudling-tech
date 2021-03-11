@@ -17,6 +17,7 @@ import javaIcon from '../../../../resources/icons/java.svg';
 import pythonIcon from '../../../../resources/icons/python.svg';
 import dockerIcon from '../../../../resources/icons/docker.svg';
 import ThreeDimButton from "../../../common/Buttons/ThreeDimButton/ThreeDimButton";
+import codeBgImg from "../../../../resources/images/codeBgLow1.jpg";
 
 
 interface Props {
@@ -45,10 +46,10 @@ const ProjectCard: React.FC<Props> = ({
     showAllDetails
 }) => {
 
-    // TODO: Show project details if user is on touch screen, currently it's only small screens that work
     const history = useHistory();
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
     const [initialHide, setInitialHide] = useState<boolean>(true);
+    const [showBg, setShowBg] = useState<boolean>(false);
 
     const deviceIsTouchScreen = useIsTouchScreen();
 
@@ -105,16 +106,27 @@ const ProjectCard: React.FC<Props> = ({
         }
     }
 
-    let badgeClasses = [classes.technologyBadge];
+    let badgeClasses = [classes.technologyBadge],
+        projectCardClasses;
 
     if (initialHide && !showAllDetails) {
         badgeClasses.push(classes.hideFirst);
     }
 
-    if (showProjectDetails || showAllDetails) {
+    if (showProjectDetails || showAllDetails || deviceIsTouchScreen) {
         badgeClasses.push(classes.showBadge);
     } else {
         badgeClasses.push(classes.hideBadge);
+    }
+
+    if (showProjectDetails || showAllDetails || deviceIsTouchScreen) {
+        projectCardClasses = [classes.ProjectCard, classes.activateBlur];
+    } else {
+        projectCardClasses =  [classes.ProjectCard];
+    }
+
+    if (!showBg) {
+        projectCardClasses.push(classes.hideBg);
     }
 
     return (
@@ -129,17 +141,16 @@ const ProjectCard: React.FC<Props> = ({
                 setInitialHide(false);
             }}
         >
+            <img alt="" src={image} style={{"display":"none"}} onLoad={() => {setShowBg(true)}} />
+            {/*<img alt="" src={image} style={{"display":"none"}} onLoad={() => {}} />*/}
             <div
-                className={showProjectDetails || showAllDetails
-                    ? [classes.ProjectCard, classes.activateBlur].join(" ")
-                    : classes.ProjectCard
-                }
+                className={projectCardClasses.join(" ")}
                 style = {{
                     "backgroundImage": `url(${image})`
                 }}
             >
                 <div
-                    className = {showProjectDetails || showAllDetails
+                    className = {showProjectDetails || showAllDetails || deviceIsTouchScreen
                         ? classes.detailsContainer
                         : [classes.detailsContainer, classes.hideDetails].join(" ")
                     }
@@ -176,14 +187,14 @@ const ProjectCard: React.FC<Props> = ({
 
             <div className={classes.textsContainer}>
                 <div
-                    className = {showProjectDetails || showAllDetails
+                    className = {showProjectDetails || showAllDetails || deviceIsTouchScreen
                         ? classes.name
                         : [classes.name, classes.hideName].join(" ")
                     }
                 >{name}</div>
 
                 <div
-                    className = {showProjectDetails || showAllDetails
+                    className = {showProjectDetails || showAllDetails || deviceIsTouchScreen
                         ? classes.text
                         : [classes.text, classes.hideText].join(" ")
                     }
@@ -192,7 +203,7 @@ const ProjectCard: React.FC<Props> = ({
 
 
             <div
-                className = {showProjectDetails || showAllDetails
+                className = {showProjectDetails || showAllDetails || deviceIsTouchScreen
                     ? classes.linkButtonsContainer
                     : [classes.linkButtonsContainer, classes.hideLinkButtons].join(" ")
                 }

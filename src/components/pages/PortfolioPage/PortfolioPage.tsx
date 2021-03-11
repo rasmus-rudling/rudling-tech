@@ -13,6 +13,12 @@ import swiftWriterImg from '../../../resources/images/projects_images/low/swiftW
 import rudlingTechImg from '../../../resources/images/projects_images/low/rudling_tech1.jpg';
 import ProjectCard from "./ProjectCard/ProjectCard";
 
+import MultipleChoiceButton from "../../common/Buttons/MultipleChoiceButton/MultipleChoiceButton";
+
+interface typesDict {
+    [key: string]: any;
+}
+
 interface Props {
 
 }
@@ -21,11 +27,30 @@ const PortfolioPage: React.FC<Props> = () => {
     // TODO: Update project texts
     // TODO: Change how project cards look on mobile
 
+
+
     const [showAllDetails, setShowAllDetails] = useState<boolean>(window.innerWidth < 535);
+    const [projectTypes, setProjectTypes] = useState<Array<typesDict>>([
+        {
+            "type": "Personal",
+            "isSelected": true
+        },
+        {
+            "type": "Professional",
+            "isSelected": false
+        },
+        {
+            "type": "School",
+            "isSelected": false
+        }
+    ]);
+
 
     window.addEventListener("resize", () => {
         setShowAllDetails(window.innerWidth < 535);
     })
+
+
 
     const projects = [
         {
@@ -93,8 +118,23 @@ const PortfolioPage: React.FC<Props> = () => {
         }
     ]
 
+    const changeProjectType = (newProjectType : string) => {
+        let tempProjectTypes = [...projectTypes];
+
+        tempProjectTypes.forEach(option => {
+            option.isSelected = option.type === newProjectType;
+        })
+
+        setProjectTypes(tempProjectTypes);
+    }
+
     return (
         <div className={classes.PortfolioPage}>
+            <p>
+                On this page you will find a selection
+                of projects that I have been working
+                on during my years as a developer.
+            </p>
             <div className={classes.projectsContainer}>
                 {
                     projects.map(project => (
@@ -110,6 +150,14 @@ const PortfolioPage: React.FC<Props> = () => {
                         />
                     ))
                 }
+            </div>
+
+            <div className={classes.mobileProjectsContainer}>
+                <MultipleChoiceButton
+                    options = {projectTypes}
+                    changeOption = {changeProjectType}
+                    extraClass = {classes.projectTypes}
+                />
             </div>
         </div>
     )

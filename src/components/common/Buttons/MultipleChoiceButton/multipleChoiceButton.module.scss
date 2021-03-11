@@ -1,0 +1,97 @@
+.MultipleChoiceButton {
+	display: flex;
+	justify-content: center;
+}
+
+.MultipleChoiceButton div {
+	background-color: #fff;
+	height: 50px;
+	border: 0;
+	cursor: pointer;
+	font-weight: 300;
+	font-size: 20px;
+	transition: .4s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.MultipleChoiceButton div:hover {
+	background-color: #cde7ff;
+}
+
+$radius: 10px;
+.MultipleChoiceButton div:first-child {
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
+}
+
+.MultipleChoiceButton div:last-child {
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+.selectedOption {
+	background-color: #2F7EF5 !important;
+	color: #fff;
+}
+
+// ===================
+// === TWO OPTIONS ===
+// ===================
+.twoOptions div {
+	width: 50%;
+}
+
+.twoOptions div:last-child {
+	border-left: 2px solid #2F7EF5;
+}
+
+// =====================
+// === THREE OPTIONS ===
+// =====================
+.threeOptions div {
+	width: 33%;
+}
+
+.threeOptions div:nth-child(2) {
+	width: 34% !important;
+	border-left: 2px solid #2F7EF5;
+	border-right: 2px solid #2F7EF5;
+}
+
+// ====================
+// === FOUR OPTIONS ===
+// ====================
+.fourOptions div {
+	width: 25%;
+}
+
+.fourOptions div:nth-child(2) {
+	border-left: 2px solid #2F7EF5;
+}
+
+.fourOptions div:nth-child(3) {
+	border-left: 2px solid #2F7EF5;
+	border-right: 2px solid #2F7EF5;
+}
+
+// ====================
+// === FIVE OPTIONS ===
+// ====================
+.fiveOptions div {
+	width: 25%;
+}
+
+.fiveOptions div:nth-child(2) {
+	border-left: 2px solid #2F7EF5;
+}
+
+.fiveOptions div:nth-child(3) {
+	border-left: 2px solid #2F7EF5;
+}
+
+.fiveOptions div:nth-child(4) {
+	border-left: 2px solid #2F7EF5;
+	border-right: 2px solid #2F7EF5;
+}
