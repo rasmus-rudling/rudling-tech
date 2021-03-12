@@ -9,28 +9,75 @@ import javaIcon from "../../../resources/icons/java.svg";
 import pythonIcon from "../../../resources/icons/python.svg";
 import dockerIcon from "../../../resources/icons/docker.svg";
 
-// === THUMBNAILS ===
-import chatImg1Low from "../../../resources/images/projects_images/low/chat1.jpg";
-import chessImgLow from "../../../resources/images/projects_images/low/chess.jpg";
-import learnAiImgLow from "../../../resources/images/projects_images/low/learn_ai1.jpg";
-import medieteknikImg1Low from "../../../resources/images/projects_images/low/medieteknik1.jpg";
-import medieteknikImg2Low from "../../../resources/images/projects_images/low/medieteknik2.jpg";
-import medieteknikImg3Low from "../../../resources/images/projects_images/low/medieteknik3.jpg";
-import rlImgLow from "../../../resources/images/projects_images/low/rl1.jpg";
-import swiftWriterImgLow from "../../../resources/images/projects_images/low/swiftWriter.jpg";
-import rudlingTechImgLow from "../../../resources/images/projects_images/low/rudling_tech1.jpg";
 
-// === ORIGINAL ===
-import chatImg1 from "../../../resources/images/projects_images/original/chat1.png";
-import chessImg from "../../../resources/images/projects_images/original/chess.jpg";
-import learnAiImg from "../../../resources/images/projects_images/original/learn_ai1.png";
-import medieteknikImg1 from "../../../resources/images/projects_images/original/medieteknik1.png";
-import medieteknikImg2 from "../../../resources/images/projects_images/original/medieteknik2.png";
-import medieteknikImg3 from "../../../resources/images/projects_images/original/medieteknik3.png";
-import rlImg from "../../../resources/images/projects_images/original/rl1.png";
-import swiftWriterImg from "../../../resources/images/projects_images/original/swiftWriter.png";
-import rudlingTechImg from "../../../resources/images/projects_images/original/rudling_tech1.png";
+// ==============
+// === IMAGES ===
+// ==============
 
+// Chapter Website
+import chapterWebsite1 from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite1.png';
+import chapterWebsite2 from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite2.png';
+import chapterWebsite3 from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite3.png';
+import chapterWebsite4 from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite4.png';
+import chapterWebsite5 from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite5.png';
+import chapterWebsite1Low from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite1Low.jpg';
+import chapterWebsite2Low from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite2Low.jpg';
+import chapterWebsite3Low from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite3Low.jpg';
+import chapterWebsite4Low from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite4Low.jpg';
+import chapterWebsite5Low from '../../../resources/images/projects_images/chapterWebsite/chapterWebsite5Low.jpg';
+
+// Chess App
+import chessApp1 from '../../../resources/images/projects_images/chessApp/chessApp1.jpg';
+import chessApp1Low from '../../../resources/images/projects_images/chessApp/chessApp1Low.jpg';
+
+// Learn AI
+import learnAi1 from '../../../resources/images/projects_images/learnAi/learnAi1.png';
+import learnAi2 from '../../../resources/images/projects_images/learnAi/learnAi2.png';
+import learnAi3 from '../../../resources/images/projects_images/learnAi/learnAi3.png';
+import learnAi4 from '../../../resources/images/projects_images/learnAi/learnAi4.png';
+import learnAi5 from '../../../resources/images/projects_images/learnAi/learnAi5.png';
+import learnAi6 from '../../../resources/images/projects_images/learnAi/learnAi6.png';
+import learnAi7 from '../../../resources/images/projects_images/learnAi/learnAi7.png';
+import learnAi8 from '../../../resources/images/projects_images/learnAi/learnAi8.png';
+import learnAi9 from '../../../resources/images/projects_images/learnAi/learnAi9.png';
+import learnAi1Low from '../../../resources/images/projects_images/learnAi/learnAi1Low.jpg';
+import learnAi2Low from '../../../resources/images/projects_images/learnAi/learnAi2Low.jpg';
+import learnAi3Low from '../../../resources/images/projects_images/learnAi/learnAi3Low.jpg';
+import learnAi4Low from '../../../resources/images/projects_images/learnAi/learnAi4Low.jpg';
+import learnAi5Low from '../../../resources/images/projects_images/learnAi/learnAi5Low.jpg';
+import learnAi6Low from '../../../resources/images/projects_images/learnAi/learnAi6Low.jpg';
+import learnAi7Low from '../../../resources/images/projects_images/learnAi/learnAi7Low.jpg';
+import learnAi8Low from '../../../resources/images/projects_images/learnAi/learnAi8Low.jpg';
+import learnAi9Low from '../../../resources/images/projects_images/learnAi/learnAi9Low.jpg';
+
+
+// RL Lab
+import rlLab1 from '../../../resources/images/projects_images/rlLab/rlLab1.png';
+import rlLab1Low from '../../../resources/images/projects_images/rlLab/rlLab1Low.jpg';
+
+// Rudling Tech
+import rudlingTech1 from '../../../resources/images/projects_images/rudlingTech/rudlingTech1.png';
+import rudlingTech1Low from '../../../resources/images/projects_images/rudlingTech/rudlingTech1Low.jpg';
+
+// SwiftWriter
+import swiftWriter1 from '../../../resources/images/projects_images/swiftWriter/swiftWriter1.png';
+import swiftWriter2 from '../../../resources/images/projects_images/swiftWriter/swiftWriter2.png';
+import swiftWriter3 from '../../../resources/images/projects_images/swiftWriter/swiftWriter3.png';
+import swiftWriter4 from '../../../resources/images/projects_images/swiftWriter/swiftWriter4.png';
+import swiftWriter5 from '../../../resources/images/projects_images/swiftWriter/swiftWriter5.png';
+import swiftWriter1Low from '../../../resources/images/projects_images/swiftWriter/swiftWriter1Low.jpg';
+import swiftWriter2Low from '../../../resources/images/projects_images/swiftWriter/swiftWriter2Low.jpg';
+import swiftWriter3Low from '../../../resources/images/projects_images/swiftWriter/swiftWriter3Low.jpg';
+import swiftWriter4Low from '../../../resources/images/projects_images/swiftWriter/swiftWriter4Low.jpg';
+import swiftWriter5Low from '../../../resources/images/projects_images/swiftWriter/swiftWriter5Low.jpg';
+
+// The Card Game
+import theCardGame1 from '../../../resources/images/projects_images/theCardGame/theCardGame1.png';
+import theCardGame2 from '../../../resources/images/projects_images/theCardGame/theCardGame2.png';
+import theCardGame3 from '../../../resources/images/projects_images/theCardGame/theCardGame3.png';
+import theCardGame1Low from '../../../resources/images/projects_images/theCardGame/theCardGame1Low.jpg';
+import theCardGame2Low from '../../../resources/images/projects_images/theCardGame/theCardGame2Low.jpg';
+import theCardGame3Low from '../../../resources/images/projects_images/theCardGame/theCardGame3Low.jpg';
 
 export interface ProjectImage {
     original: string,
@@ -134,9 +181,17 @@ export const projects : Projects = {
         gitHubLink: "https://github.com/rrudling/thecardgame",
         images: [
             {
-                "original": chatImg1,
-                "thumbnail": chatImg1Low
-            }
+                "original": theCardGame1,
+                "thumbnail": theCardGame1Low
+            },
+            {
+                "original": theCardGame2,
+                "thumbnail": theCardGame2Low
+            },
+            {
+                "original": theCardGame3,
+                "thumbnail": theCardGame3Low
+            },
         ],
         technologies: ["CSS", "HTML", "JavaScript", "ReactJS", "Firebase"],
         type: "School"
@@ -154,8 +209,8 @@ export const projects : Projects = {
         gitHubLink: "https://github.com/rrudling/java-chess",
         images: [
             {
-                "original": chessImg,
-                "thumbnail": chessImgLow
+                "original": chessApp1,
+                "thumbnail": chessApp1Low
             }
         ],
         technologies: ["Java"],
@@ -178,9 +233,41 @@ export const projects : Projects = {
         gitHubLink: "https://github.com/rrudling/Learn-AI",
         images: [
             {
-                "original": learnAiImg,
-                "thumbnail": learnAiImgLow
-            }
+                "original": learnAi1,
+                "thumbnail": learnAi1Low
+            },
+            {
+                "original": learnAi2,
+                "thumbnail": learnAi2Low
+            },
+            {
+                "original": learnAi3,
+                "thumbnail": learnAi3Low
+            },
+            {
+                "original": learnAi4,
+                "thumbnail": learnAi4Low
+            },
+            {
+                "original": learnAi5,
+                "thumbnail": learnAi5Low
+            },
+            {
+                "original": learnAi6,
+                "thumbnail": learnAi6Low
+            },
+            {
+                "original": learnAi7,
+                "thumbnail": learnAi7Low
+            },
+            {
+                "original": learnAi8,
+                "thumbnail": learnAi8Low
+            },
+            {
+                "original": learnAi9,
+                "thumbnail": learnAi9Low
+            },
         ],
         technologies: ["Sass", "HTML", "JavaScript", "ReactJS", "Firebase"],
         type: "Personal"
@@ -203,16 +290,24 @@ export const projects : Projects = {
         gitHubLink: "https://github.com/medieteknik-kth/medieteknik.com",
         images: [
             {
-                "original": medieteknikImg1,
-                "thumbnail": medieteknikImg1Low
+                "original": chapterWebsite1,
+                "thumbnail": chapterWebsite1Low
             },
             {
-                "original": medieteknikImg2,
-                "thumbnail": medieteknikImg2Low
+                "original": chapterWebsite2,
+                "thumbnail": chapterWebsite2Low
             },
             {
-                "original": medieteknikImg3,
-                "thumbnail": medieteknikImg3Low
+                "original": chapterWebsite3,
+                "thumbnail": chapterWebsite3Low
+            },
+            {
+                "original": chapterWebsite4,
+                "thumbnail": chapterWebsite4Low
+            },
+            {
+                "original": chapterWebsite5,
+                "thumbnail": chapterWebsite5Low
             },
         ],
         technologies: ["Sass", "HTML", "JavaScript", "ReactJS"],
@@ -236,8 +331,8 @@ export const projects : Projects = {
         gitHubLink: undefined,
         images: [
             {
-                "original": rlImg,
-                "thumbnail": rlImgLow
+                "original": rlLab1,
+                "thumbnail": rlLab1Low
             }
         ],
         technologies: ["Python", "Docker"],
@@ -258,9 +353,25 @@ export const projects : Projects = {
         gitHubLink: "https://github.com/rrudling/swift-writer",
         images: [
             {
-                "original": swiftWriterImg,
-                "thumbnail": swiftWriterImgLow
-            }
+                "original": swiftWriter1,
+                "thumbnail": swiftWriter1Low
+            },
+            {
+                "original": swiftWriter2,
+                "thumbnail": swiftWriter2Low
+            },
+            {
+                "original": swiftWriter3,
+                "thumbnail": swiftWriter3Low
+            },
+            {
+                "original": swiftWriter4,
+                "thumbnail": swiftWriter4Low
+            },
+            {
+                "original": swiftWriter5,
+                "thumbnail": swiftWriter5Low
+            },
         ],
         technologies: ["Sass", "HTML", "JavaScript", "ReactJS", "Firebase"],
         type: "Personal"
@@ -281,8 +392,8 @@ export const projects : Projects = {
         gitHubLink: "https://github.com/rrudling/rudling-tech",
         images: [
             {
-                "original": rudlingTechImg,
-                "thumbnail": rudlingTechImgLow
+                "original": rudlingTech1,
+                "thumbnail": rudlingTech1Low
             }
         ],
         technologies: ["Sass", "HTML", "TypeScript", "ReactJS", "Firebase"],
