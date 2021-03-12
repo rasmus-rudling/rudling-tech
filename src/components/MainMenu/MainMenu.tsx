@@ -59,10 +59,10 @@ const MainMenu : React.FC<Props> = ({menuButtons}) => {
                 }
             </div>
 
-            <div
-                className={showModal ? classes.fakeModalBackground : [classes.fakeModalBackground, classes.hideModalBackground].join(" ")}
-                onClick={() => setShowModal(false)}
-            />
+            {/*<div*/}
+            {/*    className={showModal ? classes.fakeModalBackground : [classes.fakeModalBackground, classes.hideModalBackground].join(" ")}*/}
+            {/*    onClick={() => setShowModal(false)}*/}
+            {/*/>*/}
 
             <div
                 className={showModal ? classes.modalBackground : [classes.modalBackground, classes.hideModalBackground].join(" ")}

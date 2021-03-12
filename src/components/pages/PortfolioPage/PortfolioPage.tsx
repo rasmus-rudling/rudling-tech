@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import { useHistory } from "react-router-dom";
 
 import classes from './portfolioPage.module.scss';
@@ -46,7 +47,7 @@ interface Project {
     mainLink: string,
     demoLink: string | undefined,
     gitHubLink: string | undefined,
-    image: string,
+    images: Array<string>,
     technologies: Array<string>,
     type: string
 }
@@ -132,7 +133,7 @@ const projects : Projects = {
         mainLink: "https://rrudling.github.io/thecardgame/",
         demoLink: "https://rrudling.github.io/thecardgame/",
         gitHubLink: "https://github.com/rrudling/thecardgame",
-        image: chatImg1,
+        images: [chatImg1],
         technologies: ["CSS", "HTML", "JavaScript", "ReactJS", "Firebase"],
         type: "School"
     },
@@ -147,7 +148,7 @@ const projects : Projects = {
         mainLink: "https://github.com/rrudling/java-chess",
         demoLink: undefined,
         gitHubLink: "https://github.com/rrudling/java-chess",
-        image: chessImg,
+        images: [chessImg],
         technologies: ["Java"],
         type: "School"
     },
@@ -166,7 +167,7 @@ const projects : Projects = {
         mainLink: "https://rudling.tech/hmm/forwardAlgorithm",
         demoLink: "https://rudling.tech/hmm/forwardAlgorithm",
         gitHubLink: "https://github.com/rrudling/Learn-AI",
-        image: learnAiImg,
+        images: [learnAiImg],
         technologies: ["Sass", "HTML", "JavaScript", "ReactJS", "Firebase"],
         type: "Personal"
     },
@@ -186,7 +187,7 @@ const projects : Projects = {
         mainLink: "https://www.medieteknik.com/documents",
         demoLink: "https://www.medieteknik.com/documents",
         gitHubLink: "https://github.com/medieteknik-kth/medieteknik.com",
-        image: medieteknikImg1,
+        images: [medieteknikImg1],
         technologies: ["Sass", "HTML", "JavaScript", "ReactJS"],
         type: "Professional"
     },
@@ -206,7 +207,7 @@ const projects : Projects = {
         mainLink: "https://kth.kattis.com/problems/kth.ai.rl1",
         demoLink: "https://kth.kattis.com/problems/kth.ai.rl1",
         gitHubLink: undefined,
-        image: rlImg,
+        images: [rlImg],
         technologies: ["Python", "Docker"],
         type: "Professional"
     },
@@ -223,7 +224,7 @@ const projects : Projects = {
         mainLink: "https://swiftwriter.web.app/",
         demoLink: "https://swiftwriter.web.app/",
         gitHubLink: "https://github.com/rrudling/swift-writer",
-        image: swiftWriterImg,
+        images: [swiftWriterImg],
         technologies: ["Sass", "HTML", "JavaScript", "ReactJS", "Firebase"],
         type: "Personal"
     },
@@ -241,7 +242,7 @@ const projects : Projects = {
         mainLink: "https://rudling.tech",
         demoLink: "https://rudling.tech",
         gitHubLink: "https://github.com/rrudling/rudling-tech",
-        image: rudlingTechImg,
+        images: [rudlingTechImg],
         technologies: ["Sass", "HTML", "TypeScript", "ReactJS", "Firebase"],
         type: "Personal"
     }
@@ -348,7 +349,7 @@ const PortfolioPage: React.FC = () => {
                                 demoLink={project.demoLink}
                                 gitHubLink={project.gitHubLink}
                                 mainLink={project.mainLink}
-                                image={project.image}
+                                images={project.images}
                                 technologies={project.technologies}
                                 showAllDetails={showAllDetails}
                                 technologiesInfo = {technologiesInfo}
@@ -408,7 +409,7 @@ const PortfolioPage: React.FC = () => {
                     <div
                         className={classes.projectImageContainer}
                         style = {{
-                            "backgroundImage": `url(${selectedProject.image})`
+                            "backgroundImage": `url(${selectedProject.images[0]})`
                         }}
                     />
 

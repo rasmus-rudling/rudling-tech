@@ -16,16 +16,17 @@
 }
 
 .buttonsContainer {
-    width: 100%;
+	margin: 0 auto;
+    width: 70%;
     height: 100%;
     display: none;
     align-items: center;
     justify-content: space-around;
 }
 
-.buttonsContainer:not(:last-child) {
-    margin-right: 20px;
-}
+//.buttonsContainer:not(:last-child) {
+//    margin-right: 20px;
+//}
 
 .showMenuModal,
 .hideMenuModal {
@@ -52,27 +53,29 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.65);
     position: fixed;
-    z-index: 600;
+    z-index: 800;
     cursor: pointer;
-    transition: .5s;
     opacity: 1;
     backdrop-filter: blur(2px);
+	transition: 0.5s, z-index 0s;
 }
 
 .modalBackground {
-    height: calc(100vh - 305px);
-    top: 305px;
+    //height: calc(100vh - 305px);
+    //top: 305px;
+	height: 100vh;
 }
 
-.fakeModalBackground {
-    height: 305px;
-    top: 0;
-}
+//.fakeModalBackground {
+//    height: 305px;
+//    top: 0;
+//}
 
 .hideModalBackground {
     opacity: 0;
     z-index: -1;
     cursor: default;
+
 }
 
 @media (min-width: 600px) {

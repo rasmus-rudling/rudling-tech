@@ -3,6 +3,7 @@ import classes from './imageAnimation.module.scss';
 
 import rasmusImg from '../../../../resources/images/rasmus.png';
 import rasmusLow1Img from '../../../../resources/images/rasmusLow1.png';
+// import rasmusLow1Img from '../../../../resources/images/rasmusLow1Black.png';
 import sunImg from '../../../../resources/images/sun.svg';
 import cloudImg from '../../../../resources/images/cloud.svg';
 import asdas from '../../../../resources/gifs/spinner.gif';
@@ -24,6 +25,40 @@ const ImageAnimation : React.FC = () => {
             <div
                 className={showCodeBg ? classes.ImageAnimation : [classes.ImageAnimation, classes.hideCodeBg].join(" ")}
             >
+                <div className={classes.overflowHider}>
+                    <svg viewBox="0 0 100 34" width="800px">
+                        <defs>
+                            <mask id="mask" x="0" y="0" width="80" height="30">
+                                <rect x="5" y="5" width="300" height="40" fill="#fff"/>
+                                <circle cx="51" cy="19" r="12"/>
+                            </mask>
+                        </defs>
+                        <rect x="0" y="0" width="200" height="50" mask="url(#mask)" fill="#f0f0f0"/>
+                        {/*<rect x="0" y="0" width="200" height="50" mask="url(#mask)" fill="red"/>*/}
+                    </svg>
+                </div>
+
+                <div className={classes.transparentCircle}/>
+
+                <div className={showWaves ? classes.wavesContainer : [classes.wavesContainer, classes.hideWaves].join(" ")}>
+                    <Wave
+                        color = "#fff"
+                        waveClass = {classes.wave2}
+                    />
+
+                    <Wave
+                        color = "#fff"
+                        waveClass = {classes.wave3}
+                    />
+
+                    <Wave
+                        color = "#fff"
+                        waveClass = {classes.wave1}
+                    />
+                </div>
+
+
+
                 <img
                     src = {rasmusLow1Img}
                     className={showRasmus ? classes.rasmusImg : [classes.rasmusImg, classes.hideWaves].join(" ")}
@@ -37,41 +72,6 @@ const ImageAnimation : React.FC = () => {
                     }}
                     alt={"Img of Rasmus"}
                 />
-
-                {/* <img src={sunImg} className={classes.sunImg} />
-
-            <img
-                src={cloudImg}
-                className={classes.cloudStyle1}
-            />
-
-            <img
-                src={cloudImg}
-                className={classes.cloudStyle2}
-            />
-
-            <img
-                src={cloudImg}
-                className={classes.cloudStyle3}
-            /> */}
-
-                <div className={showWaves ? classes.wavesContainer : [classes.wavesContainer, classes.hideWaves].join(" ")}>
-                    <Wave
-                        color = "#fff"
-                        waveClass = {classes.wave1}
-                    />
-
-                    <Wave
-                        color = "#fff"
-                        waveClass = {classes.wave2}
-                    />
-
-                    <Wave
-                        color = "#fff"
-                        waveClass = {classes.wave3}
-                    />
-                </div>
-
             </div>
         </>
     )

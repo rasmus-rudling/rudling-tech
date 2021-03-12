@@ -13,7 +13,11 @@ const HomePage : React.FC = () => {
 
     return (
         <div className={classes.FrontPage}>
-            <ImageAnimation />
+            <div>
+                <ImageAnimation />
+
+
+            </div>
 
             <div className={classes.socialContainer}>
                 <div className={classes.startText}>

@@ -1,15 +1,11 @@
-$containerSize: 200px;
-
 .ImageAnimation {
-    border-radius: 50%;
-    height: $containerSize;
-    width: $containerSize;
+    border-radius: 300px;
+    height: 200px;
+    width: 200px;
     background-color: #232323;
-	overflow: hidden !important;
-    display: flex;
-    justify-content: center;
+	//overflow: hidden;
     position: relative;
-    border: #404040 solid 4px;
+    border: #232323 solid 4px;
     background-image: url("../../../../resources/images/codeBgLow1.jpg");
     background-size: 300px;
     background-position: -20px;
@@ -21,56 +17,35 @@ $containerSize: 200px;
 	opacity: 0;
 }
 
+.transparentCircle {
+	border-radius: 300px;
+	height: 200px;
+	width: 200px;
+	border: #232323 solid 4px;
+	//border: green solid 4px;
+	position: absolute;
+	z-index: 550;
+	top: -4px;
+	left: -4px;
+}
+
+.overflowHider {
+	position: absolute;
+	top: -57px;
+	left: -312px;
+	z-index: 500;
+	transform: scale(1.038);
+	//transform: scaleX(1.045);
+}
+
 .rasmusImg {
-    height: 115%;
-    margin-top: 14%;
-    z-index: 450;
+    height: 220px;
+    top: 28px;
+	left: 18px;
 	opacity: 1;
 	transition: .5s;
-    // animation: rasmusWave ease-in-out 14s infinite;
-}
-
-.sunImg {
-    position: absolute;
-    height: 20%;
-    animation: sun linear 60s infinite;
-    right: 7%;
-    top: 7%;
-}
-
-.cloudStyle1,
-.cloudStyle2,
-.cloudStyle3 {
-    position: absolute;
-    left: 7%;
-    fill: #fff;
-}
-
-.cloudStyle1 {
-    height: 12%;
-    animation: cloud1 linear 100s infinite;
-    // animation: cloud1 linear 5s infinite;
-    opacity: 0.85;
-    animation-delay: -10s;
-    top: 4%;
-}
-
-.cloudStyle2 {
-    height: 10%;
-    opacity: 0.7;
-    animation: cloud2 linear 70s infinite;
-    // animation: cloud2 linear 7s infinite;
-    animation-delay: -40s;
-    top: 24%;;
-}
-
-.cloudStyle3 {
-    height: 8%;
-    animation: cloud3 linear 55s infinite;
-    // animation: cloud3 linear 5s infinite;
-    opacity: 0.5;
-    animation-delay: -10s;
-    top: 15%;
+	position: absolute;
+	z-index: 0;
 }
 
 .wavesContainer {
@@ -88,14 +63,13 @@ $containerSize: 200px;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 200%;
+    width: 400px;
 }
 
 .wave1 {
     animation: wave linear 15s infinite;
     fill: rgb(47, 126, 245, 1);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
-    z-index: 300;
 }
 
 .wave2 {
@@ -104,7 +78,6 @@ $containerSize: 200px;
     animation-direction: reverse;
     fill: rgb(47, 126, 245, 0.9);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
-    z-index: 290;
 }
 
 .wave3 {
@@ -112,7 +85,6 @@ $containerSize: 200px;
     animation-delay: -1s;
     fill: rgb(47, 126, 245, 0.5);
     filter: drop-shadow(0 0 2px rgba(10, 28, 54, 0.5));
-    z-index: 270;
 }
 
 @keyframes wave {
@@ -175,22 +147,5 @@ $containerSize: 200px;
 
     100% {
         transform: scale(1) rotate(360deg);
-    }
-}
-
-@keyframes rasmusWave {
-    0% {
-        transform: translateX(0);
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateX(2%);
-        transform: translateY(2%);
-    }
-
-    100% {
-        transform: translateX(0);
-        transform: translateY(0);
     }
 }

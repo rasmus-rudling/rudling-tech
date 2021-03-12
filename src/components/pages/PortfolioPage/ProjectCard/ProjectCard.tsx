@@ -23,7 +23,7 @@ interface Props {
     mainLink: string,
     demoLink?: string,
     gitHubLink?: string,
-    image: string,
+    images: Array<string>,
     technologies: Array<string>,
     showAllDetails: boolean,
     technologiesInfo: TechnologiesInfo
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<Props> = ({
     mainLink,
     demoLink,
     gitHubLink,
-    image,
+    images,
     technologies,
     showAllDetails,
     technologiesInfo
@@ -85,12 +85,12 @@ const ProjectCard: React.FC<Props> = ({
                 setInitialHide(false);
             }}
         >
-            <img alt="" src={image} style={{"display":"none"}} onLoad={() => {setShowBg(true)}} />
+            <img alt="" src={images[0]} style={{"display":"none"}} onLoad={() => {setShowBg(true)}} />
 
             <div
                 className={projectCardClasses.join(" ")}
                 style = {{
-                    "backgroundImage": `url(${image})`
+                    "backgroundImage": `url(${images[0]})`
                 }}
             >
                 <div
