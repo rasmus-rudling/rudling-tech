@@ -6,6 +6,7 @@ import ImageAnimation from './ImageAnimation/ImageAnimation';
 import SocialLink from '../../common/SocialLink/SocialLink';
 import Spinner from "../../common/Spinner/Spinner";
 
+import resume from '../../../../public/documents/resume.pdf';
 
 const HomePage : React.FC = () => {
     // TODO: Make spinner appear when Rasmus-image is loading
@@ -86,7 +87,7 @@ const HomePage : React.FC = () => {
                         }}
                         linkAction = "download"
                         onClickHandler = {() => {
-                            window.open('https://drive.google.com/file/d/1quF-4idnwynPrXJ74jfYMokbFQ3AOTjo/view?usp=sharing', '_blank');
+                            window.open(process.env.PUBLIC_URL + '/documents/resume.pdf', '_blank');
                         }}
                     />      
                 </div>

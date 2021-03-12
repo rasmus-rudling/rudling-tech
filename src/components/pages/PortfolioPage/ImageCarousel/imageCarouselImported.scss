@@ -1,0 +1,27 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+.image-gallery-thumbnail {
+	cursor: pointer;
+}
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:hover,
+.image-gallery-thumbnail:focus {
+	border: 3px solid #2F7EF5;
+	border-radius: 2px;
+}
+
+.image-gallery-swipe,
+.image-gallery-slide-wrapper,
+.image-gallery-content .image-gallery-slide .image-gallery-image,
+.image-gallery-slides {
+	border-radius: 3px;
+}
+
+.image-gallery-slide-wrapper {
+	box-shadow: 0 0 18px -4px rgba(0,0,0,0.5);
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+	height: 100%;
+}
