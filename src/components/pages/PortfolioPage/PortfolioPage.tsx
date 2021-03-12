@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import classes from './portfolioPage.module.scss';
 import { projects, technologiesInfo, Project } from "./portfolioUtilities";
 
@@ -16,6 +17,8 @@ interface typesDict {
 
 const PortfolioPage: React.FC = () => {
     // TODO: Update project texts
+
+    const history = useHistory();
 
     const changeProjectType = (newProjectType : string) => {
         if (selectedProjectType !== newProjectType) {
@@ -188,13 +191,22 @@ const PortfolioPage: React.FC = () => {
                         }
                     </div>
 
-                    {/*<div className={classes.learnMoreButtonContainer}>*/}
-                    {/*    <ThreeDimButton*/}
-                    {/*        text="Learn more"*/}
-                    {/*        onClickHandler={() => history.push("/")}*/}
-                    {/*        color = "gray"*/}
-                    {/*    />*/}
-                    {/*</div>*/}
+                    {
+                        selectedProject.name === "The Card Game" ?
+                            <div className={classes.learnMoreButtonContainer}>
+                                <ThreeDimButton
+                                    text="Read the thesis"
+                                    onClickHandler={() => {
+                                        const link = document.createElement('a');
+                                        link.href = process.env.PUBLIC_URL + "/documents/bachelorsThesis.pdf";
+                                        link.target = "_blank";
+                                        link.click();
+                                    }}
+                                    color = "gray"
+                                />
+                            </div> : null
+                    }
+
                 </div>
             </div>
         </div>

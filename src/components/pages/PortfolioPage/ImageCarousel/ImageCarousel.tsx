@@ -22,7 +22,7 @@ const ImageCarousel: React.FC<Props> = ({images, extraClasses}) => {
         <div className={carouselClasses.join(" ")}>
             <ImageGallery
                 items={images}
-                autoPlay = {images.length > 1}
+                autoPlay = {true}
                 showPlayButton = {images.length > 1}
                 showThumbnails = {images.length > 1}
                 slideDuration = {1000}
