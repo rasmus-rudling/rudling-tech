@@ -6,6 +6,9 @@ import classes from './projectCard.module.scss';
 
 import LinkIcon from '../../../common/icons/VisitIcon';
 import ThreeDimButton from "../../../common/Buttons/ThreeDimButton/ThreeDimButton";
+import {useSelectedProjectUpdate} from "../../../../contexts/SelectedProjectContext";
+
+import {Project} from "../portfolioUtilities";
 
 interface Technology {
     "icon": string,
@@ -18,37 +21,23 @@ interface TechnologiesInfo {
 }
 
 interface Props {
-    name: string,
-    text: string,
-    mainLink: string,
-    demoLink?: string,
-    gitHubLink?: string,
-    image: string,
-    technologies: Array<string>,
+    projectInfo: Project,
     showAllDetails: boolean,
     technologiesInfo: TechnologiesInfo
 }
 
 const ProjectCard: React.FC<Props> = ({
-    name,
-    text,
-    mainLink,
-    demoLink,
-    gitHubLink,
-    image,
-    technologies,
+    projectInfo,
     showAllDetails,
     technologiesInfo
 }) => {
-
+    const updateSelectedProject = useSelectedProjectUpdate();
+    const deviceIsTouchScreen = useIsTouchScreen();
     const history = useHistory();
+
     const [showProjectDetails, setShowProjectDetails] = useState<boolean>(false);
     const [initialHide, setInitialHide] = useState<boolean>(true);
     const [showBg, setShowBg] = useState<boolean>(false);
-
-    const deviceIsTouchScreen = useIsTouchScreen();
-
-
 
     let badgeClasses = [classes.technologyBadge],
         projectCardClasses;
@@ -85,12 +74,13 @@ const ProjectCard: React.FC<Props> = ({
                 setInitialHide(false);
             }}
         >
-            <img alt="" src={image} style={{"display":"none"}} onLoad={() => {setShowBg(true)}} />
+
+            <img alt="" src={projectInfo.images[0].original} style={{"display":"none"}} onLoad={() => {setShowBg(true)}} />
 
             <div
                 className={projectCardClasses.join(" ")}
                 style = {{
-                    "backgroundImage": `url(${image})`
+                    "backgroundImage": `url(${projectInfo.images[0].original})`
                 }}
             >
                 <div
@@ -103,7 +93,7 @@ const ProjectCard: React.FC<Props> = ({
 
             <div className={classes.technologiesContainer}>
                 {
-                    technologies.map(technology => (
+                    projectInfo.technologies.map(technology => (
                         <div
                             className={badgeClasses.join(" ")}
                             onClick = {() => {
@@ -120,7 +110,7 @@ const ProjectCard: React.FC<Props> = ({
             <div
                 className={classes.mainLinkButton}
                 onClick = {() => {
-                    window.open(mainLink, '_blank');
+                    window.open(projectInfo.mainLink, '_blank');
                 }}
             >
                 <LinkIcon
@@ -135,14 +125,14 @@ const ProjectCard: React.FC<Props> = ({
                         ? classes.name
                         : [classes.name, classes.hideName].join(" ")
                     }
-                >{name}</div>
+                >{projectInfo.name}</div>
 
                 <div
                     className = {showProjectDetails || showAllDetails || deviceIsTouchScreen
                         ? classes.text
                         : [classes.text, classes.hideText].join(" ")
                     }
-                >{text}</div>
+                >{projectInfo.text}</div>
             </div>
 
 
@@ -153,26 +143,29 @@ const ProjectCard: React.FC<Props> = ({
                 }
             >
                 {
-                    demoLink !== undefined ?
+                    projectInfo.demoLink !== undefined ?
                         <ThreeDimButton
                             text="Demo"
-                            onClickHandler={() => window.open(demoLink, '_blank')}
+                            onClickHandler={() => window.open(projectInfo.demoLink, '_blank')}
                             extraClasses={[classes.demoButton]}
                         /> : null
                 }
 
                 {
-                    gitHubLink !== undefined ?
+                    projectInfo.gitHubLink !== undefined ?
                         <ThreeDimButton
                             text="GitHub"
-                            onClickHandler={() => window.open(gitHubLink, '_blank')}
+                            onClickHandler={() => window.open(projectInfo.gitHubLink, '_blank')}
                             extraClasses={[classes.gitHubButton]}
                         /> : null
                 }
 
                 <ThreeDimButton
                     text="Learn more"
-                    onClickHandler={() => history.push("/")}
+                    onClickHandler={() => {
+                        updateSelectedProject(projectInfo);
+                        history.push(`/portfolio/details/${projectInfo.name.split(' ').join('_')}`)
+                    }}
                     extraClasses={[classes.learnMoreButton]}
                     color = "gray"
                 />

@@ -8,7 +8,7 @@ import ThreeDimButton from "../../common/Buttons/ThreeDimButton/ThreeDimButton";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import MultipleChoiceButtonPrimary from "../../common/Buttons/MultipleChoiceButtonPrimary/MultipleChoiceButtonPrimary";
 import MultipleChoiceButtonSecondary from "../../common/Buttons/MultipleChoiceButtonSecondary/MultipleChoiceButtonSecondary";
-import ImageCarousel from "./ImageCarousel/ImageCarousel";
+import ImageCarousel from "../../common/ImageCarousel/ImageCarousel";
 // ==================
 
 interface typesDict {
@@ -16,10 +16,6 @@ interface typesDict {
 }
 
 const PortfolioPage: React.FC = () => {
-    // TODO: Update project texts
-
-    const history = useHistory();
-
     const changeProjectType = (newProjectType : string) => {
         if (selectedProjectType !== newProjectType) {
             setHideMobileProjectsMenu(true);
@@ -99,24 +95,21 @@ const PortfolioPage: React.FC = () => {
 
     return (
         <div className={classes.PortfolioPage}>
+            <div className={classes.header}><h1 style={{"marginBottom":"10px"}}>Rasmus Rudling Portfolio</h1></div>
             <p>
                 On this page you will find a selection
                 of projects that I have been working
                 on during my years as a developer.
             </p>
+
+            {/* === DESKTOP === */}
             <div className={classes.projectsContainer}>
                 {
                     Object.keys(projects).map(projectKey => {
                         let project = projects[projectKey];
                         return (
                             <ProjectCard
-                                name={project.name}
-                                text={project.text}
-                                demoLink={project.demoLink}
-                                gitHubLink={project.gitHubLink}
-                                mainLink={project.mainLink}
-                                image={project.images[0].original}
-                                technologies={project.technologies}
+                                projectInfo={project}
                                 showAllDetails={showAllDetails}
                                 technologiesInfo = {technologiesInfo}
                             />
@@ -125,6 +118,7 @@ const PortfolioPage: React.FC = () => {
                 }
             </div>
 
+            {/* === MOBILE === */}
             <div className={classes.mobileProjectsContainer}>
                 <MultipleChoiceButtonPrimary
                     options = {projectTypes}
@@ -145,15 +139,7 @@ const PortfolioPage: React.FC = () => {
                 </div>
 
                 <div className={classes.projectInfoContainer}>
-                    <p
-                        className={classes.longText}
-                        dangerouslySetInnerHTML={{__html: selectedProject.textLong}}
-                    />
-                    <ul>
-                        {selectedProject.bullets.map(bullet => (
-                            <li dangerouslySetInnerHTML={{__html: bullet}} />
-                        ))}
-                    </ul>
+                    <ImageCarousel images={selectedProject.images} extraClasses={[classes.imageCarousel]} />
 
                     <div style={{"fontWeight":"bolder"}}>Technologies that I used:</div>
 
@@ -169,7 +155,15 @@ const PortfolioPage: React.FC = () => {
                         ))}
                     </div>
 
-                    <ImageCarousel images={selectedProject.images} extraClasses={[classes.imageCarousel]} />
+                    <p
+                        className={classes.longText}
+                        dangerouslySetInnerHTML={{__html: selectedProject.textLong}}
+                    />
+                    <ul>
+                        {selectedProject.bullets.map(bullet => (
+                            <li dangerouslySetInnerHTML={{__html: bullet}} />
+                        ))}
+                    </ul>
 
                     <div className={classes.blueButtonsContainer}>
                         {
@@ -198,7 +192,7 @@ const PortfolioPage: React.FC = () => {
                                     text="Read the thesis"
                                     onClickHandler={() => {
                                         const link = document.createElement('a');
-                                        link.href = process.env.PUBLIC_URL + "/documents/bachelorsThesis.pdf";
+                                        link.href = process.env.PUBLIC_URL + "/documents/bachelors_thesis.pdf";
                                         link.target = "_blank";
                                         link.click();
                                     }}
@@ -206,7 +200,6 @@ const PortfolioPage: React.FC = () => {
                                 />
                             </div> : null
                     }
-
                 </div>
             </div>
         </div>

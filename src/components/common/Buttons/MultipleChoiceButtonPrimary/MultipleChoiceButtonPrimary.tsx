@@ -34,6 +34,7 @@ const MultipleChoiceButtonPrimary: React.FC<Props> = ({
             {
                 options.map(option => (
                     <div
+                        key={option.type}
                         onClick={() => changeOption(option.type)}
                         className = {option.isSelected ? classes.selectedOption : undefined}
                     >

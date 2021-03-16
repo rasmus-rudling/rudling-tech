@@ -4,15 +4,17 @@
 
 .blueActionButton,
 .grayActionButton {
-  position: relative;
-  padding: 7px 22px;
-  float: left;
-  border-radius: 10px;
-  font-size: 20px;
-  color: #FFF;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
+	position: relative;
+	padding: 7px 22px;
+	float: left;
+	border-radius: 10px;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+	//width: fit-content;
+	text-align: center;
 }
 
 .grayActionButton {

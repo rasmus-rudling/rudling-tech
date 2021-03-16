@@ -29,6 +29,8 @@ import chapterWebsite5Low from '../../../resources/images/projects_images/chapte
 // Chess App
 import chessApp1 from '../../../resources/images/projects_images/chessApp/chessApp1.jpg';
 import chessApp1Low from '../../../resources/images/projects_images/chessApp/chessApp1Low.jpg';
+import chessApp2 from '../../../resources/images/projects_images/chessApp/chessApp2.png';
+import chessApp2Low from '../../../resources/images/projects_images/chessApp/chessApp2Low.jpg';
 
 // Learn AI
 import learnAi1 from '../../../resources/images/projects_images/learnAi/learnAi1.png';
@@ -54,10 +56,16 @@ import learnAi9Low from '../../../resources/images/projects_images/learnAi/learn
 // RL Lab
 import rlLab1 from '../../../resources/images/projects_images/rlLab/rlLab1.png';
 import rlLab1Low from '../../../resources/images/projects_images/rlLab/rlLab1Low.jpg';
+import rlLab2 from '../../../resources/images/projects_images/rlLab/rlLab2.png';
+import rlLab2Low from '../../../resources/images/projects_images/rlLab/rlLab2Low.jpg';
+import rlLab3 from '../../../resources/images/projects_images/rlLab/rlLab3.png';
+import rlLab3Low from '../../../resources/images/projects_images/rlLab/rlLab3Low.jpg';
 
 // Rudling Tech
 import rudlingTech1 from '../../../resources/images/projects_images/rudlingTech/rudlingTech1.png';
 import rudlingTech1Low from '../../../resources/images/projects_images/rudlingTech/rudlingTech1Low.jpg';
+import rudlingTech2 from '../../../resources/images/projects_images/rudlingTech/rudlingTech2.png';
+import rudlingTech2Low from '../../../resources/images/projects_images/rudlingTech/rudlingTech2Low.jpg';
 
 // SwiftWriter
 import swiftWriter1 from '../../../resources/images/projects_images/swiftWriter/swiftWriter1.png';
@@ -168,7 +176,7 @@ export const technologiesInfo : TechnologiesInfo = {
 export const projects : Projects = {
     "The Card Game": {
         name: "The Card Game",
-        text: "The chat was used to see how our morals change with anonymity.",
+        text: "A chat application used to collect data about how morals change with anonymity.",
         textLong: `In our bachelor's thesis, we examined how people's morals change with anonymity.
         We created this chat application to collect data about user behavior. The application allowed us to
         test how users behaved when they were exposed to different levels of anonymity.`,
@@ -199,8 +207,8 @@ export const projects : Projects = {
     "Chess App": {
         name: "Chess App",
         text: "This chess application was developed as a project in a Java course.",
-        textLong: `In the course <i>DD1385 Software Engineering</i> I got introduced to object oriented programming
-        in Java. As a final project in the course, me together with another student created a graphical chess application.`,
+        textLong: `In the course <i>DD1385 Software Engineering</i> I got introduced to object-oriented programming
+        in Java. As a final project in the course, I together with another student created a graphical chess application.`,
         bullets: [
 
         ],
@@ -211,6 +219,10 @@ export const projects : Projects = {
             {
                 "original": chessApp1,
                 "thumbnail": chessApp1Low
+            },
+            {
+                "original": chessApp2,
+                "thumbnail": chessApp2Low
             }
         ],
         technologies: ["Java"],
@@ -218,7 +230,7 @@ export const projects : Projects = {
     },
     "Learn AI": {
         name: "Learn AI",
-        text: "Interactive website to ease the learning of AI concepts for other students.",
+        text: "An interactive website to ease the learning of AI concepts for other students.",
         textLong: `Created a website to ease the learning of AI concepts for other students.
         After taking the course <i>DD2380 Artificial Intelligence</i> at KTH I felt that I had understood
         a lot of the basic concepts of AI. Therefore, I decided to create this website. Partly for my own learning,
@@ -281,9 +293,9 @@ export const projects : Projects = {
         page, allowing chapter members to find all the available events in one place. Previously, 
         the events were spread out on Facebook.`,
         bullets: [
-            `This was the first project were I got to use both React and Sass.`,
+            `This was the first project where I got to use both React and Sass.`,
             `Learned a lot about how it is to work in a technical team.`,
-            "When we were finished with the first version of the website it became an open source project."
+            "When we were finished with the first version of the website it became an open-source project."
         ],
         mainLink: "https://www.medieteknik.com/documents",
         demoLink: "https://www.medieteknik.com/documents",
@@ -318,10 +330,10 @@ export const projects : Projects = {
         text: "Use Python to further develop a lab exercise regarding reinforcement learning for master students.",
         textLong: `After taking the course <i>DD2380 Artificial Intelligence</i> at KTH I started working as a 
         teaching assistant in the course. Before the next course round started, I further developed one of the three
-        lab assignments which was about reinforcement learning.`,
+        lab assignments which were about reinforcement learning.`,
         bullets: [
-            `When developing the lab, I learned how one could use shell scripts to create a more efficient work flow. When
-            testing the code I used docker, that's when the shell scripts really made our lives easier, since we didn't need
+            `When developing the lab, I learned how one could use shell scripts to create a more efficient workflow. When
+            testing the code I used docker, that's when the shell scripts really made our lives easier since we didn't need
             to manually copy files all the time.`,
             `This was the first project that I worked on that I didn't was part of from the start. I learned a lot about
             how to understand big codebases and how to gradually add new features.`
@@ -333,6 +345,14 @@ export const projects : Projects = {
             {
                 "original": rlLab1,
                 "thumbnail": rlLab1Low
+            },
+            {
+                "original": rlLab2,
+                "thumbnail": rlLab2Low
+            },
+            {
+                "original": rlLab3,
+                "thumbnail": rlLab3Low
             }
         ],
         technologies: ["Python", "Docker"],
@@ -341,9 +361,9 @@ export const projects : Projects = {
     "SwiftWriter": {
         name: "SwiftWriter",
         text: "An application made to helper people type faster.",
-        textLong: `SwiftWriter is an application that will help people write faster in a fun and frustration free manner.
+        textLong: `SwiftWriter is an application that will help people write faster in a fun and frustration-free manner.
         I started to work on this project because I wanted to create something that was
-        useful for others. Currently I don't have the time to work on this project, but I'm excited to
+        useful for others. Currently, I don't have the time to work on this project, but I'm excited to
         continue working on this application when I have more time.`,
         bullets: [
             `In this project, I created my first react context. I use it to store the user's choice of language.`
@@ -394,6 +414,10 @@ export const projects : Projects = {
             {
                 "original": rudlingTech1,
                 "thumbnail": rudlingTech1Low
+            },
+            {
+                "original": rudlingTech2,
+                "thumbnail": rudlingTech2Low
             }
         ],
         technologies: ["Sass", "HTML", "TypeScript", "ReactJS", "Firebase"],

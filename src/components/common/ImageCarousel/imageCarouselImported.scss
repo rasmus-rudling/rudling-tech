@@ -1,4 +1,4 @@
-@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import "../../../../node_modules/react-image-gallery/styles/scss/image-gallery";
 
 .image-gallery-thumbnail {
 	cursor: pointer;
@@ -20,6 +20,10 @@
 
 .image-gallery-slide-wrapper {
 	box-shadow: 0 0 18px -4px rgba(0,0,0,0.5);
+}
+
+.image-gallery-icon:hover {
+	color: #2F7EF5;
 }
 
 .image-gallery-content .image-gallery-slide .image-gallery-image {

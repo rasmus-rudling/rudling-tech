@@ -111,9 +111,9 @@ const SocialLink : React.FC<Props> = ({
 
             setTimeout(() => {
                 let selection = window.getSelection();
-                if (selection !== null) {
-                    selection.removeAllRanges();
-                }
+                // if (selection !== null) {
+                //     selection.removeAllRanges();
+                // }
                 setIconExtraClass(undefined);
             }, 5000)
 

@@ -16,7 +16,14 @@ code {
 }
 
 .linkStyle:hover {
-    color: #0A1C36;
+    background-color: rgba(47, 126, 245, 0.2);
+}
+
+h1,
+h2,
+p,
+li {
+    font-weight: 300;
 }
 
 p, li {

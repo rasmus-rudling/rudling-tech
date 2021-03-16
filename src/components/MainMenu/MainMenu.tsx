@@ -21,7 +21,7 @@ const MainMenu : React.FC<Props> = ({menuButtons}) => {
 
     const menuButtonClickHandler = (pageAddress: string) => {
         setShowModal(false);
-        history.push(pageAddress)
+        history.replace(pageAddress)
     }
 
     return (

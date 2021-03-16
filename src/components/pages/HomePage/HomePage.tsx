@@ -16,8 +16,6 @@ const HomePage : React.FC = () => {
         <div className={classes.FrontPage}>
             <div>
                 <ImageAnimation />
-
-
             </div>
 
             <div className={classes.socialContainer}>
@@ -39,12 +37,15 @@ const HomePage : React.FC = () => {
                         className="linkStyle"
                     >
                         cognitive systems
-                    </a>. 
+                    </a>. On this website you can find my previous work, and in the future
+                    I will also create a blog section where I will talk about technological concepts
+                    concepts I'm interested in. I hope you enjoy the visit!
                     
-                    On this website
-                    you'll find blog posts and tutorials about concepts
-                    I'm interested in. You can also find my previous work
-                    in my portfolio. I hope you enjoy the visit!
+                    {/*On this website*/}
+                    {/*you'll find blog posts and tutorials about concepts*/}
+                    {/*I'm interested in. You can also find my previous work*/}
+                    {/*in my portfolio. I hope you enjoy the visit!*/}
+
                 </div>
 
                 <div className={classes.socialLinks}>

@@ -7,17 +7,20 @@ import {
     Route
 } from "react-router-dom";
 
+import { projects } from "./components/pages/PortfolioPage/portfolioUtilities";
 
 import MainMenu from './components/MainMenu/MainMenu';
 import HomePage from './components/pages/HomePage/HomePage';
 import PortfolioPage from "./components/pages/PortfolioPage/PortfolioPage";
+import ProjectDetails from "./components/pages/PortfolioPage/ProjectDetails/ProjectDetails";
 
 import IsTouchScreenProvider from './contexts/IsTouchScreenContext';
+import SelectedProjectProvider from "./contexts/SelectedProjectContext";
 
 const App = () => {
     const mainMenuButtons = [
         {
-            pageAddress: "",
+            pageAddress: "/",
             text: "Home"
         },
         // {
@@ -25,7 +28,7 @@ const App = () => {
         //     text: "Blog"
         // },
         {
-            pageAddress: "portfolio",
+            pageAddress: "/portfolio",
             text: "Portfolio"
         },
         // {
@@ -34,31 +37,47 @@ const App = () => {
         // }
     ]
 
+    let projectPaths = Object.keys(projects).map(projectName => projectName.split(' ').join('_'));
+
     return (
         <IsTouchScreenProvider>
-            <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <MainMenu menuButtons = {mainMenuButtons}/>
-                        <HomePage />
-                    </Route>
+            <SelectedProjectProvider>
+                <Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <MainMenu menuButtons = {mainMenuButtons}/>
+                            <HomePage />
+                        </Route>
 
-                    <Route exact path="/blog">
-                        <MainMenu menuButtons = {mainMenuButtons}/>
-                        <HomePage />
-                    </Route>
+                        <Route exact path="/blog">
+                            <MainMenu menuButtons = {mainMenuButtons}/>
+                            <HomePage />
+                        </Route>
 
-                    <Route exact path="/portfolio">
-                        <MainMenu menuButtons = {mainMenuButtons}/>
-                        <PortfolioPage />
-                    </Route>
+                        <Route exact path="/portfolio">
+                            <MainMenu menuButtons = {mainMenuButtons}/>
+                            <PortfolioPage />
+                        </Route>
 
-                    <Route exact path="/tutorials">
-                        <MainMenu menuButtons = {mainMenuButtons}/>
-                        <HomePage />
-                    </Route>
-                </Switch>
-            </Router>
+                        {
+                            projectPaths.map(projectPath => {
+                                console.log(`portfolio/details/${projectPath}`);
+                                return (
+                                    <Route exact path={`/portfolio/details/${projectPath}`} key={projectPath}>
+                                        <MainMenu menuButtons = {mainMenuButtons}/>
+                                        <ProjectDetails />
+                                    </Route>
+                                )
+                            })
+                        }
+
+                        <Route exact path="/tutorials">
+                            <MainMenu menuButtons = {mainMenuButtons}/>
+                            <HomePage />
+                        </Route>
+                    </Switch>
+                </Router>
+            </SelectedProjectProvider>
         </IsTouchScreenProvider>
     );
 }

@@ -24,6 +24,10 @@
     justify-content: space-around;
 }
 
+.buttonsContainer button {
+	outline: none;
+}
+
 .showMenuModal,
 .hideMenuModal {
     position: fixed;

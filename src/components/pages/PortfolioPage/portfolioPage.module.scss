@@ -7,6 +7,10 @@
 	flex-direction: column;
 }
 
+.header {
+	text-align: center;
+}
+
 .PortfolioPage p {
 	font-weight: 300;
 	text-align: center;
@@ -120,11 +124,8 @@
 }
 
 .imageCarousel {
-	margin-top: 20px;
+	margin: 15px 0;
 }
-
-
-
 
 
 @media (max-width: 424px) {
