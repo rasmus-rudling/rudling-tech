@@ -240,8 +240,8 @@ export const projects : Projects = {
             many of the different aspects of react.`,
             `This was the first project that I hosted with a paid domain name.`
         ],
-        mainLink: "https://rudling.tech/hmm/forwardAlgorithm",
-        demoLink: "https://rudling.tech/hmm/forwardAlgorithm",
+        mainLink: "https://learn-ai-7df72.firebaseapp.com/hmm/forwardAlgorithm",
+        demoLink: "https://learn-ai-7df72.firebaseapp.com/hmm/forwardAlgorithm",
         gitHubLink: "https://github.com/rrudling/Learn-AI",
         images: [
             {

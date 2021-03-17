@@ -135,6 +135,14 @@ const ProjectCard: React.FC<Props> = ({
                 >{projectInfo.text}</div>
             </div>
 
+            <div
+                className = {showProjectDetails || showAllDetails || deviceIsTouchScreen
+                    ? classes.projectType
+                    : [classes.projectType, classes.hideProjectType].join(" ")
+                }
+            >
+                {projectInfo.type} project
+            </div>
 
             <div
                 className = {showProjectDetails || showAllDetails || deviceIsTouchScreen

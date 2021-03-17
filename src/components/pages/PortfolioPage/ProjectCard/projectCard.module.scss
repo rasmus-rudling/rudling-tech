@@ -16,7 +16,8 @@ $cardHeight: 325px;
 .activateBlur,
 .detailsContainer,
 .name,
-.text {
+.text,
+.projectType {
   transition: .4s;
 }
 
@@ -134,19 +135,20 @@ $cardHeight: 325px;
 }
 
 .technologyBadge {
-  background-color: #fff;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-  display: flex;
-  justify-content: center;
-  height: 55px;
-  width: 40px;
-  z-index: 500;
-  cursor: pointer;
-  position: relative;
-  transition: .2s;
-  transition-timing-function: ease-in-out;
-  top: -60px
+	background-color: #fff;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	display: flex;
+	justify-content: center;
+	height: 55px;
+	width: 40px;
+	z-index: 500;
+	cursor: pointer;
+	position: relative;
+	transition: .2s;
+	transition-timing-function: ease-in-out;
+	top: -60px;
+	user-select: none;
 }
 
 .showBadge:nth-child(2) {
@@ -284,6 +286,27 @@ $cardHeight: 325px;
 
 .learnMoreButton {
   margin-bottom: 10px;
+}
+
+.projectType {
+	position: absolute;
+	bottom: 90px;
+	left: 30px;
+	font-weight: 300;
+	border-radius: 3px;
+	color: #fff;
+	border: 2px solid #fff;
+	height: 30px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+}
+
+.hideProjectType {
+	opacity: 0;
+	transform: translateY(-10px);
 }
 
 @media (min-width: 502px) {
