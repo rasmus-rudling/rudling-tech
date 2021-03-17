@@ -38,7 +38,7 @@ const HomePage : React.FC = () => {
                     >
                         cognitive systems
                     </a>. On this website you can find my previous work, and in the future
-                    I will also create a blog section where I will talk about technological concepts
+                    I will also create a blog section where I will talk about technological
                     concepts I'm interested in. I hope you enjoy the visit!
                     
                     {/*On this website*/}

@@ -15,6 +15,7 @@ interface typesDict {
     [key: string]: any;
 }
 
+// TODO: Make visually appealing summary of the technologies I've been using
 const PortfolioPage: React.FC = () => {
     const changeProjectType = (newProjectType : string) => {
         if (selectedProjectType !== newProjectType) {

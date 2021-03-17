@@ -240,8 +240,8 @@ export const projects : Projects = {
             many of the different aspects of react.`,
             `This was the first project that I hosted with a paid domain name.`
         ],
-        mainLink: "https://learn-ai-7df72.firebaseapp.com/hmm/forwardAlgorithm",
-        demoLink: "https://learn-ai-7df72.firebaseapp.com/hmm/forwardAlgorithm",
+        mainLink: "https://learn-ai-7df72.web.app/hmm/forwardAlgorithm",
+        demoLink: "https://learn-ai-7df72.web.app/hmm/forwardAlgorithm",
         gitHubLink: "https://github.com/rrudling/Learn-AI",
         images: [
             {
@@ -286,7 +286,7 @@ export const projects : Projects = {
     },
     "Chapter Website": {
         name: "Chapter Website",
-        text: "Worked mostly on the document page and on the event page.",
+        text: "A brand new website for the Media Technology Chapter at KTH.",
         textLong: `Worked with a team of nine developers and designers to build a new 
         website for the Media Technology Chapter at KTH. Worked mostly on the document page, allowing our 
         chapter members to find documents faster. Also worked on the event 
