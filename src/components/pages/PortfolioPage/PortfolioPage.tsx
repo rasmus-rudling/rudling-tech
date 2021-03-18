@@ -9,6 +9,7 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import MultipleChoiceButtonPrimary from "../../common/Buttons/MultipleChoiceButtonPrimary/MultipleChoiceButtonPrimary";
 import MultipleChoiceButtonSecondary from "../../common/Buttons/MultipleChoiceButtonSecondary/MultipleChoiceButtonSecondary";
 import ImageCarousel from "../../common/ImageCarousel/ImageCarousel";
+import TechnologiesBarChart from "./TechnologiesBarChart/TechnologiesBarChart.jsx";
 // ==================
 
 interface typesDict {
@@ -102,6 +103,10 @@ const PortfolioPage: React.FC = () => {
                 of projects that I have been working
                 on during my years as a developer.
             </p>
+
+            <TechnologiesBarChart
+                data1={[4, 3, 5, 6, 9]}
+            />
 
             {/* === DESKTOP === */}
             <div className={classes.projectsContainer}>
