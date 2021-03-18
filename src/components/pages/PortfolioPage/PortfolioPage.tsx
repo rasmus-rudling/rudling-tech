@@ -16,6 +16,15 @@ interface typesDict {
     [key: string]: any;
 }
 
+export interface TechnologiesCounter {
+    [key: string]: number
+}
+
+export interface TechnologiesCounterObject {
+    technology: string,
+    count: number
+}
+
 // TODO: Make visually appealing summary of the technologies I've been using
 const PortfolioPage: React.FC = () => {
     const changeProjectType = (newProjectType : string) => {
@@ -95,6 +104,30 @@ const PortfolioPage: React.FC = () => {
         setShowAllDetails(window.innerWidth < 535);
     })
 
+    const barChartWidth = window.innerWidth > 500 ? 500 : window.innerWidth * 0.8;
+    let technologiesCounter : TechnologiesCounter = {};
+
+    Object.keys(projects).forEach(projectName => {
+        let projectTechnologies = projects[projectName].technologies;
+
+        projectTechnologies.forEach(technology => {
+            if (technologiesCounter[technology] === undefined) {
+                technologiesCounter[technology] = 1;
+            } else {
+                technologiesCounter[technology] += 1;
+            }
+        })
+    })
+
+    let technologiesCounterArray : Array<TechnologiesCounterObject> = [];
+
+    Object.keys(technologiesCounter).forEach(technology => {
+        technologiesCounterArray.push({technology: technology, count: technologiesCounter[technology]});
+    });
+
+    console.log(technologiesCounterArray);
+
+
     return (
         <div className={classes.PortfolioPage}>
             <div className={classes.header}><h1 style={{"marginBottom":"10px"}}>Rasmus Rudling Portfolio</h1></div>
@@ -105,7 +138,8 @@ const PortfolioPage: React.FC = () => {
             </p>
 
             <TechnologiesBarChart
-                data1={[4, 3, 5, 6, 9]}
+                technologiesCounter={technologiesCounterArray}
+                width={barChartWidth}
             />
 
             {/* === DESKTOP === */}

@@ -1,31 +1,21 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
-import classes from './technologiesBarChart.module.scss';
+import './technologiesBarChart.scss';
+import { technologiesInfo } from '../portfolioUtilities';
+// import { TechnologiesCounter } from '../PortfolioPage';
 
-interface Props {
-    data1: Array<number>
-}
+// interface Props {
+//     technologiesCounter: TechnologiesCounter
+// }
 
-const TechnologiesBarChart: React.FC<Props> = ({data1}) => {
+// const TechnologiesBarChart: React.FC<Props> = ({data1}) => {
+const TechnologiesBarChart = ({technologiesCounter, width}) => {
     const barChartRef = useRef(null);
 
-    const data = [
-        { technology: 'Sass', count: 4 },
-        { technology: 'React', count: 5 },
-        { technology: 'Python', count: 3 },
-        { technology: 'HTML', count: 2 },
-        { technology: 'CSS', count: 7 },
-        { technology: 'Java', count: 1 },
-        { technology: 'JavaScript', count: 5 },
-        { technology: 'TypeScript', count: 1 },
-    ];
-
-
     useEffect(() => {
-        const width = 500;
-        const height = 250;
-        const margin = { top: 50, bottom: 50, left: 50, right: 50 };
+        const height = 400;
+        const margin = { top: 30, bottom: 85, left: -50, right: 8 };
 
         const svg = d3.select(barChartRef.current)
             .append('svg')
@@ -34,39 +24,44 @@ const TechnologiesBarChart: React.FC<Props> = ({data1}) => {
             .attr("viewBox", `0 0 ${width} ${height}`);
 
         const x = d3.scaleBand()
-            .domain(d3.range(data.length))
+            .domain(d3.range(technologiesCounter.length))
             .range([margin.left, width - margin.right + 75])
-            .padding(0.5);
+            .padding(0.3);
 
         const y = d3.scaleLinear()
-            .domain([0, 8])
+            .domain([0, 5])
             .range([height - margin.bottom, margin.top]);
 
         svg
             .append("g")
             .attr("fill", '#2F7EF5')
             .selectAll("rect")
-            .data(data.sort((a, b) => d3.descending(a.score, b.score)))
-            .join("rect")
-            .attr("x", (d, i) => x(i))
-            .attr("y", d => y(d.count))
-            .attr('title', (d) => d.count)
-            .attr("class", "rect")
-            .attr("height", d => y(0) - y(d.count))
-            .attr("width", x.bandwidth());
+                .data(technologiesCounter.sort((a, b) => d3.ascending(a.technology, b.technology)))
+                .join("rect")
+                .attr("x", (d, i) => x(i))
+                .attr("y", d => y(d.count))
+                .attr('title', (d) => d.count)
+                .attr("class", (d, i) => technologiesCounter[i].technology)
+                .attr("height", d => y(0) - y(d.count))
+                .attr("width", x.bandwidth())
 
         const yAxis = g => {
             g.attr("transform", `translate(${margin.left}, 0)`)
-                .call(d3.axisLeft(y).ticks(null, data.format))
+                .call(d3.axisLeft(y).tickValues([0, 1, 2, 3, 4, 5]))
+                .call(d3.axisLeft(y).ticks(6))
                 .attr("font-size", '20px')
                 .attr("font-weight", '300')
         }
 
         const xAxis = g => {
             g.attr("transform", `translate(0,${height - margin.bottom})`)
-                .call(d3.axisBottom(x).tickFormat(i => data[i].technology))
-                .attr("font-size", '20px')
-                .attr("font-weight", '300');
+                .call(d3.axisBottom(x)
+                    .tickFormat(i => technologiesCounter[i].technology))
+                    .attr("font-size", '20px')
+                    .attr("font-weight", '300')
+                    .selectAll("text")
+                        .attr("transform", "translate(-10, 5)rotate(-45)")
+                        .style("text-anchor", "end")
         }
 
         svg.append("g").call(xAxis);
@@ -76,11 +71,9 @@ const TechnologiesBarChart: React.FC<Props> = ({data1}) => {
 
 
     return (
-        <div className={classes.TechnologiesBarChart}>
-            <div
-                ref = {barChartRef}
-                className={classes.TechnologiesBarChart}
-            />
+        <div className="TechnologiesBarChart">
+            <h3>Number of occurrences</h3>
+            <div ref = {barChartRef} />
         </div>
     )
 }

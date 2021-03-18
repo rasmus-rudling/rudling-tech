@@ -26,6 +26,11 @@ li {
     font-weight: 300;
 }
 
+h3,
+h4 {
+    font-weight: 400;
+}
+
 p, li {
     line-height: 1.5;
 }

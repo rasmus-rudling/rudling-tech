@@ -1,0 +1,89 @@
+.TechnologiesBarChart {
+	margin-top: 20px;
+	display: flex;
+	//flex-direction: column-reverse;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.CSS,
+.Docker,
+.Firebase,
+.HTML,
+.Java,
+.JavaScript,
+.Python,
+.ReactJS,
+.Sass,
+.TypeScript {
+	//cursor: pointer;
+	transform-origin: bottom;
+	transform-box: fill-box;
+	transition: .4s;
+}
+
+.CSS:hover,
+.Docker:hover,
+.Firebase:hover,
+.Java:hover,
+
+.Python:hover,
+.TypeScript:hover {
+	transform: scaleY(0.78);
+}
+
+.JavaScript:hover,
+.Sass:hover,
+.Firebase:hover {
+	transform: scaleY(0.92);
+}
+
+.HTML:hover,
+.ReactJS:hover {
+	transform: scaleY(0.95);
+}
+
+.CSS:hover {
+	fill: #265AA6;
+}
+
+.Docker:hover {
+	fill: #0091E2;
+}
+
+.Firebase:hover {
+	fill: #FFA50E;
+	//fill: #FFCC30;
+	//fill: #F68410;
+}
+
+.HTML:hover {
+	fill: #E44D26;
+}
+
+.Java:hover {
+	fill: #E76F00;
+	//fill: #5382A1;
+}
+
+.Python:hover {
+	fill: #366C99;
+	//fill: #FFC938;
+}
+
+.JavaScript:hover {
+	fill: #F7DF1E;
+}
+
+.TypeScript:hover {
+	fill: #007ACC;
+}
+
+.ReactJS:hover {
+	fill: #61DAFB;
+}
+
+.Sass:hover {
+	fill: #CF649A;
+}
