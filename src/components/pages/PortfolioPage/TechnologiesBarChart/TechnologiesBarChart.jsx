@@ -72,7 +72,7 @@ const TechnologiesBarChart = ({technologiesCounter, width}) => {
 
     return (
         <div className="TechnologiesBarChart">
-            <h3>Number of occurrences</h3>
+            <h3>Occurrences in featured projects</h3>
             <div ref = {barChartRef} />
         </div>
     )
