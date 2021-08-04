@@ -21,7 +21,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-const LanguageProvider: React.FC<Props> = ({ children }) => {
+const SelectedProjectProvider: React.FC<Props> = ({ children }) => {
     const projectFromSessionStorage = sessionStorage.getItem("project");
     const firstProject = projects[Object.keys(projects)[0]];
 
@@ -47,4 +47,4 @@ const LanguageProvider: React.FC<Props> = ({ children }) => {
     );
 };
 
-export default LanguageProvider;
+export default SelectedProjectProvider;
