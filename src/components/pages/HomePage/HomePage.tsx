@@ -1,14 +1,14 @@
-import React from 'react';
-import classes from './homePage.module.scss';
+import React from "react";
+import classes from "./homePage.module.scss";
 
-import ImageAnimation from './ImageAnimation/ImageAnimation';
+import ImageAnimation from "./ImageAnimation/ImageAnimation";
 
-import SocialLink from '../../common/SocialLink/SocialLink';
+import SocialLink from "../../common/SocialLink/SocialLink";
 import Spinner from "../../common/Spinner/Spinner";
 
-import resume from '../../../../public/documents/resume.pdf';
+import resume from "../../../../public/documents/resume.pdf";
 
-const HomePage : React.FC = () => {
+const HomePage: React.FC = () => {
     // TODO: Make spinner appear when Rasmus-image is loading
     // TODO: Hide waves when overflow on mobile
 
@@ -22,84 +22,91 @@ const HomePage : React.FC = () => {
                 <div className={classes.startText}>
                     <span>Hi and welcome!</span>
                     <br />
-                    My name is Rasmus Rudling and I'm in the penultimate
-                    year of my degree in Master of Science in Engineering at
-                    KTH Royal Institute of Technology.
-                    I'm currently studying a <a 
+                    My name is Rasmus Rudling and I'm in the fifth and final
+                    year of my degree in Master of Science in Engineering at KTH
+                    Royal Institute of Technology. I'm currently studying a{" "}
+                    <a
                         target="_blank"
-                        href="https://www.kth.se/en/studies/master/computer-science" 
+                        rel="noreferrer"
+                        href="https://www.kth.se/en/studies/master/computer-science"
                         className="linkStyle"
                     >
                         master in Computer Science
-                    </a> where I've specialized to learn about <a 
+                    </a>{" "}
+                    where I've specialized to learn about{" "}
+                    <a
                         target="_blank"
-                        href="https://www.kth.se/student/kurser/program/TCSCM/20202/inriktningar?l=en" 
+                        rel="noreferrer"
+                        href="https://www.kth.se/student/kurser/program/TCSCM/20202/inriktningar?l=en"
                         className="linkStyle"
                     >
                         cognitive systems
-                    </a>. On this website you can find my previous work, and in the future
-                    I will also create a blog section where I will talk about technological
-                    concepts I'm interested in. I hope you enjoy the visit!
-                    
-                    {/*On this website*/}
-                    {/*you'll find blog posts and tutorials about concepts*/}
-                    {/*I'm interested in. You can also find my previous work*/}
-                    {/*in my portfolio. I hope you enjoy the visit!*/}
-
+                    </a>
+                    . On this website you can find my previous work, and in the
+                    future I will also create a blog section where I will talk
+                    about technological concepts I'm interested in. I hope you
+                    enjoy the visit!
                 </div>
 
                 <div className={classes.socialLinks}>
-                    <SocialLink 
-                        socialIcon = "github"
+                    <SocialLink
+                        socialIcon="github"
                         text="github.com/rrudling"
-                        linkAction = "visit"
-                        onClickHandler = {() => {
-                            window.open('https://www.github.com/rrudling', '_blank');
+                        linkAction="visit"
+                        onClickHandler={() => {
+                            window.open(
+                                "https://www.github.com/rrudling",
+                                "_blank"
+                            );
                         }}
                     />
 
-                    <SocialLink 
-                        socialIcon = "linkedin"
+                    <SocialLink
+                        socialIcon="linkedin"
                         text="linkedin.com/in/rrudling"
-                        extraStyle = {{
-                            "marginTop": "20px",
+                        extraStyle={{
+                            marginTop: "20px",
                         }}
-                        linkAction = "visit"
-                        onClickHandler = {() => {
-                            window.open('https://www.linkedin.com/in/rrudling', '_blank');
+                        linkAction="visit"
+                        onClickHandler={() => {
+                            window.open(
+                                "https://www.linkedin.com/in/rrudling",
+                                "_blank"
+                            );
                         }}
                     />
 
-                    <SocialLink 
-                        socialIcon = "mail"
+                    <SocialLink
+                        socialIcon="mail"
                         text="rasmusrudling@gmail.com"
-                        extraStyle = {{
-                            "marginTop": "20px",
+                        extraStyle={{
+                            marginTop: "20px",
                         }}
-                        linkAction = "copy"
-                        secondIcon = "check"
+                        linkAction="copy"
+                        secondIcon="check"
                     />
 
-                    <SocialLink 
-                        socialIcon = "resume"
+                    <SocialLink
+                        socialIcon="resume"
                         text="Check out my resume!"
-                        extraStyle = {{
-                            "marginTop": "20px",
+                        extraStyle={{
+                            marginTop: "20px",
                         }}
-                        linkAction = "download"
-                        onClickHandler = {() => {
-                            window.open(process.env.PUBLIC_URL + '/documents/resume.pdf', '_blank');
+                        linkAction="download"
+                        onClickHandler={() => {
+                            window.open(
+                                process.env.PUBLIC_URL +
+                                    "/documents/rasmus_rudling_resume.pdf",
+                                "_blank"
+                            );
                         }}
-                    />      
+                    />
                 </div>
 
-                <div>
-
-                </div>
+                <div></div>
             </div>
-            
         </div>
-    )
-}
+    );
+};
 
 export default HomePage;
