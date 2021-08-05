@@ -1,1 +1,1 @@
-## Find my website [here](https://rudling-tech.web.app/)!
+## Find my website [here](https://rudling.tech)!
