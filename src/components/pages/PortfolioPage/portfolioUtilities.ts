@@ -11,6 +11,7 @@ import dockerIcon from "../../../resources/icons/docker.svg";
 
 // TODO: Add projects from RPL
 // TODO: Add varma-golv project
+// TODO: Add screenshot of Spotify API website
 
 // ==============
 // === IMAGES ===
