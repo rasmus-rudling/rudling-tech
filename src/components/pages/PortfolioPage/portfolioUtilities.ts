@@ -9,6 +9,9 @@ import javaIcon from "../../../resources/icons/java.svg";
 import pythonIcon from "../../../resources/icons/python.svg";
 import dockerIcon from "../../../resources/icons/docker.svg";
 
+// TODO: Add projects from RPL
+// TODO: Add varma-golv project
+
 // ==============
 // === IMAGES ===
 // ==============
