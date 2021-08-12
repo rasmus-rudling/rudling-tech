@@ -1,27 +1,27 @@
 .MainMenu {
-    height: 80px;
-    width: 100vw;
-    background-color: #fff;
-    position: fixed;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    transition: .3s;
+	height: 80px;
+	width: 100vw;
+	background-color: #fff;
+	position: fixed;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	transition: 0.3s;
 }
 
 .MainMenuBoxShadow {
-    transition: .3s;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+	transition: 0.3s;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .buttonsContainer {
 	margin: 0 auto;
-    width: 70%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: space-around;
+	width: 70%;
+	height: 100%;
+	display: none;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .buttonsContainer button {
@@ -30,60 +30,73 @@
 
 .showMenuModal,
 .hideMenuModal {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 80px;
-    width: 100vw;
-    background-color: #fff;
-    z-index: 900;
-    transition: .7s;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	top: 80px;
+	width: 100vw;
+	background-color: #fff;
+	z-index: 900;
+	transition: 0.7s;
 }
 
 .showMenuModal {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .hideMenuModal {
-    transform: translateY(-102%);
+	transform: translateY(-102%);
 }
 
 .modalBackground,
 .fakeModalBackground {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
-    position: fixed;
-    z-index: 800;
-    cursor: pointer;
-    opacity: 1;
-    backdrop-filter: blur(2px);
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+	position: fixed;
+	z-index: 800;
+	cursor: pointer;
+	opacity: 1;
+	backdrop-filter: blur(2px);
 	transition: 0.5s, z-index 0s;
 }
 
 .modalBackground {
-    //height: calc(100vh - 305px);
-    //top: 305px;
+	//height: calc(100vh - 305px);
+	//top: 305px;
 	height: 100vh;
 }
 
-//.fakeModalBackground {
-//    height: 305px;
-//    top: 0;
-//}
-
 .hideModalBackground {
-    opacity: 0;
-    z-index: -1;
-    cursor: default;
+	opacity: 0;
+	z-index: -1;
+	cursor: default;
+}
 
+.languageBtn {
+	position: fixed;
+	left: calc(10% - 10px);
+	color: #2f7ef5;
+	font-size: 25px;
+	font-weight: 400;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 5px;
+	padding: 2px 8px 4px 8px;
+	text-transform: uppercase;
+}
+
+.languageBtn:hover {
+	background-color: rgba(47, 126, 245, 0.2);
 }
 
 @media (min-width: 600px) {
-    .buttonsContainer {
-        display: flex;
-    }
+	.buttonsContainer {
+		display: flex;
+	}
 
-    .showMenuModal {
-        display: none;
-    }
+	.showMenuModal {
+		display: none;
+	}
 }

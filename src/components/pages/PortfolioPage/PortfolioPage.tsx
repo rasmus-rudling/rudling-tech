@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import classes from "./portfolioPage.module.scss";
 import {
@@ -16,6 +16,7 @@ import MultipleChoiceButtonPrimary from "../../common/Buttons/MultipleChoiceButt
 import MultipleChoiceButtonSecondary from "../../common/Buttons/MultipleChoiceButtonSecondary/MultipleChoiceButtonSecondary";
 import ImageCarousel from "../../common/ImageCarousel/ImageCarousel";
 import TechnologiesBarChart from "./TechnologiesBarChart/TechnologiesBarChart.jsx";
+import { useLanguage } from "../../../contexts/LanguageContext";
 // ==================
 
 interface typesDict {
@@ -33,6 +34,8 @@ export interface TechnologiesCounterObject {
 
 // TODO: Make visually appealing summary of the technologies I've been using
 const PortfolioPage: React.FC = () => {
+	const language = useLanguage();
+
 	const changeProjectType = (newProjectType: string) => {
 		if (selectedProjectType !== newProjectType) {
 			setHideMobileProjectsMenu(true);
@@ -40,8 +43,10 @@ const PortfolioPage: React.FC = () => {
 
 		let tempProjectTypes = [...projectTypes];
 
+		console.log(tempProjectTypes);
+
 		tempProjectTypes.forEach((option) => {
-			option.isSelected = option.type === newProjectType;
+			option.isSelected = option.type.en === newProjectType;
 		});
 
 		setProjectTypes(tempProjectTypes);
@@ -55,7 +60,7 @@ const PortfolioPage: React.FC = () => {
 
 	const changeCurrentProject = (newCurrentProject: string) => {
 		setProjectsToShow(getNewProjectsToShow(newCurrentProject));
-		setSelectedProject(projects[newCurrentProject]);
+		setSelectedProject(svEnProjects[newCurrentProject]);
 	};
 
 	const getNewProjectsToShow = (
@@ -65,10 +70,9 @@ const PortfolioPage: React.FC = () => {
 	) => {
 		let tempProjectsToShow: Array<typesDict> = [],
 			projectIdx = 0;
-
-		Object.keys(projects).forEach((projectKey) => {
-			let project = projects[projectKey];
-			if (project.type === _selectedProjectType) {
+		Object.keys(svEnProjects).forEach((projectKey) => {
+			let project = svEnProjects[projectKey];
+			if (project.type.en === _selectedProjectType) {
 				let optionObject: typesDict = {};
 				optionObject["type"] = project.name;
 				if (setWithIdx) {
@@ -80,7 +84,7 @@ const PortfolioPage: React.FC = () => {
 					}
 				} else {
 					optionObject["isSelected"] =
-						project.name === newCurrentProject;
+						project.name.en === newCurrentProject;
 				}
 
 				tempProjectsToShow.push(optionObject);
@@ -95,22 +99,32 @@ const PortfolioPage: React.FC = () => {
 	);
 	const [projectTypes, setProjectTypes] = useState<Array<typesDict>>([
 		{
-			type: "Personal",
+			type: {
+				sv: "Personligt projekt",
+				en: "Personal project",
+			},
 			isSelected: true,
 		},
 		{
-			type: "Professional",
+			type: {
+				sv: "Professionellt projekt",
+				en: "Professional project",
+			},
+
 			isSelected: false,
 		},
 		{
-			type: "School",
+			type: {
+				sv: "Skolprojekt",
+				en: "School project",
+			},
 			isSelected: false,
 		},
 	]);
 	const [selectedProjectType, setSelectedProjectType] =
-		useState<string>("Personal");
-	const [selectedProject, setSelectedProject] = useState<Project>(
-		projects["Learn AI"]
+		useState<string>("Personal project");
+	const [selectedProject, setSelectedProject] = useState<SvEnProject>(
+		svEnProjects["Learn AI"]
 	);
 	const [projectsToShow, setProjectsToShow] = useState<Array<typesDict>>(
 		getNewProjectsToShow("Learn AI")
@@ -228,12 +242,16 @@ const PortfolioPage: React.FC = () => {
 					<p
 						className={classes.longText}
 						dangerouslySetInnerHTML={{
-							__html: selectedProject.textLong,
+							__html: selectedProject.textLong[language],
 						}}
 					/>
 					<ul>
 						{selectedProject.bullets.map((bullet) => (
-							<li dangerouslySetInnerHTML={{ __html: bullet }} />
+							<li
+								dangerouslySetInnerHTML={{
+									__html: bullet[language],
+								}}
+							/>
 						))}
 					</ul>
 
@@ -265,7 +283,7 @@ const PortfolioPage: React.FC = () => {
 						) : null}
 					</div>
 
-					{selectedProject.name === "The Card Game" ? (
+					{selectedProject.name.en === "The Card Game" ? (
 						<div className={classes.learnMoreButtonContainer}>
 							<ThreeDimButton
 								text="Read the thesis"

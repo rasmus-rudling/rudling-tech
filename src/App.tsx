@@ -12,6 +12,7 @@ import ProjectDetails from "./components/pages/PortfolioPage/ProjectDetails/Proj
 
 import IsTouchScreenProvider from "./contexts/IsTouchScreenContext";
 import SelectedProjectProvider from "./contexts/SelectedProjectContext";
+import LanguageProvider from "./contexts/LanguageContext";
 
 const App = () => {
 	const mainMenuButtons = [
@@ -38,47 +39,51 @@ const App = () => {
 	);
 
 	return (
-		<IsTouchScreenProvider>
-			<SelectedProjectProvider>
-				<Router>
-					<Switch>
-						<Route exact path="/">
-							<MainMenu menuButtons={mainMenuButtons} />
-							<HomePage />
-						</Route>
+		<LanguageProvider>
+			<IsTouchScreenProvider>
+				<SelectedProjectProvider>
+					<Router>
+						<Switch>
+							<Route exact path="/">
+								<MainMenu menuButtons={mainMenuButtons} />
+								<HomePage />
+							</Route>
 
-						<Route exact path="/blog">
-							<MainMenu menuButtons={mainMenuButtons} />
-							<HomePage />
-						</Route>
+							<Route exact path="/blog">
+								<MainMenu menuButtons={mainMenuButtons} />
+								<HomePage />
+							</Route>
 
-						<Route exact path="/portfolio">
-							<MainMenu menuButtons={mainMenuButtons} />
-							<PortfolioPage />
-						</Route>
+							<Route exact path="/portfolio">
+								<MainMenu menuButtons={mainMenuButtons} />
+								<PortfolioPage />
+							</Route>
 
-						{projectPaths.map((projectPath) => {
-							// console.log(`portfolio/details/${projectPath}`);
-							return (
-								<Route
-									exact
-									path={`/portfolio/details/${projectPath}`}
-									key={projectPath}
-								>
-									<MainMenu menuButtons={mainMenuButtons} />
-									<ProjectDetails />
-								</Route>
-							);
-						})}
+							{projectPaths.map((projectPath) => {
+								// console.log(`portfolio/details/${projectPath}`);
+								return (
+									<Route
+										exact
+										path={`/portfolio/details/${projectPath}`}
+										key={projectPath}
+									>
+										<MainMenu
+											menuButtons={mainMenuButtons}
+										/>
+										<ProjectDetails />
+									</Route>
+								);
+							})}
 
-						<Route exact path="/tutorials">
-							<MainMenu menuButtons={mainMenuButtons} />
-							<HomePage />
-						</Route>
-					</Switch>
-				</Router>
-			</SelectedProjectProvider>
-		</IsTouchScreenProvider>
+							<Route exact path="/tutorials">
+								<MainMenu menuButtons={mainMenuButtons} />
+								<HomePage />
+							</Route>
+						</Switch>
+					</Router>
+				</SelectedProjectProvider>
+			</IsTouchScreenProvider>
+		</LanguageProvider>
 	);
 };
 
