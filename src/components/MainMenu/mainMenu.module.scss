@@ -17,11 +17,11 @@
 
 .buttonsContainer {
 	margin: 0 auto;
-	width: 70%;
+	width: 500px;
 	height: 100%;
 	display: none;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-end;
 }
 
 .buttonsContainer button {
@@ -61,8 +61,6 @@
 }
 
 .modalBackground {
-	//height: calc(100vh - 305px);
-	//top: 305px;
 	height: 100vh;
 }
 
@@ -74,7 +72,8 @@
 
 .languageBtn {
 	position: fixed;
-	left: calc(10% - 10px);
+	left: calc(10vw - 10px);
+	top: 22px;
 	color: #2f7ef5;
 	font-size: 25px;
 	font-weight: 400;
@@ -85,6 +84,7 @@
 	border-radius: 5px;
 	padding: 2px 8px 4px 8px;
 	text-transform: uppercase;
+	z-index: 1500;
 }
 
 .languageBtn:hover {
@@ -98,5 +98,19 @@
 
 	.showMenuModal {
 		display: none;
+	}
+
+	.languageBtn {
+		left: calc((100vw - 500px) / 2);
+	}
+}
+
+@media screen and (min-width: 1165px) {
+	.buttonsContainer {
+		width: 1075px;
+	}
+
+	.languageBtn {
+		left: calc((100vw - 1075px) / 2);
 	}
 }
