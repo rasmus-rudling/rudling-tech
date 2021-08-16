@@ -60,7 +60,6 @@ const App = () => {
 							</Route>
 
 							{projectPaths.map((projectPath) => {
-								// console.log(`portfolio/details/${projectPath}`);
 								return (
 									<Route
 										exact

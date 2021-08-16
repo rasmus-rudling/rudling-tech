@@ -8,10 +8,12 @@ import BackButton from "../../../../resources/icons/leftArrow.svg";
 import ImageCarousel from "../../../common/ImageCarousel/ImageCarousel";
 import { technologiesInfo } from "../portfolioUtilities";
 import ThreeDimButton from "../../../common/Buttons/ThreeDimButton/ThreeDimButton";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 
 const ProjectDetails: React.FC = () => {
 	const selectedProject = useSelectedProject();
 	const history = useHistory();
+	const language = useLanguage();
 
 	const imageCarousel = (
 		<>
@@ -38,7 +40,7 @@ const ProjectDetails: React.FC = () => {
 			</div>
 
 			<div className={classes.header}>
-				<h1>{selectedProject.name}</h1>
+				<h1>{selectedProject.name[language]}</h1>
 			</div>
 
 			<div className={classes.imageAndTechContainer}>
@@ -51,7 +53,9 @@ const ProjectDetails: React.FC = () => {
 				</div>
 
 				<div className={classes.technologiesUsed}>
-					Technologies that I used:
+					{language === "en"
+						? "Technologies that I used:"
+						: "Teknologier som jag använt:"}
 					<div
 						className={
 							portfolioPageClasses.technologiesUsedContainer
@@ -81,13 +85,17 @@ const ProjectDetails: React.FC = () => {
 				<div className={classes.textContainer}>
 					<p
 						dangerouslySetInnerHTML={{
-							__html: selectedProject.textLong,
+							__html: selectedProject.textLong[language],
 						}}
 					/>
 
 					<ul>
 						{selectedProject.bullets.map((bullet) => (
-							<li dangerouslySetInnerHTML={{ __html: bullet }} />
+							<li
+								dangerouslySetInnerHTML={{
+									__html: bullet[language],
+								}}
+							/>
 						))}
 					</ul>
 				</div>
@@ -115,7 +123,7 @@ const ProjectDetails: React.FC = () => {
 							extraClasses={[portfolioPageClasses.demoButton]}
 						/>
 					) : null}
-					{selectedProject.name === "The Card Game" ? (
+					{selectedProject.name.en === "The Card Game" ? (
 						<ThreeDimButton
 							text="Read the thesis"
 							onClickHandler={() => {
@@ -130,10 +138,14 @@ const ProjectDetails: React.FC = () => {
 						/>
 					) : null}
 
-					{selectedProject.name === "Image Colorizer" ? (
+					{selectedProject.name.en === "Image Colorizer" ? (
 						<>
 							<ThreeDimButton
-								text="Read our thesis"
+								text={
+									language === "en"
+										? "Read our thesis"
+										: "Läs vår uppsats"
+								}
 								onClickHandler={() => {
 									const link = document.createElement("a");
 									link.href =
@@ -145,7 +157,11 @@ const ProjectDetails: React.FC = () => {
 								color="gray"
 							/>
 							<ThreeDimButton
-								text="Read the original paper"
+								text={
+									language === "en"
+										? "Read the original paper"
+										: "Läs orginalet"
+								}
 								onClickHandler={() => {
 									const link = document.createElement("a");
 									link.href =

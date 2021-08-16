@@ -29,6 +29,13 @@ const MainMenu: React.FC<Props> = ({ menuButtons }) => {
 
 	return (
 		<>
+			<button
+				className={classes.languageBtn}
+				onClick={() => updateLanguage()}
+			>
+				{language}
+			</button>
+
 			<div
 				className={
 					showModal
@@ -38,13 +45,6 @@ const MainMenu: React.FC<Props> = ({ menuButtons }) => {
 						  )
 				}
 			>
-				<button
-					className={classes.languageBtn}
-					onClick={() => updateLanguage()}
-				>
-					{language}
-				</button>
-
 				<div className={classes.buttonsContainer}>
 					{menuButtons.map((menuButton) => (
 						<MenuButton

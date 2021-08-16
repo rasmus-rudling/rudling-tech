@@ -560,7 +560,7 @@ export const svEnProjects: SvEnProjects = {
 			en: "Chess App",
 		},
 		text: {
-			sv: "Denna schackapplikation utvecklades som ett projekt i en Java -kurs.",
+			sv: "Den här schackapplikationen utvecklades som ett projekt i en Java -kurs.",
 			en: "This chess application was developed as a project in a Java course.",
 		},
 		textLong: {
@@ -596,8 +596,8 @@ export const svEnProjects: SvEnProjects = {
 			en: "Learn AI",
 		},
 		text: {
-			sv: "En interaktiv webbplats för att underlätta inlärningen av AI-koncept för andra studenter.",
-			en: "An interactive website to ease the learning of AI concepts for other students.",
+			sv: "En interaktiv webbplats för att underlätta inlärningen av AI-koncept för andra masterstudenter.",
+			en: "An interactive website to ease the learning of AI concepts for other master students.",
 		},
 		textLong: {
 			sv: `Skapade en webbplats för att underlätta inlärningen av AI -koncept för andra studenter. Efter att 
@@ -674,8 +674,8 @@ export const svEnProjects: SvEnProjects = {
 			en: "Chapter Website",
 		},
 		text: {
-			sv: "En helt ny hemsida för Sektionen för Medieteknik på KTH.",
-			en: "A brand new website for the Media Technology Chapter at KTH.",
+			sv: "Byggde en helt ny hemsida för Sektionen för Medieteknik på KTH.",
+			en: "Built brand new website for the Media Technology Chapter at KTH.",
 		},
 		textLong: {
 			sv: `Worked with a team of nine developers and designers to build a new website for the Media 
@@ -739,7 +739,7 @@ export const svEnProjects: SvEnProjects = {
 			en: "RL lab",
 		},
 		text: {
-			sv: "Använd Python för att vidareutveckla en labbövning avseende förstärkningslärande för masterstudenter.",
+			sv: "Använde Python för att vidareutveckla en labbövning gällande reinforcement learning för masterstudenter.",
 			en: "Use Python to further develop a lab exercise regarding reinforcement learning for master students.",
 		},
 		textLong: {
@@ -794,7 +794,7 @@ export const svEnProjects: SvEnProjects = {
 			en: "SwiftWriter",
 		},
 		text: {
-			sv: "En ansökan gjord för att hjälpa människor att skriva snabbare.",
+			sv: "En applikation gjord för att hjälpa människor att skriva snabbare.",
 			en: "An application made to helper people type faster.",
 		},
 		textLong: {
@@ -896,13 +896,12 @@ export const svEnProjects: SvEnProjects = {
 			en: "ShareTunes",
 		},
 		text: {
-			sv: `En musikalisk webbplats för sociala medier där du kan skapa en profil och dela din favorit
-            musik med vänner.`,
+			sv: `Ett socialt medie där du kan skapa en profil och dela din favoritmusik med vänner.`,
 			en: `A musical sharing social media website where you can create a profile and share your favorite 
             music with friends.`,
 		},
 		textLong: {
-			sv: `En musikalisk webbplats för sociala medier där du kan skapa en profil och dela din favoritmusik med 
+			sv: `Ett socialt medie där du kan skapa en profil och dela din favoritmusik med 
             vänner. Du kan både kommentera, gilla, skapa inlägg och följa andra användare och lyssna på 
             förhandsgranskningar av låtar som hämtats från Spotify API.`,
 			en: `A musical sharing social media website where you can create a profile and share your favorite music with 
@@ -920,21 +919,41 @@ export const svEnProjects: SvEnProjects = {
                 on the currently logged-in user, this was a very fruitful experience to learn different aspects of backend development.`,
 			},
 		],
-		mainLink: "https://rrudling.github.io/thecardgame/",
+		mainLink: "https://github.com/charlottea98/ShareTunes",
 		demoLink: "https://sharetunesmedia.web.app/",
-		gitHubLink: "https://github.com/rrudling/thecardgame",
+		gitHubLink: "https://github.com/charlottea98/ShareTunes",
 		images: [
 			{
-				original: theCardGame1,
-				thumbnail: theCardGame1Low,
+				original: shareTunes2,
+				thumbnail: shareTunes2Low,
 			},
 			{
-				original: theCardGame2,
-				thumbnail: theCardGame2Low,
+				original: shareTunes1,
+				thumbnail: shareTunes1Low,
 			},
 			{
-				original: theCardGame3,
-				thumbnail: theCardGame3Low,
+				original: shareTunes3,
+				thumbnail: shareTunes3Low,
+			},
+			{
+				original: shareTunes4,
+				thumbnail: shareTunes4Low,
+			},
+			{
+				original: shareTunes5,
+				thumbnail: shareTunes5Low,
+			},
+			{
+				original: shareTunes6,
+				thumbnail: shareTunes6Low,
+			},
+			{
+				original: shareTunes7,
+				thumbnail: shareTunes7Low,
+			},
+			{
+				original: shareTunes8,
+				thumbnail: shareTunes8Low,
 			},
 		],
 		technologies: ["Sass", "HTML", "TypeScript", "ReactJS", "Firebase"],
@@ -943,10 +962,10 @@ export const svEnProjects: SvEnProjects = {
 			en: "School project",
 		},
 	},
-	"Image Colorizer": {
+	"Image Colorizer with DL": {
 		name: {
-			sv: "Bildfärgare (med DL)",
-			en: "Image Colorizer (with DL)",
+			sv: "Bildfärgare med DL",
+			en: "Image Colorizer with DL",
 		},
 		text: {
 			sv: `Målet med detta projekt var att studera hur en gråskala bild kan färgläggas med hjälp av ett 
@@ -955,7 +974,7 @@ export const svEnProjects: SvEnProjects = {
             neural network (CNN)`,
 		},
 		textLong: {
-			sv: `<b> Abstrakt </b> Målet med detta dokument är att studera hur en gråskala bild kan färgläggas med 
+			sv: `<b> Abstrakt:</b> Målet med detta dokument är att studera hur en gråskala bild kan färgläggas med 
             hjälp av ett konvolutionellt neuralt nätverk (CNN). Metoden som presenterades i papperet Colorful Image 
             Colorization, skriven av R. Zhang et al., Användes som referens [1]. Data som används för att träna 
             modellen som presenteras i detta dokument är begränsad till porträttbilder av människors ansikten. 
@@ -965,7 +984,7 @@ export const svEnProjects: SvEnProjects = {
             Även om den har tränats för mycket färre iterationer, färgar modellen som presenteras i detta dokument 
             porträttbilder mer realistiskt i 58% av fallen jämfört med modellen som presenteras av R. Zhang et al. i 
             [1] i en kvalitativ studie.`,
-			en: `<b>Abstract</b>The goal of this paper is to study how a grayscale image can be 
+			en: `<b>Abstract: </b>The goal of this paper is to study how a grayscale image can be 
             colorized using a convolutional neural network (CNN). The method presented in the paper Colorful
             Image Colorization, written by R. Zhang et al., was used as reference [1]. The
             data used to train the model presented in this paper is confined to portrait images
@@ -979,23 +998,23 @@ export const svEnProjects: SvEnProjects = {
 		},
 		bullets: [],
 		mainLink: "https://github.com/Gnabriel/Image-Colorization",
-		demoLink: "https://sharetunesmedia.web.app/",
-		gitHubLink: "https://github.com/rrudling/thecardgame",
+		demoLink: undefined,
+		gitHubLink: "https://github.com/Gnabriel/Image-Colorization",
 		images: [
 			{
-				original: theCardGame1,
-				thumbnail: theCardGame1Low,
+				original: imageColorization1,
+				thumbnail: imageColorization1Low,
 			},
 			{
-				original: theCardGame2,
-				thumbnail: theCardGame2Low,
+				original: imageColorization2,
+				thumbnail: imageColorization2Low,
 			},
 			{
-				original: theCardGame3,
-				thumbnail: theCardGame3Low,
+				original: imageColorization3,
+				thumbnail: imageColorization3Low,
 			},
 		],
-		technologies: ["Sass", "HTML", "TypeScript", "ReactJS", "Firebase"],
+		technologies: ["Python"],
 		type: {
 			sv: "Skolprojekt",
 			en: "School project",

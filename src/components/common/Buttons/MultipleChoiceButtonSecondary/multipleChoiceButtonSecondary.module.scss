@@ -17,7 +17,7 @@
 	cursor: pointer;
 	font-weight: 300;
 	font-size: 20px;
-	transition: .4s;
+	transition: 0.4s;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -30,7 +30,7 @@
 .selectedOption {
 	//background-color: rgb(47, 126, 245, 0.1) !important;
 	background-color: #dce7f9 !important;
-	border-bottom: 4px solid #2F7EF5 !important;
+	border-bottom: 4px solid #2f7ef5 !important;
 }
 
 // ===================
@@ -55,5 +55,6 @@
 // === FOUR+ OPTIONS ===
 // =====================
 .fourPlusOptions div {
-	width: 125px;
+	width: max-content;
+	padding: 0 10px;
 }

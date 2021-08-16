@@ -17,7 +17,7 @@
 }
 
 .projectsContainer {
-  display: none;
+	display: none;
 }
 
 .mobileProjectsContainer {
@@ -34,7 +34,7 @@
 
 .mobileProjectsMenu mark {
 	opacity: 1;
-	transition: .4s;
+	transition: 0.4s;
 }
 
 .hideMobileProjectsMenu mark {
@@ -52,7 +52,7 @@
 
 .projectInfoContainer li {
 	font-weight: 300;
-	background-image: url('../../../resources/icons/blueTriangle.svg');
+	background-image: url("../../../resources/icons/blueTriangle.svg");
 	background-position: 0 5px;
 	background-size: 10px 10px;
 	background-repeat: no-repeat;
@@ -98,7 +98,7 @@
 	margin-top: 15px;
 	border-radius: 3px;
 	overflow: hidden;
-	box-shadow: 0 0 18px -4px rgba(0,0,0,0.5);
+	box-shadow: 0 0 18px -4px rgba(0, 0, 0, 0.5);
 	width: 100%;
 	height: 200px;
 	background-position: top;
@@ -127,7 +127,6 @@
 	margin: 15px 0;
 }
 
-
 @media (max-width: 424px) {
 	.projectTypes div {
 		font-size: 14px !important;
@@ -144,7 +143,7 @@
 
 @media (min-width: 475px) {
 	.projectTypes div {
-		font-size: 20px !important;
+		font-size: 18px !important;
 		height: 50px !important;
 	}
 }
@@ -182,9 +181,9 @@
 }
 
 @media (min-width: 1250px) {
-  .projectsContainer {
-    width: 90%;
-    max-width: 1075px;
-    justify-content: space-between;
-  }
+	.projectsContainer {
+		width: 90%;
+		max-width: 1075px;
+		justify-content: space-between;
+	}
 }

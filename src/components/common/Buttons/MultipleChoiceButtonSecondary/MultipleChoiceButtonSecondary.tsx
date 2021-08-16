@@ -30,8 +30,6 @@ const MultipleChoiceButtonSecondary: React.FC<Props> = ({
 		numberOfOptionsClass = classes.fourPlusOptions;
 	}
 
-	console.log(options);
-
 	return (
 		<div
 			className={[

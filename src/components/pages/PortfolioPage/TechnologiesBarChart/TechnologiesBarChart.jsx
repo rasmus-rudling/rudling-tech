@@ -3,6 +3,7 @@ import * as d3 from "d3";
 
 import "./technologiesBarChart.scss";
 import { technologiesInfo } from "../portfolioUtilities";
+import { useLanguage } from "../../../../contexts/LanguageContext";
 // import { TechnologiesCounter } from '../PortfolioPage';
 
 // interface Props {
@@ -11,6 +12,7 @@ import { technologiesInfo } from "../portfolioUtilities";
 
 // const TechnologiesBarChart: React.FC<Props> = ({data1}) => {
 const TechnologiesBarChart = ({ technologiesCounter, width }) => {
+    const language = useLanguage();
     const barChartRef = useRef(null);
 
     useEffect(() => {
@@ -80,7 +82,7 @@ const TechnologiesBarChart = ({ technologiesCounter, width }) => {
 
     return (
         <div className="TechnologiesBarChart">
-            <h3>Occurrences in featured projects</h3>
+            <h3>{language === "en" ? "Occurrences in featured projects" : "Förekomster i nedanstående projekt"}</h3>
             <div ref={barChartRef} />
         </div>
     );
