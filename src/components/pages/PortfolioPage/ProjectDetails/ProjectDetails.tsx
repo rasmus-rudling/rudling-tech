@@ -138,7 +138,7 @@ const ProjectDetails: React.FC = () => {
 						/>
 					) : null}
 
-					{selectedProject.name.en === "Image Colorizer" ? (
+					{selectedProject.name.en === "Image Colorizer with DL" ? (
 						<>
 							<ThreeDimButton
 								text={
