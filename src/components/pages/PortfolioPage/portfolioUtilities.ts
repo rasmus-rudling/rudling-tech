@@ -172,54 +172,54 @@ interface TechnologiesInfo {
 export const technologiesInfo: TechnologiesInfo = {
 	Firebase: {
 		icon: firebaseIcon,
-		tooltipText: "Learn more about Firebase",
+		tooltipText: "Firebase",
 		tooltipLink: "https://en.wikipedia.org/wiki/Firebase",
 	},
 	CSS: {
 		icon: cssIcon,
-		tooltipText: "Learn more about CSS",
+		tooltipText: "CSS",
 		tooltipLink: "https://en.wikipedia.org/wiki/Cascading_Style_Sheets",
 	},
 	HTML: {
 		icon: htmlIcon,
-		tooltipText: "Learn more about HTML",
+		tooltipText: "HTML",
 		tooltipLink: "https://en.wikipedia.org/wiki/HTML",
 	},
 	JavaScript: {
 		icon: javascriptIcon,
-		tooltipText: "Learn more about Javascript",
+		tooltipText: "Javascript",
 		tooltipLink: "https://en.wikipedia.org/wiki/Javascript",
 	},
 	TypeScript: {
 		icon: typescriptIcon,
-		tooltipText: "Learn more about Typescript",
+		tooltipText: "Typescript",
 		tooltipLink: "https://en.wikipedia.org/wiki/TypeScript",
 	},
 	Sass: {
 		icon: sassIcon,
-		tooltipText: "Learn more about Sass",
+		tooltipText: "Sass",
 		tooltipLink: "https://en.wikipedia.org/wiki/Sass_(stylesheet_language)",
 	},
 	ReactJS: {
 		icon: reactIcon,
-		tooltipText: "Learn more about React",
+		tooltipText: "React",
 		tooltipLink: "https://en.wikipedia.org/wiki/React_(JavaScript_library)",
 	},
 	Java: {
 		icon: javaIcon,
-		tooltipText: "Learn more about Java",
+		tooltipText: "Java",
 		tooltipLink:
 			"https://en.wikipedia.org/wiki/Java_(programming_language)",
 	},
 	Python: {
 		icon: pythonIcon,
-		tooltipText: "Learn more about Python",
+		tooltipText: "Python",
 		tooltipLink:
 			"https://en.wikipedia.org/wiki/Python_(programming_language)",
 	},
 	Docker: {
 		icon: dockerIcon,
-		tooltipText: "Learn more about Docker",
+		tooltipText: "Docker",
 		tooltipLink: "https://en.wikipedia.org/wiki/Docker_(software)",
 	},
 };

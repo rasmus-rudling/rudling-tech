@@ -119,6 +119,9 @@ const ProjectCard: React.FC<Props> = ({
 					>
 						<img src={technologiesInfo[technology].icon} alt="" />
 						<span className={classes.tooltiptext}>
+							{language === "en"
+								? "Learn more about"
+								: "Lär dig mer om"}{" "}
 							{technologiesInfo[technology].tooltipText}
 						</span>
 					</div>
