@@ -1,202 +1,202 @@
 .ProjectDetails {
-    margin: 0 auto;
-    padding-top: 110px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 110px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
+	max-width: 1000px;
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 20px;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 .bigScreenImageCarousel {
-    display: none;
+	display: none;
 }
 
 .backButtonContainer {
-    position: fixed;
-    top: 15px;
-    left: calc(10% - 7px);
-    z-index: 1001;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
+	position: fixed;
+	top: 15px;
+	left: calc(10% - 7px);
+	z-index: 1001;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .backButtonContainer:hover {
-    background-color: rgba(47, 126, 245, 0.2);
+	background-color: rgba(47, 126, 245, 0.2);
 }
 
 .backButtonContainer img {
-    width: 70%;
+	width: 70%;
 }
 
 .imageAndTechContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .imageCarouselContainer {
-    width: 100%;
+	width: 100%;
 }
 
 .technologiesUsed {
-    width: 185px;
-    font-weight: 500;
-    margin-left: 0;
-    margin-top: 15px;
+	width: 205px;
+	font-weight: 500;
+	margin-left: 0;
+	margin-top: 15px;
 }
 
 .textAndButtonsContainer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
 }
 
 .textContainer {
-    width: 100%;
+	width: 100%;
 }
 
 .buttonsContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .imageCarouselContainer img {
-    width: 100%;
+	width: 100%;
 }
 
 .buttonsContainer div {
-    width: 190px;
+	width: 190px;
 }
 
 .buttonsContainer div:nth-child(2) {
-    margin: 10px 0;
+	margin: 10px 0;
 }
 
 .ProjectDetails ul {
-    margin: 15px 0 15px;
-    list-style-position: inside;
+	margin: 15px 0 15px;
+	list-style-position: inside;
 }
 
 .ProjectDetails li {
-    font-weight: 300;
-    background-image: url("../../../../resources/icons/blueTriangle.svg");
-    background-position: 0 7px;
-    background-size: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 15px;
-    list-style: none;
+	font-weight: 300;
+	background-image: url("../../../../resources/icons/blueTriangle.svg");
+	background-position: 0 7px;
+	background-size: 10px 10px;
+	background-repeat: no-repeat;
+	padding-left: 15px;
+	list-style: none;
 }
 
 @media (min-width: 515px) {
-    .buttonsContainer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-    }
+	.buttonsContainer {
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
 
-    .buttonsContainer div:nth-child(1) {
-        margin-right: 15px;
-    }
+	.buttonsContainer div:nth-child(1) {
+		margin-right: 15px;
+	}
 }
 
 @media (min-width: 570px) {
-    .buttonsContainer {
-        width: 90%;
-    }
+	.buttonsContainer {
+		width: 90%;
+	}
 }
 
 @media (min-width: 600px) {
-    .backButtonContainer {
-        top: 105px;
-        left: calc(10% - 7px);
-        position: absolute;
-        z-index: 999;
-    }
+	.backButtonContainer {
+		top: 105px;
+		left: calc(10% - 7px);
+		position: absolute;
+		z-index: 999;
+	}
 }
 
 @media (min-width: 760px) {
-    .buttonsContainer {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
+	.buttonsContainer {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+	}
 
-    .buttonsContainer div:nth-child(1) {
-        margin-right: 0;
-    }
+	.buttonsContainer div:nth-child(1) {
+		margin-right: 0;
+	}
 }
 
 @media (min-width: 850px) {
-    .textAndButtonsContainer {
-        flex-direction: row;
-    }
+	.textAndButtonsContainer {
+		flex-direction: row;
+	}
 
-    .textContainer {
-        width: calc(80vw - 315px);
-        margin-right: 15px;
-    }
+	.textContainer {
+		width: calc(80vw - 315px);
+		margin-right: 15px;
+	}
 
-    .buttonsContainer {
-        flex-direction: column;
-        width: 400px;
-        align-items: center;
-        justify-content: start;
-    }
+	.buttonsContainer {
+		flex-direction: column;
+		width: 400px;
+		align-items: center;
+		justify-content: start;
+	}
 
-    .technologiesUsed {
-        margin-top: 0;
-        margin-left: 15px;
-    }
+	.technologiesUsed {
+		margin-top: 0;
+		margin-left: 15px;
+	}
 
-    .imageAndTechContainer {
-        flex-direction: row;
-    }
+	.imageAndTechContainer {
+		flex-direction: row;
+	}
 
-    .imageCarouselContainer {
-        width: calc(80vw - 215px);
-    }
+	.imageCarouselContainer {
+		width: calc(80vw - 215px);
+	}
 
-    .smallScreenImageCarousel {
-        display: none;
-    }
+	.smallScreenImageCarousel {
+		display: none;
+	}
 
-    .bigScreenImageCarousel {
-        display: flex;
-    }
+	.bigScreenImageCarousel {
+		display: flex;
+	}
 }
 
 @media (min-width: 1310px) {
-    .imageCarouselContainer {
-        width: 80%;
-    }
+	.imageCarouselContainer {
+		width: 80%;
+	}
 }
 
 @media (min-width: 1275px) {
-    .backButtonContainer {
-        left: 30px;
-    }
+	.backButtonContainer {
+		left: 30px;
+	}
 }
 
 @media (min-width: 1375px) {
-    .header {
-        text-align: left;
-    }
+	.header {
+		text-align: left;
+	}
 }

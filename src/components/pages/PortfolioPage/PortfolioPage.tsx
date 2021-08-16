@@ -43,8 +43,6 @@ const PortfolioPage: React.FC = () => {
 
 		let tempProjectTypes = [...projectTypes];
 
-		console.log(tempProjectTypes);
-
 		tempProjectTypes.forEach((option) => {
 			option.isSelected = option.type.en === newProjectType;
 		});
@@ -140,8 +138,8 @@ const PortfolioPage: React.FC = () => {
 		window.innerWidth > 500 ? 500 : window.innerWidth * 0.8;
 	let technologiesCounter: TechnologiesCounter = {};
 
-	Object.keys(projects).forEach((projectName) => {
-		let projectTechnologies = projects[projectName].technologies;
+	Object.keys(svEnProjects).forEach((projectName) => {
+		let projectTechnologies = svEnProjects[projectName].technologies;
 
 		projectTechnologies.forEach((technology) => {
 			if (technologiesCounter[technology] === undefined) {
@@ -169,8 +167,9 @@ const PortfolioPage: React.FC = () => {
 				</h1>
 			</div>
 			<p>
-				On this page you will find a selection of projects that I have
-				been working on during my years as a developer.
+				{language === "en"
+					? "On this page you will find a selection of projects that I have been working on during my years as a developer."
+					: "På den här sidan hittar du ett urval av projekt som jag har arbetat med under mina år som utvecklare."}
 			</p>
 
 			<TechnologiesBarChart
@@ -180,11 +179,12 @@ const PortfolioPage: React.FC = () => {
 
 			{/* === DESKTOP === */}
 			<div className={classes.projectsContainer}>
-				{Object.keys(projects).map((projectKey) => {
-					let project = projects[projectKey];
+				{Object.keys(svEnProjects).map((projectKey) => {
+					let svEnProjectTemp = svEnProjects[projectKey];
+
 					return (
 						<ProjectCard
-							projectInfo={project}
+							projectInfo={svEnProjectTemp}
 							showAllDetails={showAllDetails}
 							technologiesInfo={technologiesInfo}
 						/>
@@ -221,7 +221,9 @@ const PortfolioPage: React.FC = () => {
 					/>
 
 					<div style={{ fontWeight: "bolder" }}>
-						Technologies that I used:
+						{language === "en"
+							? "Technologies that I used:"
+							: "Teknologier som jag använt:"}
 					</div>
 
 					<div className={classes.technologiesUsedContainer}>

@@ -34,8 +34,6 @@ const LanguageProvider: React.FC<Props> = ({ children }) => {
 
 	const [language, setLanguage] = useState<"en" | "sv">(initLanguage);
 
-	console.log(initLanguage);
-
 	const changeLanguage = () => {
 		let newLang: "sv" | "en" = language === "en" ? "sv" : "en";
 		setLanguage(newLang);
