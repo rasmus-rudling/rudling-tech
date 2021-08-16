@@ -689,7 +689,7 @@ export const svEnProjects: SvEnProjects = {
         },
         text: {
             sv: `Målet med detta projekt var att studera hur en gråskalig bild kan färgläggas med hjälp av ett 
-            konvolutionellt neuralt nätverk (CNN)`,
+            konvolutionellt neuralt nätverk (CNN).`,
             en: `The goal of this project was to study how a grayscale image can be colorized using a convolutional 
             neural network (CNN)`,
         },
