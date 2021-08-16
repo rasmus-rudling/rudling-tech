@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 import classes from "./portfolioPage.module.scss";
 import {
-	projects,
 	technologiesInfo,
-	Project,
 	svEnProjects,
 	SvEnProject,
 } from "./portfolioUtilities";
