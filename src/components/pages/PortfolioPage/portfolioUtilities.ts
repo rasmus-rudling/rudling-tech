@@ -110,9 +110,9 @@ import shareTunes8Low from "../../../resources/images/projects_images/shareTunes
 import imageColorization1 from "../../../resources/images/projects_images/imageColorization/imageColorization1.png";
 import imageColorization2 from "../../../resources/images/projects_images/imageColorization/imageColorization2.png";
 import imageColorization3 from "../../../resources/images/projects_images/imageColorization/imageColorization3.png";
-import imageColorization1Low from "../../../resources/images/projects_images/shareTunes/shareTunes1Low.png";
-import imageColorization2Low from "../../../resources/images/projects_images/shareTunes/shareTunes2Low.png";
-import imageColorization3Low from "../../../resources/images/projects_images/shareTunes/shareTunes3Low.png";
+import imageColorization1Low from "../../../resources/images/projects_images/imageColorization/imageColorization1Low.png";
+import imageColorization2Low from "../../../resources/images/projects_images/imageColorization/imageColorization2Low.png";
+import imageColorization3Low from "../../../resources/images/projects_images/imageColorization/imageColorization3Low.png";
 
 export interface ProjectImage {
 	original: string;
@@ -280,7 +280,7 @@ export const svEnProjects: SvEnProjects = {
 			en: "Chess App",
 		},
 		text: {
-			sv: "Den här schackapplikationen utvecklades som ett projekt i en Java -kurs.",
+			sv: "Den här schackapplikationen utvecklades som ett projekt i en Java-kurs.",
 			en: "This chess application was developed as a project in a Java course.",
 		},
 		textLong: {
@@ -320,7 +320,7 @@ export const svEnProjects: SvEnProjects = {
 			en: "An interactive website to ease the learning of AI concepts for other master students.",
 		},
 		textLong: {
-			sv: `Skapade en hemsida för att underlätta inlärningen av AI -koncept för andra studenter. Efter att 
+			sv: `Skapade en hemsida för att underlätta inlärningen av AI-koncept för andra studenter. Efter att 
             ha gått kursen <i> DD2380 Artificiell intelligens </i> på KTH kände jag att jag hade förstått en hel del 
             av de grundläggande begreppen AI. Därför bestämde jag mig för att skapa denna hemsida. Dels för mitt eget 
             lärande, men främst för att hjälpa andra elever att förstå begreppen bättre.`,
