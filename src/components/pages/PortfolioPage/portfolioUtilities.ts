@@ -237,7 +237,7 @@ export const svEnProjects: SvEnProjects = {
 		textLong: {
 			sv: `I vår kandidatexamen undersökte vi hur människors moral förändras med anonymitet. Vi skapade denna 
             chattapplikation för att samla in data om användarnas beteende. Applikationen tillät oss att testa hur 
-            användare betedde sig när de utsattes för olika nivåer av anonymitet.`,
+            användare betedde sig när de var på olika nivåer av anonymitet.`,
 			en: `In our bachelor's thesis, we examined how people's morals change with anonymity.
             We created this chat application to collect data about user behavior. The application allowed us to
             test how users behaved when they were exposed to different levels of anonymity.`,
@@ -245,7 +245,7 @@ export const svEnProjects: SvEnProjects = {
 
 		bullets: [
 			{
-				sv: `Detta var det första projektet där jag fick arbeta med Firebase. Vi använde Firebases 
+				sv: `Detta var det första projektet där jag arbetade med Firebase. Vi använde Firebase:s 
                 Firestore-databas för att visa chattmeddelanden för användarna i realtid.`,
 				en: `This was the first project where I got to work with Firebase. We used Firebase's firestore database
                 in order to display the chat messages to the users in real-time.`,
@@ -322,7 +322,7 @@ export const svEnProjects: SvEnProjects = {
 		textLong: {
 			sv: `Skapade en hemsida för att underlätta inlärningen av AI-koncept för andra studenter. Efter att 
             ha gått kursen <i> DD2380 Artificiell intelligens </i> på KTH kände jag att jag hade förstått en hel del 
-            av de grundläggande begreppen AI. Därför bestämde jag mig för att skapa denna hemsida. Dels för mitt eget 
+            av de grundläggande begreppen inpm AI. Därför bestämde jag mig för att skapa denna hemsida. Dels för mitt eget 
             lärande, men främst för att hjälpa andra elever att förstå begreppen bättre.`,
 			en: `Created a website to ease the learning of AI concepts for other students.
             After taking the course <i>DD2380 Artificial Intelligence</i> at KTH I felt that I had understood
@@ -331,9 +331,9 @@ export const svEnProjects: SvEnProjects = {
 		},
 		bullets: [
 			{
-				sv: `Skapade <i> mycket </i> komponenter i detta projekt. Detta gjorde mig riktigt bekväm att arbeta 
-                med många av de olika aspekterna av reaktion.`,
-				en: `Created <i>a lot</i> of components in this project. This made me really comfortable working with
+				sv: `Skapade många komponenter i detta projekt. Det gjorde mig bekväm att arbeta 
+                med många av de olika aspekterna av react.`,
+				en: `Created a lot of components in this project. This made me comfortable working with
                 many of the different aspects of react.`,
 			},
 			{
@@ -409,7 +409,7 @@ export const svEnProjects: SvEnProjects = {
 		},
 		bullets: [
 			{
-				sv: "Detta var det första projektet där jag fick använda både React och Sass.",
+				sv: "Detta var det första projektet där jag använde både React och Sass.",
 				en: `This was the first project where I got to use both React and Sass.`,
 			},
 			{
@@ -463,18 +463,18 @@ export const svEnProjects: SvEnProjects = {
 		},
 		textLong: {
 			sv: `Efter att ha gått kursen <i> DD2380 Artificiell intelligens </i> på KTH började jag arbeta som lärarassistent i kursen. 
-            Innan nästa kursomgång började utvecklade jag ytterligare ett av de tre labbuppgifterna som handlade om reinforcement learning.`,
+            Innan nästa kursomgång började utvecklade jag ytterligare en av de tre labbuppgifterna som handlade om reinforcement learning.`,
 			en: `After taking the course <i>DD2380 Artificial Intelligence</i> at KTH I started working as a 
             teaching assistant in the course. Before the next course round started, I further developed one of the three
             lab assignments which were about reinforcement learning.`,
 		},
 		bullets: [
 			{
-				sv: `När jag utvecklade labbet lärde jag mig hur man kan använda skalskript för att skapa ett mer effektivt arbetsflöde. När
-                testa koden jag använde docker, det var då skalskripten verkligen gjorde våra liv enklare eftersom vi inte behövde det
-                för att manuellt kopiera filer hela tiden.`,
+				sv: `När jag utvecklade labben lärde jag mig hur man kan använda shell-scripts för att skapa ett mer effektivt arbetsflöde. När
+                jag testade koden använde jag docker, det var då shell-scripts gjorde våra liv enklare eftersom vi inte behövde
+                kopiera filer manuellt hela tiden.`,
 				en: `When developing the lab, I learned how one could use shell scripts to create a more efficient workflow. When
-                testing the code I used docker, that's when the shell scripts really made our lives easier since we didn't need
+                testing the code I used docker, that's when the shell scripts made our lives easier since we didn't need
                 to manually copy files all the time.`,
 			},
 			{
@@ -519,8 +519,8 @@ export const svEnProjects: SvEnProjects = {
 		textLong: {
 			sv: `SwiftWriter är ett program som hjälper människor att skriva snabbare på ett roligt och frustrationsfritt sätt. 
             Jag började arbeta med det här projektet eftersom jag ville skapa något som var användbart för andra. För närvarande 
-            har jag inte tid att arbeta med det här projektet, men jag är upphetsad att fortsätta arbeta med den här applikationen 
-            när jag har mer tid.`,
+            har jag inte tid att arbeta med det här projektet, men jag är taggad på att fortsätta arbeta med den här applikationen 
+            när jag har möjlighet till det.`,
 			en: `SwiftWriter is an application that will help people write faster in a fun and frustration-free manner.
             I started to work on this project because I wanted to create something that was
             useful for others. Currently, I don't have the time to work on this project, but I'm excited to
@@ -581,7 +581,7 @@ export const svEnProjects: SvEnProjects = {
 		bullets: [
 			{
 				sv: `I det här projektet har jag fokuserat mycket på responsiv design och skapat en sömlös upplevelse både 
-                för stationära och mobila användare.`,
+                för desktop- och mobil-användare.`,
 				en: `In this project I've focused a lot on responsive design, creating a seamless experience both for
                 desktop and mobile users.`,
 			},
@@ -622,18 +622,19 @@ export const svEnProjects: SvEnProjects = {
 		textLong: {
 			sv: `Ett socialt medie där du kan skapa en profil och dela din favoritmusik med 
             vänner. Du kan både kommentera, gilla, skapa inlägg och följa andra användare och lyssna på 
-            förhandsgranskningar av låtar som hämtats från Spotify API.`,
+            förhandsgranskningar av låtar som hämtats från Spotify:s API.`,
 			en: `A musical sharing social media website where you can create a profile and share your favorite music with 
             friends. You can both comment, like, create posts and follow other users and listen to previews of songs fetched from 
             the Spotify API.`,
 		},
 		bullets: [
 			{
-				sv: "Jag tillbringade mycket tid med att arbeta med Spotifys API. Detta breddade min förståelse för webbutveckling mycket.",
-				en: `I spent a lot of time working with Spotify's API. This broadened my understanding of web development a lot.`,
+				sv: "Jag tillbringade mycket tid med att arbeta med Spotifys API. Detta breddade min förståelse för webbutveckling.",
+				en: `I spent a lot of time working with Spotify's API. This broadened my understanding of web development.`,
 			},
 			{
-				sv: "",
+				sv: `Jag tog ett stort ansvar för backend:en i det här projektet. Eftersom vår applikation hade mycket dynamiskt innehåll baserat
+                på den för närvarande inloggade användaren var det en givande upplevelse att lära sig olika aspekter av backendutveckling.`,
 				en: `I took a big responsibility for the backend of this project. Since our application had a lot of dynamic content based 
                 on the currently logged-in user, this was a very fruitful experience to learn different aspects of backend development.`,
 			},
@@ -687,25 +688,25 @@ export const svEnProjects: SvEnProjects = {
 			en: "Image Colorizer with DL",
 		},
 		text: {
-			sv: `Målet med detta projekt var att studera hur en gråskala bild kan färgläggas med hjälp av ett 
-            konvolutionellt neuralt nätverk (CNN)`,
+			sv: `Målet med detta projekt var att studera hur en gråskalig bild kan färgläggas med hjälp av ett 
+            konvolutionellt neuralt nätverk (CNN).`,
 			en: `The goal of this project was to study how a grayscale image can be colorized using a convolutional 
             neural network (CNN)`,
 		},
 		textLong: {
-			sv: `<b> Abstrakt:</b> Målet med detta dokument är att studera hur en gråskala bild kan färgläggas med 
+			sv: `<b> Abstrakt:</b> Målet med detta paper är att studera hur en gråskalig bild kan färgläggas med 
             hjälp av ett konvolutionellt neuralt nätverk (CNN). Metoden som presenterades i papperet Colorful Image 
-            Colorization, skriven av R. Zhang et al., Användes som referens [1]. Data som används för att träna 
+            Colorization, skriven av R. Zhang et al., Användes som referens. Data som används för att träna 
             modellen som presenteras i detta dokument är begränsad till porträttbilder av människors ansikten. 
             Datauppsättningen som används i denna studie är således smalare än vad som används i originalpappret, 
             vilket är en mängd olika bildkategorier. Två olika förlustfunktioner implementeras med resultat som visar 
             att en multinomisk korsentropiförlustfunktion ger mycket bättre resultat än en euklidisk förlustfunktion. 
             Även om den har tränats för mycket färre iterationer, färgar modellen som presenteras i detta dokument 
             porträttbilder mer realistiskt i 58% av fallen jämfört med modellen som presenteras av R. Zhang et al. i 
-            [1] i en kvalitativ studie.`,
-			en: `<b>Abstract: </b>The goal of this paper is to study how a grayscale image can be 
+            en kvalitativ studie.`,
+			en: `<b>Abstract:</b> The goal of this paper is to study how a grayscale image can be 
             colorized using a convolutional neural network (CNN). The method presented in the paper Colorful
-            Image Colorization, written by R. Zhang et al., was used as reference [1]. The
+            Image Colorization, written by R. Zhang et al., was used as reference. The
             data used to train the model presented in this paper is confined to portrait images
             of people’s faces. The dataset used in this study is thus more narrow than what
             is used in the original paper, which is a wide variety of image categories. Two
@@ -713,7 +714,7 @@ export const svEnProjects: SvEnProjects = {
             cross-entropy loss function produces much better results than a euclidian loss
             function. Although it has been trained for far fewer iterations, the model presented
             in this paper colorizes portrait images more realistically in 58% of the cases when
-            compared to the model presented by R. Zhang et al. in [1] in a qualitative study.`,
+            compared to the model presented by R. Zhang et al. in a qualitative study.`,
 		},
 		bullets: [],
 		mainLink: "https://github.com/Gnabriel/Image-Colorization",
