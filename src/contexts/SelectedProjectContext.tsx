@@ -23,13 +23,27 @@ interface Props {
 
 const SelectedProjectProvider: React.FC<Props> = ({ children }) => {
 	const projectFromSessionStorage = sessionStorage.getItem("project");
-	const firstProject = svEnProjects[Object.keys(svEnProjects)[0]];
 
-	const [selectedProject, setSelectedProject] = useState<SvEnProject>(
-		projectFromSessionStorage !== null
-			? JSON.parse(projectFromSessionStorage)
-			: firstProject
-	);
+	const possibleProjects = Object.keys(svEnProjects);
+	const URL = window.location.href;
+	const projectName = String(URL.split("/").pop()).replace("_", " ");
+
+	const projectFromURLExist = possibleProjects.includes(projectName);
+
+	let initProject;
+
+	if (projectFromURLExist) {
+		initProject = svEnProjects[projectName];
+	} else {
+		const firstProject = svEnProjects[possibleProjects[0]];
+		initProject =
+			projectFromSessionStorage !== null
+				? JSON.parse(projectFromSessionStorage)
+				: firstProject;
+	}
+
+	const [selectedProject, setSelectedProject] =
+		useState<SvEnProject>(initProject);
 
 	const changeSelectedProject = (newSelectedProject: SvEnProject) => {
 		setSelectedProject(newSelectedProject);
