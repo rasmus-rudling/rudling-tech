@@ -341,8 +341,8 @@ export const svEnProjects: SvEnProjects = {
 				en: `This was the first project that I hosted with a paid domain name.`,
 			},
 		],
-		mainLink: "https://learn-ai-7df72.web.app/hmm/forwardAlgorithm",
-		demoLink: "https://learn-ai-7df72.web.app/hmm/forwardAlgorithm",
+		mainLink: "https://learn-ai.web.app/",
+		demoLink: "https://learn-ai.web.app/",
 		gitHubLink: "https://github.com/rrudling/Learn-AI",
 		images: [
 			{
